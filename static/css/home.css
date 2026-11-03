@@ -1,0 +1,407 @@
+/* ==========================================================================
+   VOXEL LAB — HOME PAGE (CDU01) STYLES
+   Fidelidade pixel-perfect a 1_Inicio_celular.png e 5_Inicio_desktop.png
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO SECTION
+   -------------------------------------------------------------------------- */
+
+.hero-section {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-6);
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-5);
+    background-color: var(--surface);
+    background-image:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-6);
+  }
+}
+
+.hero-tag {
+  color: var(--nozzle);
+  margin-bottom: var(--space-3);
+  display: inline-block;
+}
+
+.hero-title {
+  margin-bottom: var(--space-3);
+}
+
+.hero-title .title-accent {
+  color: var(--nozzle);
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  max-width: 520px;
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+/* Faixa técnica do Hero (Mobile & Desktop) */
+.hero-badges-row {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  background-color: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero-badge-col {
+  flex: 1;
+  text-align: center;
+  padding: 10px 8px;
+  border-right: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hero-badge-col:last-child {
+  border-right: none;
+}
+
+/* Painel Gráfico 3D da Direita no Desktop */
+.hero-graphic-box {
+  display: none;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  aspect-ratio: 4 / 3;
+  min-height: 360px;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .hero-graphic-box {
+    display: flex;
+  }
+}
+
+.hero-graphic-visual {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-graphic-caption {
+  position: absolute;
+  bottom: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+
+.hero-graphic-footer {
+  border-top: 1px solid var(--line);
+  background-color: var(--surface);
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CATEGORIAS (Visível no celular conforme 1_Inicio_celular.png)
+   No desktop (>= 1024px), a navegação fica integrada no header oficial
+   -------------------------------------------------------------------------- */
+
+.categories-section {
+  padding: var(--space-4) 0 var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 1024px) {
+  .categories-section {
+    display: none;
+  }
+}
+
+.section-label-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 94px;
+  padding: 16px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.category-card:hover {
+  border-color: var(--nozzle);
+}
+
+.category-card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--ink);
+  margin-bottom: var(--space-2);
+}
+
+.category-card:hover .category-card-icon {
+  color: var(--nozzle);
+}
+
+.category-card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   MAIS PEDIDOS (CDU01 / RN09)
+   -------------------------------------------------------------------------- */
+
+.mais-pedidos-section {
+  padding: var(--space-5) 0;
+}
+
+@media (min-width: 1024px) {
+  .mais-pedidos-section {
+    border-top: 1px solid var(--line);
+    padding-top: var(--space-6);
+  }
+}
+
+.mais-pedidos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .mais-pedidos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   BANNER SOB MEDIDA (CDU01)
+   -------------------------------------------------------------------------- */
+
+.sob-medida-banner {
+  background-color: var(--surface);
+  border: 1px solid var(--cad);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  margin: var(--space-6) 0;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .sob-medida-banner {
+    padding: var(--space-5) var(--space-5);
+  }
+}
+
+.sob-medida-banner-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .sob-medida-banner-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+}
+
+.sob-medida-banner-text {
+  max-width: 380px;
+}
+
+.sob-medida-banner-text h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-top: 6px;
+}
+
+@media (min-width: 1024px) {
+  .sob-medida-banner-text h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.sob-medida-steps-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  flex-grow: 1;
+}
+
+@media (min-width: 640px) {
+  .sob-medida-steps-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sob-medida-steps-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.step-card {
+  position: relative;
+  padding-top: var(--space-2);
+}
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--cad);
+}
+
+.step-card.step-orange::before {
+  background-color: var(--nozzle);
+}
+
+.step-card-num {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--cad);
+}
+
+.step-card.step-orange .step-card-num {
+  color: var(--nozzle);
+}
+
+.step-card-title {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   GUIA QUAL MATERIAL? (Mobile Reference 1_Inicio_celular.png)
+   -------------------------------------------------------------------------- */
+
+.materiais-guia-section {
+  padding: var(--space-5) 0 var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .materiais-guia-section {
+    display: none;
+  }
+}
+
+.materiais-tabela {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.material-linha {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  gap: var(--space-4);
+}
+
+.material-linha:last-child {
+  border-bottom: none;
+}
+
+.material-nome {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  min-width: 60px;
+}
+
+.material-nome.text-nozzle {
+  color: var(--nozzle);
+}
+
+.material-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Não Encontrada (404) · {{ site.nome }}{% endblock %}
+
+{% block content %}
+<div class="vl-container" style="padding: 80px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh;">
+  <div class="grid-bg" style="width: 100px; height: 100px; border: 1px solid var(--line); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+    <svg viewBox="0 0 100 100" width="60" height="60" fill="none" stroke="currentColor" stroke-width="1.5">
+      <polygon points="50,20 76,35 50,50 24,35" stroke="var(--ink-muted)"/>
+      <polygon points="24,35 50,50 50,80 24,65" stroke="var(--ink-muted)"/>
+      <polygon points="76,35 50,50 50,80 76,65" stroke="var(--ink-muted)"/>
+    </svg>
+  </div>
+
+  <span class="mono-label text-nozzle">ERRO 404</span>
+  <h1 style="margin: 8px 0 16px 0; font-size: 2.25rem;">Esta peça não existe no catálogo.</h1>
+  <p style="color: var(--ink-muted); max-width: 480px; margin-bottom: 32px; font-size: 1rem;">
+    O link que você seguiu pode estar quebrado ou a peça foi descontinuada. Mas não se preocupe: se não existir na loja, a gente modela para você.
+  </p>
+
+  <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+    <a href="/catalogo" class="btn-primario btn-primario-lg">Ver catálogo</a>
+    <a href="/sob-medida" class="btn-sob-medida btn-primario-lg">Orçar sob medida</a>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,47 @@
+<!-- Componente EtapasSobMedida (CDU 3.4) -->
+{#
+  Exemplo de uso:
+  {{ etapas_sob_medida() }}
+#}
+
+{% macro etapas_sob_medida(etapas=None, extra_class='') -%}
+{% if not etapas %}
+  {% set etapas = [
+    {
+      'num': '01',
+      'titulo': 'Foto e medidas',
+      'desc': 'Pelo formulário ao lado ou direto no WhatsApp.',
+      'orange': False
+    },
+    {
+      'num': '02',
+      'titulo': 'Orçamento',
+      'desc': 'Valor do projeto e da impressão, separados.',
+      'orange': False
+    },
+    {
+      'num': '03',
+      'titulo': 'CAD para aprovar',
+      'desc': 'Você vê a peça em 3D antes de qualquer impressão.',
+      'orange': False
+    },
+    {
+      'num': '04',
+      'titulo': 'Impressão e envio',
+      'desc': 'Para todo o Brasil.',
+      'orange': True
+    }
+  ] %}
+{% endif %}
+
+<div class="etapas-sob-medida-grid {{ extra_class }}">
+  {% for etapa in etapas %}
+    <div class="etapa-item {% if etapa.orange %}etapa-orange{% endif %}">
+      <div class="etapa-num">{{ etapa.num }}</div>
+      <div class="etapa-title">{{ etapa.titulo }}</div>
+      <div class="etapa-desc">{{ etapa.desc }}</div>
+    </div>
+  {% endfor %}
+</div>
+{%- endmacro %}
+

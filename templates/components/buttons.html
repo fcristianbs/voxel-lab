@@ -1,0 +1,37 @@
+<!-- Componentes de Botões (CDU 3.4) -->
+
+{% macro botao_primario(text, href=None, type='button', is_large=False, extra_class='', icon=None, id=None) -%}
+  {% set cls = 'btn-primario' %}
+  {% if is_large %}{% set cls = cls ~ ' btn-primario-lg' %}{% endif %}
+  {% if extra_class %}{% set cls = cls ~ ' ' ~ extra_class %}{% endif %}
+
+  {% if href %}
+    <a href="{{ href }}" class="{{ cls }}" {% if id %}id="{{ id }}"{% endif %}>
+      {% if icon %}{{ icon|safe }}{% endif %}
+      <span>{{ text }}</span>
+    </a>
+  {% else %}
+    <button type="{{ type }}" class="{{ cls }}" {% if id %}id="{{ id }}"{% endif %}>
+      {% if icon %}{{ icon|safe }}{% endif %}
+      <span>{{ text }}</span>
+    </button>
+  {% endif %}
+{%- endmacro %}
+
+{% macro botao_sob_medida(text, href=None, type='button', outline=False, is_large=False, extra_class='', id=None) -%}
+  {% set cls = 'btn-sob-medida' %}
+  {% if outline %}{% set cls = cls ~ ' btn-sob-medida-outline' %}{% endif %}
+  {% if is_large %}{% set cls = cls ~ ' btn-primario-lg' %}{% endif %}
+  {% if extra_class %}{% set cls = cls ~ ' ' ~ extra_class %}{% endif %}
+
+  {% if href %}
+    <a href="{{ href }}" class="{{ cls }}" {% if id %}id="{{ id }}"{% endif %}>
+      <span>{{ text }}</span>
+    </a>
+  {% else %}
+    <button type="{{ type }}" class="{{ cls }}" {% if id %}id="{{ id }}"{% endif %}>
+      <span>{{ text }}</span>
+    </button>
+  {% endif %}
+{%- endmacro %}
+

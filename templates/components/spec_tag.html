@@ -1,0 +1,19 @@
+<!-- Componente SpecTag (CDU 3.4) -->
+{#
+  Exemplo de uso:
+  {{ spec_tag([{'chave': 'MAT', 'valor': 'PETG-UV'}, {'chave': 'CAMADA', 'valor': '0,20 mm'}]) }}
+#}
+
+{% macro spec_tag(items, extra_class='') -%}
+<div class="spec-tag-group {{ extra_class }}">
+  {% for item in items %}
+    <div class="spec-tag-item">
+      {% if item.chave %}
+        <span class="spec-tag-key">{{ item.chave }}</span>
+      {% endif %}
+      <span class="spec-tag-val">{{ item.valor or item }}</span>
+    </div>
+  {% endfor %}
+</div>
+{%- endmacro %}
+

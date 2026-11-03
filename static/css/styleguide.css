@@ -1,0 +1,150 @@
+/* ==========================================================================
+   VOXEL LAB — STYLEGUIDE STYLES
+   Visualização e documentação viva de todos os tokens e componentes
+   ========================================================================== */
+
+.sg-hero {
+  padding: var(--space-6) 0 var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  color: var(--nozzle);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.sg-section {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-section-header {
+  margin-bottom: var(--space-4);
+}
+
+.sg-section-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-1);
+}
+
+.sg-section-desc {
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+}
+
+/* Grids de tokens */
+.sg-color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.sg-color-card {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.sg-color-swatch {
+  height: 72px;
+  width: 100%;
+}
+
+.sg-color-info {
+  padding: 10px 12px;
+}
+
+.sg-color-name {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sg-color-hex {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.sg-color-role {
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+  line-height: 1.25;
+}
+
+/* Vitrine de componentes */
+.sg-component-box {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.sg-component-title {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sg-component-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.sg-component-preview-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+/* Grid de cards de produto */
+.sg-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+/* Moldura Mobile Simulation */
+.sg-mobile-frame {
+  max-width: 390px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  margin-top: var(--space-3);
+  position: relative;
+}
+
+.sg-mobile-header {
+  background-color: var(--surface-raised);
+  border-bottom: 1px solid var(--line);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+  display: flex;
+  justify-content: space-between;
+}
+

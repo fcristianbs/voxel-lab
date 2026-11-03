@@ -1,0 +1,35 @@
+<!-- Componente Chip / FiltroAtivo (CDU 3.4) -->
+{#
+  Exemplo de uso:
+  {{ chip("Starlink", active=True, removable=True) }}
+  {{ chip("PETG", href="/categoria/engenharia?material=petg") }}
+#}
+
+{% macro chip(label, active=False, removable=False, href=None, is_cad=False, remove_url='#', extra_class='', data_val=None) -%}
+  {% set cls = 'vl-chip' %}
+  {% if active %}
+    {% if is_cad %}
+      {% set cls = cls ~ ' active-cad' %}
+    {% else %}
+      {% set cls = cls ~ ' active' %}
+    {% endif %}
+  {% endif %}
+  {% if extra_class %}{% set cls = cls ~ ' ' ~ extra_class %}{% endif %}
+
+  {% if href %}
+    <a href="{{ href }}" class="{{ cls }}" {% if data_val %}data-value="{{ data_val }}"{% endif %}>
+      <span>{{ label }}</span>
+      {% if removable and active %}
+        <span class="vl-chip-remove" aria-label="Remover filtro">&times;</span>
+      {% endif %}
+    </a>
+  {% else %}
+    <button type="button" class="{{ cls }}" {% if data_val %}data-value="{{ data_val }}"{% endif %}>
+      <span>{{ label }}</span>
+      {% if removable and active %}
+        <span class="vl-chip-remove" aria-label="Remover filtro">&times;</span>
+      {% endif %}
+    </button>
+  {% endif %}
+{%- endmacro %}
+

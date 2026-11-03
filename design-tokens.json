@@ -1,0 +1,89 @@
+{
+  "name": "Voxel Lab",
+  "version": 1,
+  "color": {
+    "themes": [
+      {"id": "dark", "name": "Grafite (principal)"},
+      {"id": "light", "name": "Claro"}
+    ],
+    "tokens": [
+      {"name": "surface", "value": {"dark": "#0c1014", "light": "#f2f4f6"}, "usage": "Fundo de página, de post e de story. O grafite é o fundo padrão da marca no Instagram."},
+      {"name": "surface-raised", "value": {"dark": "#151b22", "light": "#ffffff"}, "usage": "Cartões, área de foto do produto e painéis de especificação sobre `surface`."},
+      {"name": "grid", "value": {"dark": "#1c242d", "light": "#e1e6eb"}, "usage": "Malha de voxel (grid de 8px) desenhada no fundo dos posts. É decorativa e nunca carrega texto."},
+      {"name": "line", "value": {"dark": "#2a343f", "light": "#c9d1d9"}, "usage": "Linhas finas, cotas, molduras de foto e bordas de etiquetas."},
+      {"name": "ink", "value": {"dark": "#e8edf2", "light": "#0f1419"}, "usage": "Texto principal sobre `surface` e `surface-raised`."},
+      {"name": "ink-muted", "value": {"dark": "#8c99a6", "light": "#55616d"}, "usage": "Texto secundário, legendas e dados técnicos sobre `surface` e `surface-raised`."},
+      {"name": "nozzle", "value": {"dark": "#ff6b2c", "light": "#c2410c"}, "usage": "Laranja Bico Quente, a cor principal da marca: CTAs, destaques de título, preço e o símbolo. Como texto, fica sobre `surface` e `surface-raised`."},
+      {"name": "nozzle-soft", "value": {"dark": "#3a1a0b", "light": "#fff3ec"}, "usage": "Fundo tingido atrás de texto `nozzle`, como selos e etiquetas de oferta."},
+      {"name": "on-nozzle", "value": {"dark": "#0c1014", "light": "#ffffff"}, "usage": "Texto sobre preenchimento `nozzle`, como botões e faixas de CTA."},
+      {"name": "cad", "value": {"dark": "#33d1e0", "light": "#0b6f7c"}, "usage": "Ciano CAD, a cor secundária. Indica modelagem e projeto sob medida: wireframes, cotas em destaque e a etapa 'projeto'. Como texto, fica sobre `surface` e `surface-raised`."},
+      {"name": "cad-soft", "value": {"dark": "#0b2d33", "light": "#d9f5f8"}, "usage": "Fundo tingido atrás de texto `cad`."},
+      {"name": "on-cad", "value": {"dark": "#0c1014", "light": "#ffffff"}, "usage": "Texto sobre preenchimento `cad`."},
+      {"name": "ok", "value": {"dark": "#7bd88f", "light": "#1f7a3a"}, "usage": "Apenas status 'pronta para envio' ou 'aprovado', sempre acompanhado de palavra. Não é cor de marca."}
+    ]
+  },
+  "type": {
+    "fonts": [],
+    "families": {
+      "display": "Unbounded, \"Arial Black\", system-ui, sans-serif",
+      "body": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "mono": "\"IBM Plex Mono\", ui-monospace, Menlo, monospace"
+    },
+    "groups": [
+      {
+        "name": "Display",
+        "family": "display",
+        "note": "Unbounded, da Google Fonts: larga, geométrica e com cantos quase quadrados, como um voxel. Só em títulos.",
+        "styles": [
+          {"name": "display-xl", "fontSize": "64px", "lineHeight": "60px", "fontWeight": 700, "letterSpacing": "-0.02em", "sample": "SOB MEDIDA", "usage": "Título de capa de carrossel e de story. No máximo 3 palavras."},
+          {"name": "display", "fontSize": "40px", "lineHeight": "40px", "fontWeight": 700, "letterSpacing": "-0.015em", "sample": "Suporte Starlink Mini", "usage": "Título de post de feed."},
+          {"name": "heading", "fontSize": "24px", "lineHeight": "28px", "fontWeight": 600, "letterSpacing": "-0.01em", "sample": "Do desenho à peça", "usage": "Título de slide interno de carrossel."}
+        ]
+      },
+      {
+        "name": "Texto",
+        "family": "body",
+        "note": "IBM Plex Sans: humanista com DNA de engenharia. Para legendas e textos de apoio.",
+        "styles": [
+          {"name": "lead", "fontSize": "20px", "lineHeight": "28px", "fontWeight": 500, "sample": "Projetamos e imprimimos a peça que não existe na loja.", "usage": "Subtítulo de post e de story."},
+          {"name": "body", "fontSize": "16px", "lineHeight": "24px", "fontWeight": 400, "sample": "Impresso em PETG com proteção UV, resistente a sol e chuva.", "usage": "Texto corrido em slides e no site."},
+          {"name": "small", "fontSize": "13px", "lineHeight": "18px", "fontWeight": 400, "sample": "Prazo médio de 3 a 5 dias úteis.", "usage": "Notas, rodapés e letras miúdas."}
+        ]
+      },
+      {
+        "name": "Técnico",
+        "family": "mono",
+        "note": "IBM Plex Mono: a voz de ficha técnica da marca, para cotas, materiais e parâmetros.",
+        "styles": [
+          {"name": "spec", "fontSize": "14px", "lineHeight": "20px", "fontWeight": 500, "sample": "PETG-UV · 0,20 mm · 40% gyroid", "usage": "Ficha técnica da peça, cotas e parâmetros de impressão."},
+          {"name": "label", "fontSize": "11px", "lineHeight": "14px", "fontWeight": 600, "letterSpacing": "0.12em", "sample": "ENGENHARIA · CASA · FIGURES", "usage": "Rótulos em caixa-alta: categoria do post, número do slide e @."}
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "note": "Grid de voxel com base de 8px (4px só para ajuste fino). Em post 1080×1350, multiplique por 3.",
+    "tokens": [
+      {"name": "space-1", "value": "4px", "usage": "Ajuste fino entre ícone e texto."},
+      {"name": "space-2", "value": "8px", "usage": "Um voxel: passo da malha de fundo e padding interno de etiquetas."},
+      {"name": "space-3", "value": "16px", "usage": "Entre linhas relacionadas, como título e subtítulo."},
+      {"name": "space-4", "value": "24px", "usage": "Margem interna de post e de story (72px no arquivo final)."},
+      {"name": "space-5", "value": "32px", "usage": "Entre blocos dentro de um post."},
+      {"name": "space-6", "value": "48px", "usage": "Respiro grande, como a margem de segurança do story."}
+    ]
+  },
+  "radius": {
+    "note": "Cantos vivos, como um voxel. Arredondamento só no mínimo.",
+    "tokens": [
+      {"name": "radius-0", "value": "0px", "usage": "Blocos de cor, molduras de foto e faixas."},
+      {"name": "radius-sm", "value": "2px", "usage": "Etiquetas, botões e voxels do padrão."},
+      {"name": "radius-md", "value": "6px", "usage": "Cartões e capas de destaque (antes do recorte circular do Instagram)."}
+    ]
+  },
+  "shadow": {
+    "note": "A marca quase não usa sombra. A profundidade vem da isometria.",
+    "tokens": [
+      {"name": "focus-ring", "value": {"dark": "0 0 0 2px #0c1014, 0 0 0 4px #33d1e0", "light": "0 0 0 2px #f2f4f6, 0 0 0 4px #0b6f7c"}, "usage": "Foco de teclado em site e loja: 2px de fundo, depois 2px de `cad`."}
+    ]
+  }
+}

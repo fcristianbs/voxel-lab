@@ -1,0 +1,55 @@
+/* ==========================================================================
+   VOXEL LAB DESIGN TOKENS
+   Conforme assets/design-tokens.json e CDU Seção 3
+   ========================================================================== */
+
+:root {
+  /* Cores — Tema Escuro (Principal) */
+  --surface: #0c1014;
+  --surface-raised: #151b22;
+  --grid: #1c242d;
+  --line: #2a343f;
+  --ink: #e8edf2;
+  --ink-muted: #8c99a6;
+
+  /* Cores de Ação e Marca */
+  /* Laranja Bico Quente: produto, preço, CTA de compra */
+  --nozzle: #ff6b2c;
+  --nozzle-hover: #ff7d45;
+  --nozzle-soft: #3a1a0b;
+  --on-nozzle: #0c1014;
+
+  /* Ciano CAD: sob medida, projeto, modelagem */
+  --cad: #33d1e0;
+  --cad-hover: #4ae0ee;
+  --cad-soft: #0b2d33;
+  --on-cad: #0c1014;
+
+  /* Status */
+  --ok: #7bd88f;
+
+  /* Tipografia */
+  --font-display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+  /* Espaçamento (Grid Base 8px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  /* Cantos (Inviolável: 2px) */
+  --radius-0: 0px;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+
+  /* Anel de Foco de Acessibilidade (WCAG AA) */
+  --focus-ring: 0 0 0 2px #0c1014, 0 0 0 4px #33d1e0;
+
+  /* Largura Máxima */
+  --container-max-width: 1280px;
+}
+

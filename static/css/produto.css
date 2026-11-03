@@ -1,0 +1,381 @@
+/* ==========================================================================
+   VOXEL LAB — PÁGINA DE PRODUTO (CDU03 / CDU04)
+   Fidelidade visual a 7_Produto_desktop.png e 3_Produto_celular.png
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   GRID PRINCIPAL DO PRODUTO (GALERIA + COMPRA)
+   -------------------------------------------------------------------------- */
+.produto-top-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .produto-top-section {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-6);
+    align-items: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   GALERIA DE FOTOS (COM MINIATURAS VERTICAIS NO DESKTOP)
+   -------------------------------------------------------------------------- */
+.produto-galeria-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .produto-galeria-wrap {
+    flex-direction: row;
+    gap: var(--space-3);
+  }
+}
+
+.produto-thumbs-lista {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  .produto-thumbs-lista {
+    flex-direction: column;
+    overflow-x: visible;
+    width: 84px;
+    flex-shrink: 0;
+  }
+}
+
+.produto-thumb-btn {
+  width: 72px;
+  height: 60px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .produto-thumb-btn {
+    width: 100%;
+    height: 64px;
+  }
+}
+
+.produto-thumb-btn:hover {
+  border-color: var(--ink-muted);
+  color: var(--ink);
+}
+
+.produto-thumb-btn.active {
+  border-color: var(--nozzle);
+  color: var(--nozzle);
+  background-color: var(--nozzle-soft);
+}
+
+.produto-thumb-btn.thumb-cad {
+  color: var(--cad);
+}
+
+.produto-thumb-btn.thumb-cad.active {
+  border-color: var(--cad);
+  background-color: var(--cad-soft);
+}
+
+/* Foto Principal Grande */
+.produto-foto-principal {
+  flex-grow: 1;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--surface-raised);
+}
+
+.produto-foto-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background-color: var(--nozzle-soft);
+  color: var(--nozzle);
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.produto-foto-placeholder-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.produto-foto-caption {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  max-width: 260px;
+}
+
+.produto-foto-counter {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+}
+
+.produto-foto-watermark {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   COLUNA DE DETALHES E COMPRA
+   -------------------------------------------------------------------------- */
+.produto-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.produto-cat-badge {
+  color: var(--nozzle);
+}
+
+.produto-title {
+  margin-top: 2px;
+  font-size: 1.875rem;
+  line-height: 1.18;
+}
+
+@media (min-width: 1024px) {
+  .produto-title {
+    font-size: 2.375rem;
+  }
+}
+
+.produto-desc {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.produto-preco-bloco {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.produto-preco-val {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--nozzle);
+}
+
+.produto-preco-parcelado {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+/* Box de Ações de Compra */
+.produto-cta-box {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--space-2);
+}
+
+.btn-comprar-ml {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-comprar-ml:hover {
+  border-color: var(--ink-muted);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.produto-live-msg-preview {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+  text-align: center;
+  padding: 4px 6px;
+  word-break: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   SEÇÃO INFERIOR: FICHA TÉCNICA E COMO INSTALAR (2 COLUNAS)
+   -------------------------------------------------------------------------- */
+.produto-specs-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .produto-specs-section {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.produto-specs-box, .produto-instalacao-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.specs-section-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* Passos de Instalação */
+.instalacao-passos-lista {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-raised);
+}
+
+.instalacao-passo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.instalacao-passo-item:last-child {
+  border-bottom: none;
+}
+
+.passo-item-num {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cad);
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+
+.passo-item-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+/* Callout "Seu tubo tem outra medida? A gente adapta." */
+.callout-adapta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: var(--cad-soft);
+  border: 1px solid var(--cad);
+  border-radius: var(--radius-sm);
+  color: var(--cad);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: var(--space-2);
+}
+
+.callout-adapta:hover {
+  background-color: rgba(51, 209, 224, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   SEÇÃO COMBINA COM (PRODUTOS RELACIONADOS)
+   -------------------------------------------------------------------------- */
+.relacionados-section {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  margin-bottom: var(--space-6);
+}
+
+.relacionados-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+  .relacionados-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+  }
+}
+

@@ -1,0 +1,51 @@
+<!-- Componente LinhaProduto (CDU 3.4) -->
+{#
+  Exemplo de uso:
+  {{ linha_produto(produto) }}
+#}
+
+{% macro linha_produto(produto, extra_class='') -%}
+<article class="linha-produto {{ extra_class }}">
+  <!-- Miniatura de 104px com malha -->
+  <a href="/produto/{{ produto.slug }}" class="linha-produto-img-wrap grid-bg" aria-label="Ver {{ produto.nome }}">
+    <div class="card-produto-placeholder" style="transform: scale(0.85);">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 36px; height: 36px;" aria-hidden="true">
+        <polygon points="50,20 76,35 50,50 24,35" stroke="var(--ink-muted)" fill="rgba(255,255,255,0.02)"/>
+        <polygon points="24,35 50,50 50,80 24,65" stroke="var(--ink-muted)" fill="rgba(255,255,255,0.01)"/>
+        <polygon points="76,35 50,50 50,80 76,65" stroke="var(--ink-muted)" fill="rgba(255,255,255,0.03)"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Dados da Linha -->
+  <div class="linha-produto-content">
+    <div class="linha-produto-header">
+      {% if produto.categoria %}
+        <span class="mono-label text-nozzle" style="font-size: 0.625rem;">{{ produto.categoria }}</span>
+      {% endif %}
+      <a href="/produto/{{ produto.slug }}" style="text-decoration: none;">
+        <h4 class="linha-produto-title">{{ produto.nome }}</h4>
+      </a>
+      <div class="mono-label card-produto-specs" style="font-size: 0.6875rem;">
+        <span>{{ produto.material }}</span>
+        {% if produto.uso %}<span> · {{ produto.uso }}</span>{% endif %}
+      </div>
+    </div>
+
+    <div class="linha-produto-footer">
+      <div class="card-produto-price" style="font-size: 0.9375rem;">
+        {% if produto.preco and site.mostrarPrecos %}
+          R$ {{ "%.2f"|format(produto.preco)|replace('.', ',') }}
+        {% else %}
+          R$ [preço]
+        {% endif %}
+      </div>
+
+      <a href="/produto/{{ produto.slug }}" class="card-produto-btn-pedir" style="height: 28px; padding: 0 10px; font-size: 0.75rem;">
+        Pedir
+      </a>
+    </div>
+  </div>
+</article>
+{%- endmacro %}
+

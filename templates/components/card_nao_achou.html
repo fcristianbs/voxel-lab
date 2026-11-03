@@ -1,0 +1,24 @@
+<!-- Componente CardNaoAchou (CDU 3.4) -->
+{#
+  Exemplo de uso:
+  {{ card_nao_achou("/sob-medida") }}
+#}
+
+{% macro card_nao_achou(link_url="/sob-medida", extra_class='') -%}
+<div class="card-nao-achou {{ extra_class }}">
+  <div class="card-nao-achou-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+    </svg>
+  </div>
+  <div class="card-nao-achou-title">Não achou a peça?</div>
+  <p class="card-nao-achou-text">Mande a medida que a gente modela.</p>
+  <a href="{{ link_url }}" class="card-nao-achou-link">
+    <span>Orçar sob medida</span>
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+</div>
+{%- endmacro %}
+

@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+
+{% block title %}Voxel Lab · A peça que não existe na loja{% endblock %}
+{% block description %}Peças técnicas de engenharia, suportes Starlink, adaptadores, reposições, casa e gadgets em impressão 3D.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% from 'components/buttons.html' import botao_primario, botao_sob_medida %}
+{% from 'components/spec_tag.html' import spec_tag %}
+{% from 'components/card_produto.html' import card_produto %}
+
+{% block content %}
+<div class="vl-container">
+
+  <!-- ========================================================================
+       HERO SECTION (CDU01 / Referências 1_Inicio_celular.png e 5_Inicio_desktop.png)
+       ======================================================================== -->
+  <section class="hero-section">
+    <div class="hero-grid">
+      <!-- Coluna Esquerda: Textos e CTAs -->
+      <div class="hero-content">
+        <span class="mono-label hero-tag">IMPRESSÃO 3D · ENGENHARIA SOB MEDIDA</span>
+        
+        <h1 class="hero-title">
+          A peça que <span class="title-accent">não existe</span> na loja.
+        </h1>
+        
+        <p class="hero-subtitle">
+          Peças técnicas, gadgets, casa e action figures. Se não estiver no catálogo, a gente modela do zero e imprime para você.
+        </p>
+
+        <!-- Botões de Ação Principal -->
+        <div class="hero-actions">
+          {{ botao_primario("Ver catálogo", href="/catalogo", extra_class="btn-primario-lg") }}
+          {{ botao_sob_medida("Orçar sob medida", href="/sob-medida", outline=True, extra_class="btn-primario-lg") }}
+        </div>
+
+        <!-- Faixa Técnica com Parâmetros -->
+        <div class="hero-badges-row">
+          <div class="hero-badge-col">PETG · ASA · TPU</div>
+          <div class="hero-badge-col">Envio Brasil</div>
+          <div class="hero-badge-col">Orçamento 24h</div>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Box Gráfico com Malha de Voxel e Peça 3D (Desktop) -->
+      <div class="hero-graphic-box grid-bg">
+        <div class="hero-graphic-visual">
+          <!-- Ilustração do Extrusor + Voxel Cube 3D Oficial -->
+          <svg viewBox="0 0 120 130" width="120" height="130" fill="none" style="margin-top: -20px;" aria-hidden="true">
+            <!-- Bloco Aquecedor Ciano -->
+            <rect x="36" y="8" width="48" height="26" rx="2" fill="#33D1E0"/>
+            <!-- Bico Extrusor -->
+            <polygon points="48,34 72,34 64,48 56,48" fill="#1A9AA6"/>
+            <!-- Voxel / Filamento Extrudado em Laranja -->
+            <rect x="57" y="52" width="6" height="6" rx="1" fill="#FF6B2C"/>
+            <!-- Cubo Isométrico 3D em Camadas Laranja -->
+            <!-- Topo -->
+            <polygon points="60,66 86,81 60,96 34,81" fill="#FF8A50"/>
+            <!-- Lado Esquerdo -->
+            <polygon points="34,81 60,96 60,126 34,111" fill="#FF6B2C"/>
+            <!-- Lado Direito -->
+            <polygon points="60,96 86,81 86,111 60,126" fill="#C24A14"/>
+          </svg>
+
+          <div class="hero-graphic-caption">FOTO · PEÇA EM DESTAQUE, LUZ LATERAL</div>
+        </div>
+
+        <!-- Rodapé do Card Gráfico com SpecTag -->
+        <div class="hero-graphic-footer">
+          {{ spec_tag([
+            {'chave': 'MAT', 'valor': 'PETG-UV'},
+            {'chave': 'CAMADA', 'valor': '0,20 mm'}
+          ], extra_class='border-0') }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CATEGORIAS (CDU01 passo 3 / 2x2 no celular, 4 no desktop)
+       ======================================================================== -->
+  <section class="categories-section" id="categorias">
+    <div class="section-label-bar">
+      <span class="mono-label text-muted">CATEGORIAS</span>
+    </div>
+
+    <div class="categories-grid">
+      <!-- Engenharia -->
+      <a href="/categoria/engenharia" class="category-card" aria-label="Categoria Engenharia">
+        <div class="category-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="M4.93 4.93l1.41 1.41"></path>
+            <path d="M17.66 17.66l1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="M4.93 19.07l1.41-1.41"></path>
+            <path d="M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </div>
+        <div class="category-card-name">Engenharia</div>
+      </a>
+
+      <!-- Casa -->
+      <a href="/categoria/casa" class="category-card" aria-label="Categoria Casa">
+        <div class="category-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <div class="category-card-name">Casa</div>
+      </a>
+
+      <!-- Gadgets -->
+      <a href="/categoria/gadgets" class="category-card" aria-label="Categoria Gadgets">
+        <div class="category-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="category-card-name">Gadgets</div>
+      </a>
+
+      <!-- Figures -->
+      <a href="/categoria/figures" class="category-card" aria-label="Categoria Figures">
+        <div class="category-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M5.5 21a8.38 8.38 0 0 1 13 0"></path>
+            <line x1="12" y1="11" x2="12" y2="17"></line>
+            <line x1="9" y1="14" x2="15" y2="14"></line>
+          </svg>
+        </div>
+        <div class="category-card-name">Figures</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIS PEDIDOS (CDU01 passo 4 / RN09: 4 produtos com destaque: true)
+       ======================================================================== -->
+  <section class="mais-pedidos-section" id="mais-pedidos">
+    <div class="section-label-bar">
+      <span class="mono-label text-muted">MAIS PEDIDOS</span>
+      <a href="/catalogo" class="mono-label text-cad" style="text-decoration: none;">
+        <span class="desktop-only">Ver catálogo completo →</span>
+        <span class="mobile-only">Ver todos →</span>
+      </a>
+    </div>
+
+    <div class="mais-pedidos-grid">
+      {% for produto in mais_pedidos %}
+        {{ card_produto(produto) }}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BANNER SOB MEDIDA (CDU01 passo 5 / Moldura com Ciano e Etapas)
+       ======================================================================== -->
+  <section class="sob-medida-banner">
+    <div class="sob-medida-banner-inner">
+      <!-- Texto do Banner -->
+      <div class="sob-medida-banner-text">
+        <span class="mono-label text-cad">SOB MEDIDA</span>
+        <h2>Tem a medida? <span class="text-cad">A gente modela.</span></h2>
+      </div>
+
+      <!-- Etapas com barra superior (01 a 03 no mobile, 01 a 04 no desktop) -->
+      <div class="sob-medida-steps-row">
+        <div class="step-card">
+          <div class="step-card-num">01</div>
+          <div class="step-card-title">Foto e medidas</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card-num">02</div>
+          <div class="step-card-title">Orçamento</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card-num">03</div>
+          <div class="step-card-title">CAD para aprovar</div>
+        </div>
+
+        <div class="step-card step-orange">
+          <div class="step-card-num">04</div>
+          <div class="step-card-title">Impressão e envio</div>
+        </div>
+      </div>
+
+      <!-- CTA Botão -->
+      <div class="sob-medida-banner-cta">
+        {{ botao_sob_medida("Enviar minha medida", href="/sob-medida", extra_class="btn-primario-lg") }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       GUIA QUAL MATERIAL? (Referência 1_Inicio_celular.png)
+       ======================================================================== -->
+  <section class="materiais-guia-section">
+    <div class="section-label-bar">
+      <span class="mono-label text-muted">QUAL MATERIAL?</span>
+    </div>
+
+    <div class="materiais-tabela">
+      <div class="material-linha">
+        <div class="material-nome">PLA</div>
+        <div class="material-desc">Interno, decoração e figures</div>
+      </div>
+
+      <div class="material-linha">
+        <div class="material-nome text-nozzle">PETG</div>
+        <div class="material-desc">Externo, sol e chuva, peças técnicas</div>
+      </div>
+
+      <div class="material-linha">
+        <div class="material-nome">TPU</div>
+        <div class="material-desc">Flexível, amortece e veda</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+

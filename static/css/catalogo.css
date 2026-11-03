@@ -1,0 +1,362 @@
+/* ==========================================================================
+   VOXEL LAB — CATÁLOGO / CATEGORIA (CDU02)
+   Fidelidade visual a 6_Categoria_desktop.png e 2_Categoria_celular.png
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   BREADCRUMB
+   -------------------------------------------------------------------------- */
+.vl-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  padding: var(--space-4) 0 var(--space-2);
+}
+
+.vl-breadcrumb a {
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+
+.vl-breadcrumb a:hover {
+  color: var(--nozzle);
+}
+
+.vl-breadcrumb-sep {
+  color: var(--line);
+}
+
+/* --------------------------------------------------------------------------
+   CABEÇALHO DA CATEGORIA (COM MALHA DE VOXEL)
+   -------------------------------------------------------------------------- */
+.categoria-hero {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .categoria-hero {
+    padding: var(--space-6);
+  }
+}
+
+.categoria-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .categoria-hero-inner {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+}
+
+.categoria-hero-text {
+  max-width: 680px;
+}
+
+.categoria-hero-title {
+  margin-top: 4px;
+  margin-bottom: var(--space-2);
+  font-size: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+  .categoria-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+.categoria-hero-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.categoria-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.hero-spec-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   ESTRUTURA PRINCIPAL: SIDEBAR + GRID DE PRODUTOS
+   -------------------------------------------------------------------------- */
+.catalogo-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .catalogo-layout {
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-5);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR DE FILTROS (DESKTOP)
+   -------------------------------------------------------------------------- */
+.catalogo-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (max-width: 1023px) {
+  .catalogo-sidebar-desktop {
+    display: none;
+  }
+}
+
+.filtro-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filtro-titulo {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+}
+
+.filtro-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Checkbox e Radio Customizados com Design Tokens */
+.filtro-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink);
+  cursor: pointer;
+  user-select: none;
+}
+
+.filtro-label:hover {
+  color: var(--nozzle);
+}
+
+.filtro-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.filtro-input:checked {
+  background-color: var(--nozzle-soft);
+  border-color: var(--nozzle);
+}
+
+.filtro-input:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--nozzle);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Radio button */
+.filtro-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filtro-input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--nozzle);
+  border-radius: 50%;
+  border: none;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   BARRA DE CHIPS NO MOBILE (HORIZONTAL SCROLL)
+   -------------------------------------------------------------------------- */
+.mobile-subcategorias-scroll {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-3);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-bottom: var(--space-3);
+}
+
+.mobile-subcategorias-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mobile-subcategorias-scroll {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TOPO DA ÁREA DE CONTEÚDO (CHIPS ATIVOS + ORDENAÇÃO)
+   -------------------------------------------------------------------------- */
+.catalogo-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+  min-height: 40px;
+}
+
+.catalogo-chips-ativos {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.catalogo-ordenacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.catalogo-ordenacao-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.catalogo-select {
+  height: 36px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  padding: 0 28px 0 10px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238C99A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   GRADE DE PRODUTOS DO CATÁLOGO
+   -------------------------------------------------------------------------- */
+.catalogo-produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .catalogo-produtos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalogo-produtos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+/* Estado vazio quando nenhum produto bate com os filtros */
+.catalogo-empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  grid-column: 1 / -1;
+  gap: var(--space-3);
+}
+
+.catalogo-empty-state.visible {
+  display: flex;
+}
+
+.catalogo-empty-state p {
+  color: var(--ink-muted);
+  max-width: 420px;
+}
+
+/* Rodapé do Catálogo com Contador */
+.catalogo-footer-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+}
+

@@ -1,0 +1,990 @@
+/* ==========================================================================
+   VOXEL LAB — COMPONENTES DO DESIGN SYSTEM (FASE 1)
+   Conforme especificações da Seção 3 e Seção 7 do CDU
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HEADER (.vl-header)
+   Desktop: 72px, Mobile: 64px
+   Logo (ícone 28px + "VOXEL LAB", "LAB" em laranja)
+   Links: Engenharia, Casa, Gadgets, Figures, Sob medida (em ciano)
+   Campo de busca e botão WhatsApp em laranja
+   -------------------------------------------------------------------------- */
+
+.vl-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(12, 16, 20, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  height: 64px;
+}
+
+@media (min-width: 1024px) {
+  .vl-header {
+    height: 72px;
+  }
+}
+
+.vl-header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.vl-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.vl-logo img, .vl-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+.vl-logo-lab {
+  color: var(--nozzle);
+}
+
+.vl-nav {
+  display: none;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .vl-nav {
+    display: flex;
+  }
+}
+
+.vl-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  position: relative;
+  padding: 6px 0;
+}
+
+.vl-nav-link:hover {
+  color: var(--nozzle);
+}
+
+.vl-nav-link.active {
+  color: var(--nozzle);
+}
+
+.vl-nav-link.nav-sob-medida {
+  color: var(--cad);
+}
+
+.vl-nav-link.nav-sob-medida:hover {
+  color: var(--cad-hover);
+}
+
+.vl-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Campo de busca no header */
+.vl-search-form {
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .vl-search-form {
+    display: block;
+    width: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vl-search-form {
+    width: 260px;
+  }
+}
+
+.vl-search-input {
+  width: 100%;
+  height: 38px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0 12px 0 34px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+
+.vl-search-input::placeholder {
+  color: var(--ink-muted);
+}
+
+.vl-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+
+.vl-header-btn-whatsapp {
+  height: 38px;
+  padding: 0 16px;
+  background-color: var(--nozzle);
+  color: var(--on-nozzle);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: var(--radius-sm);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.vl-header-btn-whatsapp:hover {
+  background-color: var(--nozzle-hover);
+}
+
+@media (min-width: 768px) {
+  .vl-header-btn-whatsapp {
+    display: inline-flex;
+  }
+}
+
+/* Ações mobile: botão de busca e hambúrguer */
+.vl-mobile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .vl-mobile-btn {
+    display: none;
+  }
+}
+
+/* Gaveta do menu mobile */
+.vl-mobile-drawer {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  padding: var(--space-4) var(--space-4) calc(var(--space-6) + 52px);
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.vl-mobile-drawer.open {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.vl-mobile-drawer-search {
+  margin-bottom: var(--space-2);
+}
+
+.vl-mobile-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.vl-mobile-drawer-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.vl-mobile-drawer-link.nav-sob-medida {
+  color: var(--cad);
+}
+
+/* --------------------------------------------------------------------------
+   2. FOOTER (.vl-footer)
+   @voxellab.3d · Enviamos para todo o Brasil
+   Mercado Livre · Instagram · WhatsApp
+   -------------------------------------------------------------------------- */
+
+.vl-footer {
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  .vl-footer {
+    padding-bottom: calc(var(--space-5) + 56px); /* Espaço para barra fixa */
+  }
+}
+
+.vl-footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+}
+
+@media (min-width: 768px) {
+  .vl-footer-inner {
+    flex-direction: row;
+  }
+}
+
+.vl-footer-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vl-footer-links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+
+.vl-footer-links a:hover {
+  color: var(--nozzle);
+}
+
+/* --------------------------------------------------------------------------
+   3. BOTÃO PRIMÁRIO (.btn-primario)
+   48–54px de altura, fundo --nozzle, texto --on-nozzle 600, border-radius 2px
+   -------------------------------------------------------------------------- */
+
+.btn-primario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  height: 48px;
+  padding: 0 var(--space-4);
+  background-color: var(--nozzle);
+  color: var(--on-nozzle);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primario:hover {
+  background-color: var(--nozzle-hover);
+  border-color: var(--nozzle-hover);
+}
+
+.btn-primario:active {
+  transform: scale(0.99);
+}
+
+.btn-primario-lg {
+  min-height: 52px;
+  height: 52px;
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTÃO SOB MEDIDA (.btn-sob-medida)
+   Fundo --cad (ou contorno --cad), texto --on-cad
+   -------------------------------------------------------------------------- */
+
+.btn-sob-medida {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  height: 48px;
+  padding: 0 var(--space-4);
+  background-color: var(--cad);
+  color: var(--on-cad);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: 1px solid var(--cad);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-sob-medida:hover {
+  background-color: var(--cad-hover);
+  border-color: var(--cad-hover);
+}
+
+.btn-sob-medida-outline {
+  background-color: transparent;
+  color: var(--cad);
+  border: 1px solid var(--cad);
+}
+
+.btn-sob-medida-outline:hover {
+  background-color: var(--cad-soft);
+  color: var(--cad-hover);
+  border-color: var(--cad-hover);
+}
+
+/* --------------------------------------------------------------------------
+   5. SPEC TAG (.spec-tag)
+   Pares chave/valor em mono, separados por linhas de 1px
+   ex: MAT PETG-UV │ CAMADA 0,20 mm
+   -------------------------------------------------------------------------- */
+
+.spec-tag-group {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  background-color: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.spec-tag-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-right: 1px solid var(--line);
+}
+
+.spec-tag-item:last-child {
+  border-right: none;
+}
+
+.spec-tag-key {
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.spec-tag-val {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   6. CHIP / FILTRO ATIVO (.vl-chip)
+   36–40px de altura; filtro ativo com fundo --nozzle-soft e "×" para remover
+   -------------------------------------------------------------------------- */
+
+.vl-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0 14px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.vl-chip:hover {
+  border-color: var(--ink-muted);
+}
+
+.vl-chip.active {
+  background-color: var(--nozzle-soft);
+  border-color: var(--nozzle);
+  color: var(--nozzle);
+}
+
+.vl-chip.active-cad {
+  background-color: var(--cad-soft);
+  border-color: var(--cad);
+  color: var(--cad);
+}
+
+.vl-chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: inherit;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   7. CARD PRODUTO (.card-produto)
+   Foto 1:1 com malha, selo opcional, nome, linha técnica em mono,
+   preço em Unbounded laranja e botão "Pedir" contornado
+   -------------------------------------------------------------------------- */
+
+.card-produto {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.card-produto:hover {
+  border-color: var(--nozzle);
+}
+
+.card-produto-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.card-produto-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background-color: var(--nozzle-soft);
+  color: var(--nozzle);
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  padding: 3px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-produto-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--ink-muted);
+}
+
+.card-produto-placeholder svg {
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.card-produto-placeholder-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.card-produto-watermark {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.card-produto-content {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 6px;
+}
+
+.card-produto-category {
+  color: var(--nozzle);
+}
+
+.card-produto-title {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.card-produto-specs {
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.card-produto-footer {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.card-produto-price {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--nozzle);
+  letter-spacing: -0.02em;
+}
+
+.card-produto-btn-pedir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  background-color: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.card-produto:hover .card-produto-btn-pedir {
+  border-color: var(--nozzle);
+  color: var(--nozzle);
+}
+
+/* --------------------------------------------------------------------------
+   8. LINHA PRODUTO (.linha-produto)
+   Variação em lista para celular: miniatura de 104px + texto
+   -------------------------------------------------------------------------- */
+
+.linha-produto {
+  display: flex;
+  align-items: stretch;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  text-decoration: none;
+  gap: var(--space-3);
+}
+
+.linha-produto:hover {
+  border-color: var(--nozzle);
+}
+
+.linha-produto-img-wrap {
+  width: 104px;
+  min-width: 104px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+
+.linha-produto-content {
+  padding: var(--space-2) var(--space-3) var(--space-2) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.linha-produto-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.linha-produto-title {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.linha-produto-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   9. FICHA TÉCNICA (.ficha-tecnica)
+   Tabela de 2 colunas em mono, com borda --line e fundo --surface-raised
+   -------------------------------------------------------------------------- */
+
+.ficha-tecnica-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.ficha-tecnica-table tr {
+  border-bottom: 1px solid var(--line);
+}
+
+.ficha-tecnica-table tr:last-child {
+  border-bottom: none;
+}
+
+.ficha-tecnica-table th {
+  padding: 10px 14px;
+  text-align: left;
+  color: var(--ink-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  width: 40%;
+  border-right: 1px solid var(--line);
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+.ficha-tecnica-table td {
+  padding: 10px 14px;
+  text-align: right;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   10. SELETOR DE OPÇÃO (.seletor-opcao)
+   Botões de 44px. Selecionado: borda e texto --nozzle com fundo --nozzle-soft
+   A opção "Outra medida" é tracejada em ciano e leva a /sob-medida?ref=slug
+   -------------------------------------------------------------------------- */
+
+.seletor-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.seletor-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.seletor-opcoes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.opcao-btn {
+  height: 44px;
+  min-height: 44px;
+  padding: 0 16px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.opcao-btn:hover {
+  border-color: var(--ink-muted);
+}
+
+.opcao-btn.selected {
+  background-color: var(--nozzle-soft);
+  border-color: var(--nozzle);
+  color: var(--nozzle);
+}
+
+.opcao-btn.opcao-outra-medida {
+  background-color: transparent;
+  border: 1px dashed var(--cad);
+  color: var(--cad);
+}
+
+.opcao-btn.opcao-outra-medida:hover {
+  background-color: var(--cad-soft);
+  border-style: solid;
+}
+
+/* --------------------------------------------------------------------------
+   11. SELETOR DE COR (.seletor-cor)
+   Círculos de 36px; o selecionado ganha anel laranja --nozzle
+   -------------------------------------------------------------------------- */
+
+.seletor-cores-lista {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cor-swatch {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.cor-swatch-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cor-swatch.selected {
+  border-color: var(--nozzle);
+}
+
+/* --------------------------------------------------------------------------
+   12. CARD NÃO ACHOU (.card-nao-achou)
+   Bloco --cad-soft com borda ciano:
+   "Não achou a peça? Mande a medida que a gente modela."
+   -------------------------------------------------------------------------- */
+
+.card-nao-achou {
+  background-color: var(--cad-soft);
+  border: 1px solid var(--cad);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card-nao-achou-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--cad);
+}
+
+.card-nao-achou-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.card-nao-achou-text {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.card-nao-achou-link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cad);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.card-nao-achou-link:hover {
+  color: var(--cad-hover);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   13. ETAPAS SOB MEDIDA (.etapas-sob-medida)
+   Etapas 01–04 com barra superior de 3px:
+   as três primeiras em ciano e a última em laranja
+   -------------------------------------------------------------------------- */
+
+.etapas-sob-medida-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .etapas-sob-medida-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .etapas-sob-medida-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.etapa-item {
+  position: relative;
+  padding-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.etapa-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--cad);
+}
+
+.etapa-item.etapa-orange::before {
+  background-color: var(--nozzle);
+}
+
+.etapa-num {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cad);
+  letter-spacing: -0.02em;
+}
+
+.etapa-item.etapa-orange .etapa-num {
+  color: var(--nozzle);
+}
+
+.etapa-title {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.etapa-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   14. BARRA WHATSAPP FIXA (.barra-whatsapp-fixa)
+   Só no celular: fixa no rodapé, 52px, "Pedir pelo WhatsApp",
+   respeitando env(safe-area-inset-bottom)
+   -------------------------------------------------------------------------- */
+
+.barra-whatsapp-fixa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 95;
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .barra-whatsapp-fixa {
+    display: none !important;
+  }
+}
+
+.barra-whatsapp-fixa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  height: 52px;
+  background-color: var(--nozzle);
+  color: var(--on-nozzle);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.barra-whatsapp-fixa-btn:active {
+  background-color: var(--nozzle-hover);
+}
+
+.barra-whatsapp-fixa-btn svg {
+  width: 20px;
+  height: 20px;
+}
+

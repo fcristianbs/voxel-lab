@@ -1,0 +1,489 @@
+{% extends 'base.html' %}
+
+{% block title %}Design System & Styleguide · Voxel Lab{% endblock %}
+{% block description %}Guia de estilos e catálogo de componentes oficiais da Voxel Lab.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleguide.css') }}">
+{% endblock %}
+
+{% from 'components/buttons.html' import botao_primario, botao_sob_medida %}
+{% from 'components/spec_tag.html' import spec_tag %}
+{% from 'components/chip.html' import chip %}
+{% from 'components/card_produto.html' import card_produto %}
+{% from 'components/linha_produto.html' import linha_produto %}
+{% from 'components/ficha_tecnica.html' import ficha_tecnica %}
+{% from 'components/seletores.html' import seletor_opcao, seletor_cor %}
+{% from 'components/card_nao_achou.html' import card_nao_achou %}
+{% from 'components/etapas_sob_medida.html' import etapas_sob_medida %}
+
+{% block content %}
+<div class="vl-container">
+
+  <!-- Hero do Styleguide -->
+  <section class="sg-hero grid-bg-surface" style="padding: 40px 24px; border-radius: var(--radius-sm); margin-top: var(--space-4);">
+    <span class="sg-badge">VOXEL LAB DESIGN SYSTEM · V1.0</span>
+    <h1 style="margin-top: 8px;">Design System & Styleguide</h1>
+    <p style="color: var(--ink-muted); margin-top: 12px; max-width: 700px; font-size: 1.125rem;">
+      Documentação viva e interativa dos design tokens e dos 14 componentes base para o catálogo online da <strong>VOXEL LAB</strong>, construído com <strong>Python Flask</strong> e <strong>Vanilla JS</strong>.
+    </p>
+  </section>
+
+  <!-- SEÇÃO 1: TOKENS DE COR -->
+  <section class="sg-section" id="tokens-cores">
+    <div class="sg-section-header">
+      <span class="mono-label text-nozzle">01 · IDENTIDADE VISUAL</span>
+      <h2 class="sg-section-title">Tokens de Cores</h2>
+      <p class="sg-section-desc">Valores exatos de <code>design-tokens.json</code> convertidos em variáveis CSS <code>:root</code>.</p>
+    </div>
+
+    <div class="sg-color-grid">
+      <!-- Surface -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--surface); border-bottom: 1px solid var(--line);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--surface</div>
+          <div class="sg-color-hex">#0C1014</div>
+          <div class="sg-color-role">Fundo padrão grafite</div>
+        </div>
+      </div>
+
+      <!-- Surface Raised -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--surface-raised); border-bottom: 1px solid var(--line);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--surface-raised</div>
+          <div class="sg-color-hex">#151B22</div>
+          <div class="sg-color-role">Cartões e painéis</div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--grid); border-bottom: 1px solid var(--line);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--grid</div>
+          <div class="sg-color-hex">#1C242D</div>
+          <div class="sg-color-role">Linhas da malha (16px)</div>
+        </div>
+      </div>
+
+      <!-- Line -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--line);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--line</div>
+          <div class="sg-color-hex">#2A343F</div>
+          <div class="sg-color-role">Bordas e divisórias</div>
+        </div>
+      </div>
+
+      <!-- Ink -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--ink);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--ink</div>
+          <div class="sg-color-hex">#E8EDF2</div>
+          <div class="sg-color-role">Texto principal</div>
+        </div>
+      </div>
+
+      <!-- Ink Muted -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--ink-muted);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--ink-muted</div>
+          <div class="sg-color-hex">#8C99A6</div>
+          <div class="sg-color-role">Texto secundário/mono</div>
+        </div>
+      </div>
+
+      <!-- Nozzle -->
+      <div class="sg-color-card" style="border-color: var(--nozzle);">
+        <div class="sg-color-swatch" style="background-color: var(--nozzle);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name text-nozzle">--nozzle</div>
+          <div class="sg-color-hex">#FF6B2C</div>
+          <div class="sg-color-role">Laranja Bico Quente (CTA/Preço)</div>
+        </div>
+      </div>
+
+      <!-- Nozzle Soft -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--nozzle-soft);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--nozzle-soft</div>
+          <div class="sg-color-hex">#3A1A0B</div>
+          <div class="sg-color-role">Fundo de selo/filtro ativo</div>
+        </div>
+      </div>
+
+      <!-- CAD -->
+      <div class="sg-color-card" style="border-color: var(--cad);">
+        <div class="sg-color-swatch" style="background-color: var(--cad);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name text-cad">--cad</div>
+          <div class="sg-color-hex">#33D1E0</div>
+          <div class="sg-color-role">Ciano CAD (Sob medida/Projeto)</div>
+        </div>
+      </div>
+
+      <!-- CAD Soft -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--cad-soft);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name">--cad-soft</div>
+          <div class="sg-color-hex">#0B2D33</div>
+          <div class="sg-color-role">Fundo sob medida</div>
+        </div>
+      </div>
+
+      <!-- OK -->
+      <div class="sg-color-card">
+        <div class="sg-color-swatch" style="background-color: var(--ok);"></div>
+        <div class="sg-color-info">
+          <div class="sg-color-name" style="color: var(--ok);">--ok</div>
+          <div class="sg-color-hex">#7BD88F</div>
+          <div class="sg-color-role">Status de envio/sucesso</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: TIPOGRAFIA -->
+  <section class="sg-section" id="tokens-tipografia">
+    <div class="sg-section-header">
+      <span class="mono-label text-nozzle">02 · TIPOGRAFIA</span>
+      <h2 class="sg-section-title">Famílias e Escalas</h2>
+      <p class="sg-section-desc">Fontes oficiais via Google Fonts (Unbounded, IBM Plex Sans, IBM Plex Mono).</p>
+    </div>
+
+    <div class="sg-component-box">
+      <div class="sg-component-title">Display: Unbounded (600, 700) — Títulos e Preços</div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div>
+          <div class="mono-label text-muted" style="margin-bottom: 4px;">Display H1 (56px Desktop / 34px Mobile)</div>
+          <h1 style="margin: 0;">A peça que <span class="text-nozzle">não existe</span> na loja.</h1>
+        </div>
+        <div>
+          <div class="mono-label text-muted" style="margin-bottom: 4px;">Display H2 (30px Desktop / 24px Mobile)</div>
+          <h2 style="margin: 0;">Tem a medida? <span class="text-cad">A gente modela.</span></h2>
+        </div>
+        <div>
+          <div class="mono-label text-muted" style="margin-bottom: 4px;">Preço em Unbounded Laranja</div>
+          <div class="price-text" style="font-size: 2rem;">R$ [preço]</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-component-box">
+      <div class="sg-component-title">Texto: IBM Plex Sans (400, 500, 600) — Corpo e Botões</div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <p style="font-size: 1.125rem; color: var(--ink);">
+          <strong>Subtítulo (Lead 500):</strong> Peças técnicas, gadgets, casa e action figures. Se não estiver no catálogo, a gente modela do zero e imprime para você.
+        </p>
+        <p style="font-size: 0.9375rem; color: var(--ink-muted);">
+          <strong>Corpo (Body 400):</strong> Feito em PETG com proteção UV, para ficar no sol e na chuva sem deformar. Todas as peças passam por controle dimensional rigoroso.
+        </p>
+      </div>
+    </div>
+
+    <div class="sg-component-box">
+      <div class="sg-component-title">Técnico: IBM Plex Mono (500, 600) — Rótulos, Specs e Cotas</div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div>
+          <span class="mono-label text-nozzle">Rótulo em Caixa-Alta (.mono-label, letter-spacing .12em, 11px):</span>
+          <div class="mono-label" style="margin-top: 4px;">IMPRESSÃO 3D · ENGENHARIA SOB MEDIDA · STARLINK</div>
+        </div>
+        <div>
+          <span class="mono-label text-muted">Parâmetros Técnicos (.mono-spec):</span>
+          <div class="mono-spec" style="margin-top: 4px;">PETG-UV · 0,20 mm · 40% gyroid · 100% infill nas abas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: REGRAS VISUAIS INEGOCIÁVEIS -->
+  <section class="sg-section" id="regras-visuais">
+    <div class="sg-section-header">
+      <span class="mono-label text-nozzle">03 · DIRETRIZES DA MARCA</span>
+      <h2 class="sg-section-title">Regras Visuais Inegociáveis</h2>
+      <p class="sg-section-desc">Cantos de 2px, sem sombras, sem gradientes, foco acessível e malha de voxel.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4);">
+      <!-- Regra 1: Malha de Voxel -->
+      <div class="sg-component-box" style="margin-bottom: 0;">
+        <div class="sg-component-title">Malha de Voxel (.grid-bg)</div>
+        <div class="grid-bg" style="height: 120px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;">
+          <span class="mono-label" style="background: var(--surface-raised); padding: 6px 10px; border: 1px solid var(--line);">
+            Linhas 1px #1C242D a cada 16px
+          </span>
+        </div>
+      </div>
+
+      <!-- Regra 2: Cantos de 2px e Sem Sombras -->
+      <div class="sg-component-box" style="margin-bottom: 0;">
+        <div class="sg-component-title">Cantos Vivos de 2px (--radius-sm)</div>
+        <div style="display: flex; gap: 12px; align-items: center; height: 120px;">
+          <div style="flex: 1; height: 60px; background-color: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.8125rem;">
+            border-radius: 2px
+          </div>
+          <div style="flex: 1; height: 60px; background-color: var(--nozzle-soft); border: 1px solid var(--nozzle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.8125rem; color: var(--nozzle);">
+            Sem sombras / flat
+          </div>
+        </div>
+      </div>
+
+      <!-- Regra 3: Foco Visível Acessível -->
+      <div class="sg-component-box" style="margin-bottom: 0;">
+        <div class="sg-component-title">Foco de Teclado (Anel Ciano)</div>
+        <div style="display: flex; align-items: center; justify-content: center; height: 120px;">
+          <button type="button" class="btn-primario" style="box-shadow: var(--focus-ring);" aria-label="Exemplo de foco">
+            Foco Simulado
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: COMPONENTES BASE (14 COMPONENTES) -->
+  <section class="sg-section" id="componentes-base">
+    <div class="sg-section-header">
+      <span class="mono-label text-nozzle">04 · CATÁLOGO DE COMPONENTES</span>
+      <h2 class="sg-section-title">Os 14 Componentes Base</h2>
+      <p class="sg-section-desc">Componentes modulares prontos para consumo nas páginas do catálogo.</p>
+    </div>
+
+    <!-- 1 & 2: Header e Footer já demonstrados na página -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">01 & 02 · Header e Footer Globais</div>
+      <p style="font-size: 0.875rem; color: var(--ink-muted); margin-bottom: 12px;">
+        O <strong>Header</strong> oficial (com logotipo SVG, busca, navegação desktop e menu responsivo) e o <strong>Footer</strong> (com @voxellab.3d e links) estão integrados globalmente nesta página.
+      </p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span class="mono-label text-ok">✔ Header com Logo SVG & Menu Mobile</span>
+        <span class="mono-label text-ok">✔ Footer com Safe-Area</span>
+      </div>
+    </div>
+
+    <!-- 3 & 4: Botões -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">03 & 04 · BotaoPrimario & BotaoSobMedida</div>
+      <div class="sg-component-preview">
+        {{ botao_primario("Ver catálogo", href="#") }}
+        {{ botao_primario("Pedir pelo WhatsApp (Grande)", is_large=True) }}
+        {{ botao_sob_medida("Orçar sob medida", outline=True) }}
+        {{ botao_sob_medida("Enviar minha medida (Sólido)") }}
+      </div>
+    </div>
+
+    <!-- 5: SpecTag -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">05 · SpecTag (Pares chave/valor em mono)</div>
+      <div class="sg-component-preview-col">
+        <div>
+          {{ spec_tag([
+            {'chave': 'MAT', 'valor': 'PETG-UV'},
+            {'chave': 'CAMADA', 'valor': '0,20 mm'}
+          ]) }}
+        </div>
+        <div>
+          {{ spec_tag([
+            {'chave': 'PETG · ASA · TPU', 'valor': ''},
+            {'chave': 'Envio Brasil', 'valor': ''},
+            {'chave': 'Orçamento 24h', 'valor': ''}
+          ]) }}
+        </div>
+      </div>
+    </div>
+
+    <!-- 6: Chip & FiltroAtivo -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">06 · Chip & FiltroAtivo (38px de altura)</div>
+      <div class="sg-component-preview">
+        {{ chip("Todos", active=False) }}
+        {{ chip("Starlink", active=True, removable=True) }}
+        {{ chip("PETG", active=True, removable=True) }}
+        {{ chip("Externo", active=True, removable=True) }}
+        {{ chip("Sob Medida", active=True, is_cad=True) }}
+        {{ chip("Clique para Alternar", extra_class="vl-chip-interactive") }}
+      </div>
+    </div>
+
+    <!-- 7: CardProduto -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">07 · CardProduto (Foto 1:1, Voxel Grid, Badge, Preço Unbounded)</div>
+      <div class="sg-cards-grid">
+        {{ card_produto({
+          'slug': 'suporte-starlink-mini-tubo-1',
+          'nome': 'Suporte Starlink Mini · Tubo 1"',
+          'categoria': 'ENGENHARIA',
+          'material': 'PETG-UV',
+          'uso': 'externo',
+          'specs_resumo': '40% gyroid',
+          'preco': None,
+          'selo': 'MAIS VENDIDO'
+        }) }}
+
+        {{ card_produto({
+          'slug': 'suporte-headset-mesa',
+          'nome': 'Suporte de headset · Mesa',
+          'categoria': 'GADGETS',
+          'material': 'PLA',
+          'uso': 'interno',
+          'preco': 89.90,
+          'selo': 'NOVO'
+        }) }}
+      </div>
+    </div>
+
+    <!-- 8: LinhaProduto (Mobile) -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">08 · LinhaProduto (Variação em lista com miniatura de 104px)</div>
+      <div style="max-width: 480px; display: flex; flex-direction: column; gap: 12px;">
+        {{ linha_produto({
+          'slug': 'organizador-cabos-kit6',
+          'nome': 'Organizador de cabos · Kit 6',
+          'categoria': 'CASA',
+          'material': 'TPU',
+          'uso': 'interno',
+          'preco': None
+        }) }}
+
+        {{ linha_produto({
+          'slug': 'adaptador-mangueira-3-4-1-2',
+          'nome': 'Adaptador de mangueira 3/4" → 1/2"',
+          'categoria': 'ENGENHARIA',
+          'material': 'PETG',
+          'uso': 'externo',
+          'preco': 35.00
+        }) }}
+      </div>
+    </div>
+
+    <!-- 9: FichaTecnica -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">09 · FichaTecnica (Tabela 2 colunas em mono)</div>
+      <div style="max-width: 520px;">
+        {{ ficha_tecnica([
+          {'chave': 'MATERIAL', 'valor': 'PETG-UV'},
+          {'chave': 'CAMADA', 'valor': '0,20 mm'},
+          {'chave': 'PREENCHIMENTO', 'valor': '40% gyroid'},
+          {'chave': 'USO', 'valor': 'Externo, sol e chuva'},
+          {'chave': 'COMPATÍVEL', 'valor': 'Starlink Mini'},
+          {'chave': 'ACOMPANHA', 'valor': '[parafusos/abraçadeira]'},
+          {'chave': 'PRAZO', 'valor': '[n] dias úteis'}
+        ]) }}
+      </div>
+    </div>
+
+    <!-- 10 & 11: SeletorOpcao e SeletorCor (Interativo!) -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">10 & 11 · SeletorOpcao (44px) & SeletorCor (36px com anel laranja)</div>
+      <div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 520px;">
+        <!-- Seletor 1 -->
+        {{ seletor_opcao("ANTENA", ["Mini", "Standard", "Gen 3"], padrao="Mini") }}
+
+        <!-- Seletor 2 com Outra Medida (Tracejado Ciano) -->
+        {{ seletor_opcao("DIÂMETRO DO TUBO", ["3/4\"", "1\"", "1 1/4\""], padrao="1\"", permite_outra_medida=True, slug_produto="suporte-starlink-mini-tubo-1") }}
+
+        <!-- Seletor de Cores -->
+        {{ seletor_cor([
+          {'nome': 'Preto fosco', 'hex': '#111111', 'padrao': True},
+          {'nome': 'Cinza', 'hex': '#6B7280'},
+          {'nome': 'Branco', 'hex': '#E8EDF2'}
+        ]) }}
+
+        <!-- Prévia ao vivo da mensagem gerada (CDU 3.4 / 6.1) -->
+        <div style="background-color: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px;">
+          <div class="mono-label text-muted" style="margin-bottom: 6px;">Prévia da Mensagem (Live Demo):</div>
+          <div id="sg-demo-msg" class="font-mono" style="font-size: 0.8125rem; color: var(--ink);">
+            Mensagem: "Quero o Suporte Starlink Mini · Tubo 1" · Preto fosco"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12: CardNaoAchou -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">12 · CardNaoAchou (Bloco --cad-soft com borda ciano)</div>
+      <div style="max-width: 380px;">
+        {{ card_nao_achou("/sob-medida") }}
+      </div>
+    </div>
+
+    <!-- 13: EtapasSobMedida -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">13 · EtapasSobMedida (Barras 3px: 3 em Ciano + 1 em Laranja)</div>
+      <div>
+        {{ etapas_sob_medida() }}
+      </div>
+    </div>
+
+    <!-- 14: BarraWhatsAppFixa (Simulação Mobile) -->
+    <div class="sg-component-box">
+      <div class="sg-component-title">14 · BarraWhatsAppFixa (Exibição Mobile com Safe-Area)</div>
+      <p style="font-size: 0.875rem; color: var(--ink-muted); margin-bottom: 12px;">
+        Em telas mobile (&lt; 768px), ela se fixa automaticamente na parte inferior da tela. Abaixo está uma simulação dentro do frame de 390px:
+      </p>
+      <div class="sg-mobile-frame">
+        <div class="sg-mobile-header">
+          <span>TELA CELULAR (390px)</span>
+          <span>SAFE-AREA ATIVA</span>
+        </div>
+        <div style="padding: 24px 16px 80px 16px;">
+          <h3 style="font-size: 1rem;">Visão do cliente no celular</h3>
+          <p style="font-size: 0.8125rem; color: var(--ink-muted); margin-top: 8px;">
+            A barra de CTA fica sempre visível no rodapé, permitindo fechar o pedido no WhatsApp com um único toque.
+          </p>
+        </div>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--line); padding: 8px 12px;">
+          <a href="{{ site_whatsapp_url }}" class="barra-whatsapp-fixa-btn" style="height: 48px; font-size: 0.875rem;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>Pedir pelo WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Script para atualizar a prévia de mensagem interativa no Styleguide
+  document.addEventListener('DOMContentLoaded', () => {
+    let selectedAntena = "Mini";
+    let selectedTubo = '1"';
+    let selectedCor = "Preto fosco";
+
+    const msgDisplay = document.getElementById('sg-demo-msg');
+
+    function updateMsg() {
+      if (msgDisplay) {
+        msgDisplay.textContent = `Mensagem: "Quero o Suporte Starlink Mini · Tubo ${selectedTubo} · ${selectedCor}"`;
+      }
+    }
+
+    document.addEventListener('vl:change', (e) => {
+      if (e.detail.groupName === 'ANTENA') {
+        selectedAntena = e.detail.value;
+      } else if (e.detail.groupName === 'DIÂMETRO DO TUBO') {
+        selectedTubo = e.detail.value;
+      }
+      updateMsg();
+    });
+
+    document.addEventListener('vl:color-change', (e) => {
+      selectedCor = e.detail.color;
+      updateMsg();
+    });
+  });
+</script>
+{% endblock %}
+

@@ -1,0 +1,55 @@
+<!-- Componentes de Seleção (CDU 3.4) -->
+
+{# Seletor de Opções (ex: Antena, Diâmetro) #}
+{% macro seletor_opcao(nome, opcoes, padrao=None, permite_outra_medida=False, slug_produto='', extra_class='') -%}
+<div class="seletor-grupo seletor-grupo-opcoes {{ extra_class }}" data-group="{{ nome }}">
+  <div class="seletor-label">{{ nome }}</div>
+  <div class="seletor-opcoes-lista">
+    {% for op in opcoes %}
+      <button type="button"
+              class="opcao-btn {% if op == padrao %}selected{% endif %}"
+              data-value="{{ op }}">
+        {{ op }}
+      </button>
+    {% endfor %}
+
+    {% if permite_outra_medida %}
+      <a href="/sob-medida{% if slug_produto %}?ref={{ slug_produto }}{% endif %}"
+         class="opcao-btn opcao-outra-medida"
+         title="Pedir medida customizada">
+        Outra medida
+      </a>
+    {% endif %}
+  </div>
+</div>
+{%- endmacro %}
+
+{# Seletor de Cores com amostras circulares de 36px #}
+{% macro seletor_cor(cores, extra_class='') -%}
+{% set default_cor = None %}
+{% for c in cores %}
+  {% if c.padrao or loop.first and not default_cor %}
+    {% set default_cor = c %}
+  {% endif %}
+{% endfor %}
+
+<div class="seletor-grupo seletor-grupo-cores {{ extra_class }}">
+  <div class="seletor-label">
+    COR · <span class="cor-nome-selecionada" style="color: var(--ink);">{{ (default_cor.nome if default_cor else cores[0].nome)|upper }}</span>
+  </div>
+  <div class="seletor-cores-lista">
+    {% for c in cores %}
+      {% set is_sel = (c.padrao or (loop.first and not default_cor)) %}
+      <button type="button"
+              class="cor-swatch {% if is_sel %}selected{% endif %}"
+              data-nome="{{ c.nome }}"
+              data-hex="{{ c.hex }}"
+              aria-label="Cor {{ c.nome }}"
+              title="{{ c.nome }}">
+        <span class="cor-swatch-inner" style="background-color: {{ c.hex }};"></span>
+      </button>
+    {% endfor %}
+  </div>
+</div>
+{%- endmacro %}
+

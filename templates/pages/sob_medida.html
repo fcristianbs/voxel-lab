@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+
+{% block title %}Orçamento Sob Medida · Do CAD à Peça · {{ site.nome }}{% endblock %}
+{% block description %}Peça quebrada, suporte que não existe ou adaptador especial: mande foto e medidas para modelarmos em CAD e imprimirmos para você.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sob_medida.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="vl-container">
+
+  <!-- ========================================================================
+       BREADCRUMB
+       ======================================================================== -->
+  <nav class="vl-breadcrumb" aria-label="Trilha de navegação">
+    <a href="/">Início</a>
+    <span class="vl-breadcrumb-sep">/</span>
+    <span class="text-cad">Sob medida</span>
+  </nav>
+
+  <!-- ========================================================================
+       GRID PRINCIPAL (APRESENTAÇÃO + FORMULÁRIO)
+       ======================================================================== -->
+  <div class="sob-medida-page-grid">
+
+    <!-- COLUNA DA ESQUERDA: APRESENTAÇÃO E ETAPAS -->
+    <div class="sob-medida-apresentacao">
+      <span class="mono-label text-cad">SOB MEDIDA</span>
+
+      <h1 class="sob-medida-h1">
+        Seu desenho. <span class="text-cad">Nosso CAD.</span> Sua <span class="text-nozzle">peça.</span>
+      </h1>
+
+      <p class="sob-medida-sub">
+        Peça quebrada, suporte que não existe, adaptador fora de padrão: mande foto e medidas e receba o projeto para aprovar antes de imprimir.
+      </p>
+
+      <!-- Lista de Etapas (01 a 04) -->
+      <div class="sob-medida-passos-vertical">
+        <div class="passo-vert-item">
+          <div class="passo-vert-num">01</div>
+          <div class="passo-vert-content">
+            <div class="passo-vert-title">Foto e medidas</div>
+            <div class="passo-vert-desc">Pelo formulário ao lado ou direto no WhatsApp.</div>
+          </div>
+        </div>
+
+        <div class="passo-vert-item">
+          <div class="passo-vert-num">02</div>
+          <div class="passo-vert-content">
+            <div class="passo-vert-title">Orçamento</div>
+            <div class="passo-vert-desc">Valor do projeto e da impressão, separados.</div>
+          </div>
+        </div>
+
+        <div class="passo-vert-item">
+          <div class="passo-vert-num">03</div>
+          <div class="passo-vert-content">
+            <div class="passo-vert-title">CAD para aprovar</div>
+            <div class="passo-vert-desc">Você vê a peça em 3D antes de qualquer impressão.</div>
+          </div>
+        </div>
+
+        <div class="passo-vert-item">
+          <div class="passo-vert-num num-orange">04</div>
+          <div class="passo-vert-content">
+            <div class="passo-vert-title">Impressão e envio</div>
+            <div class="passo-vert-desc">Para todo o Brasil.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco: Como Funciona o Preço (RN08) -->
+      <div class="box-como-funciona-preco">
+        <span class="mono-label text-muted">COMO FUNCIONA O PREÇO</span>
+
+        <div class="preco-row">
+          <span class="preco-label">Projeto em CAD</span>
+          <span class="preco-val-cad">a partir de R$ [valor]</span>
+        </div>
+
+        <div class="preco-row">
+          <span class="preco-label">Impressão por peça</span>
+          <span class="preco-val-orange">conforme tamanho e material</span>
+        </div>
+
+        <div class="preco-nota">
+          O projeto fica salvo: a próxima peça igual sai só pelo valor da impressão.
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUNA DA DIREITA: FORMULÁRIO DE ORÇAMENTO (CDU05) -->
+    <div class="form-sob-medida-box">
+      <h2 class="form-sob-medida-title">Pedir orçamento</h2>
+
+      {% if ref_produto %}
+        <div style="background: var(--cad-soft); border: 1px solid var(--cad); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--cad);">
+          Referência da peça base: <strong>{{ ref_produto.nome }}</strong>
+        </div>
+      {% endif %}
+
+      <form id="form-sob-medida"
+            data-whatsapp="{{ site.whatsapp }}"
+            data-ref-produto="{{ ref_produto.nome if ref_produto else '' }}"
+            data-ref-url="{{ request.url if ref_produto else '' }}">
+
+        <!-- Campo: Tipo de Peça -->
+        <div class="form-campo">
+          <label class="form-label">QUE TIPO DE PEÇA?</label>
+          <div class="form-chips-row">
+            <button type="button" class="tipo-chip-btn selected" data-tipo="Reposição">Reposição</button>
+            <button type="button" class="tipo-chip-btn" data-tipo="Suporte">Suporte</button>
+            <button type="button" class="tipo-chip-btn" data-tipo="Adaptador">Adaptador</button>
+            <button type="button" class="tipo-chip-btn" data-tipo="Figure">Figure</button>
+            <button type="button" class="tipo-chip-btn" data-tipo="Outro">Outro</button>
+          </div>
+        </div>
+
+        <!-- Campo: Conte o que precisa -->
+        <div class="form-campo">
+          <label for="campo-descricao" class="form-label">CONTE O QUE PRECISA</label>
+          <textarea id="campo-descricao"
+                    class="form-textarea"
+                    maxlength="500"
+                    placeholder="A trava da tampa da minha caixa d'água quebrou e não acho para comprar."
+                    required></textarea>
+          <span class="form-error-msg" id="erro-descricao">Por favor, descreva brevemente a peça que precisa.</span>
+        </div>
+
+        <!-- Campo: Medidas com Diagrama de Cotas -->
+        <div class="form-campo">
+          <label class="form-label">MEDIDAS PRINCIPAIS (MM)</label>
+          <div class="medidas-container">
+            <!-- Diagrama Vetorial Técnico de Cotas -->
+            <svg class="medidas-diagrama-svg" viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <!-- Caixa 3D com cotas -->
+              <rect x="25" y="25" width="50" height="35" stroke="var(--cad)" fill="rgba(51, 209, 224, 0.05)"/>
+              <!-- Linha Cota A (largura) -->
+              <line x1="25" y1="16" x2="75" y2="16" stroke="var(--ink-muted)"/>
+              <text x="47" y="12" fill="var(--ink-muted)" font-family="monospace" font-size="8">A</text>
+              <!-- Linha Cota B (altura) -->
+              <line x1="82" y1="25" x2="82" y2="60" stroke="var(--ink-muted)"/>
+              <text x="86" y="45" fill="var(--ink-muted)" font-family="monospace" font-size="8">B</text>
+              <!-- Rótulo espessura C -->
+              <text x="35" y="74" fill="var(--ink-muted)" font-family="monospace" font-size="7">C = esp.</text>
+            </svg>
+
+            <!-- Inputs das Cotas A, B e C -->
+            <div class="medidas-inputs-col">
+              <div class="medida-input-wrap">
+                <span class="medida-label-tag">A</span>
+                <input type="text" id="medida-a" class="medida-input" placeholder="42" value="42">
+              </div>
+              <div class="medida-input-wrap">
+                <span class="medida-label-tag">B</span>
+                <input type="text" id="medida-b" class="medida-input" placeholder="18" value="18">
+              </div>
+              <div class="medida-input-wrap">
+                <span class="medida-label-tag">C</span>
+                <input type="text" id="medida-c" class="medida-input" placeholder="—">
+              </div>
+            </div>
+          </div>
+          <div class="medidas-dica">Com paquímetro é melhor. Sem ele, mande uma foto ao lado de uma régua.</div>
+        </div>
+
+        <!-- Campo: Fotos (RN07) -->
+        <div class="form-campo">
+          <label class="form-label">FOTOS</label>
+          <div class="fotos-slots-grid">
+            <div class="foto-slot grid-bg">foto 1</div>
+            <div class="foto-slot grid-bg">foto 2</div>
+            <div class="foto-slot foto-slot-adicionar">+ Adicionar</div>
+          </div>
+          <div class="fotos-instrucao">Você envia as fotos no WhatsApp depois.</div>
+        </div>
+
+        <!-- Campos em Linha: Uso, Quantidade e Nome -->
+        <div class="form-bottom-row">
+          <div class="form-campo">
+            <label class="form-label">USO</label>
+            <div class="toggle-uso-btns">
+              <button type="button" class="toggle-uso-btn" data-uso="Interno">Interno</button>
+              <button type="button" class="toggle-uso-btn selected" data-uso="Externo">Externo</button>
+            </div>
+          </div>
+
+          <div class="form-campo">
+            <label for="campo-quantidade" class="form-label">QTD</label>
+            <input type="number" id="campo-quantidade" class="form-input" min="1" value="1" required>
+          </div>
+
+          <div class="form-campo">
+            <label for="campo-nome" class="form-label">SEU NOME</label>
+            <input type="text" id="campo-nome" class="form-input" placeholder="Nome" required>
+            <span class="form-error-msg" id="erro-nome">Informe seu nome.</span>
+          </div>
+        </div>
+
+        <!-- Botão CTA Enviar pelo WhatsApp -->
+        <div style="margin-top: var(--space-2);">
+          <button type="submit" class="btn-sob-medida" style="width: 100%; height: 50px;">
+            <span>Enviar pelo WhatsApp</span>
+          </button>
+          <div style="text-align: center; margin-top: 8px;" class="mono-label text-muted">
+            Resposta em até {{ site.prazoRespostaHoras }} horas úteis.
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <!-- ========================================================================
+       SEÇÃO: FEITOS SOB MEDIDA (CASOS REAIS)
+       ======================================================================== -->
+  <section class="casos-section">
+    <div class="section-label-bar">
+      <span class="mono-label text-muted">FEITOS SOB MEDIDA</span>
+      <span class="mono-label text-cad">Do CAD à peça instalada</span>
+    </div>
+
+    <div class="casos-grid">
+      <!-- Caso 01 -->
+      <article class="caso-card">
+        <div class="caso-visual-split">
+          <div class="caso-split-cad">CAD</div>
+          <div class="caso-split-peca grid-bg">PEÇA</div>
+        </div>
+        <div class="caso-info">
+          <span class="mono-label text-cad">CASO 01 · REPOSIÇÃO</span>
+          <h3 class="caso-titulo">Trava de tampa industrial</h3>
+          <p class="caso-desc">Peça original descontinuada pelo fabricante, redesenhada em CAD com reforço estrutural e impressa em PETG.</p>
+        </div>
+      </article>
+
+      <!-- Caso 02 -->
+      <article class="caso-card">
+        <div class="caso-visual-split">
+          <div class="caso-split-cad">CAD</div>
+          <div class="caso-split-peca grid-bg">PEÇA</div>
+        </div>
+        <div class="caso-info">
+          <span class="mono-label text-cad">CASO 02 · SUPORTE</span>
+          <h3 class="caso-titulo">Suporte Starlink para mastro náutico</h3>
+          <p class="caso-desc">Projeto com abraçadeira personalizada para tubo naval de 38mm com absorção de impacto em TPU.</p>
+        </div>
+      </article>
+
+      <!-- Caso 03 -->
+      <article class="caso-card">
+        <div class="caso-visual-split">
+          <div class="caso-split-cad">CAD</div>
+          <div class="caso-split-peca grid-bg">PEÇA</div>
+        </div>
+        <div class="caso-info">
+          <span class="mono-label text-cad">CASO 03 · ADAPTADOR</span>
+          <h3 class="caso-titulo">Adaptador de duto de exaustão</h3>
+          <p class="caso-desc">Transição de perfil circular para ovalado com vedação perfeita para sistema de refrigeração.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/sob_medida.js') }}"></script>
+{% endblock %}
+

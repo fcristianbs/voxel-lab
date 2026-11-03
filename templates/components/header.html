@@ -1,0 +1,69 @@
+<!-- Header Global (CDU 3.4) -->
+<header class="vl-header">
+  <div class="vl-container vl-header-inner">
+    <!-- Logo Oficial -->
+    <a href="/" class="vl-logo" aria-label="Voxel Lab Início">
+      <img src="{{ url_for('static', filename='img/logo/voxel-icone.svg') }}" alt="Ícone Voxel Lab" width="28" height="28">
+      <span>VOXEL <span class="vl-logo-lab">LAB</span></span>
+    </a>
+
+    <!-- Navegação Desktop -->
+    <nav class="vl-nav" aria-label="Navegação principal">
+      <a href="/categoria/engenharia" class="vl-nav-link {% if active_page == 'engenharia' %}active{% endif %}">Engenharia</a>
+      <a href="/categoria/casa" class="vl-nav-link {% if active_page == 'casa' %}active{% endif %}">Casa</a>
+      <a href="/categoria/gadgets" class="vl-nav-link {% if active_page == 'gadgets' %}active{% endif %}">Gadgets</a>
+      <a href="/categoria/figures" class="vl-nav-link {% if active_page == 'figures' %}active{% endif %}">Figures</a>
+      <a href="/sob-medida" class="vl-nav-link nav-sob-medida {% if active_page == 'sob-medida' %}active{% endif %}">Sob medida</a>
+    </nav>
+
+    <!-- Ações do Header (Busca e WhatsApp) -->
+    <div class="vl-header-actions">
+      <!-- Campo de Busca Desktop -->
+      <form action="/busca" method="GET" class="vl-search-form" role="search">
+        <svg class="vl-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" name="q" class="vl-search-input" placeholder="Buscar peça..." aria-label="Buscar peça no catálogo">
+      </form>
+
+      <!-- Botão WhatsApp Desktop -->
+      <a href="{{ site_whatsapp_url }}" target="_blank" rel="noopener noreferrer" class="vl-header-btn-whatsapp">
+        WhatsApp
+      </a>
+
+      <!-- Botão Hambúrguer Mobile -->
+      <button type="button" id="mobile-menu-toggle" class="vl-mobile-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Gaveta Mobile -->
+  <div id="mobile-drawer" class="vl-mobile-drawer" aria-label="Menu móvel">
+    <div class="vl-mobile-drawer-search">
+      <form action="/busca" method="GET" class="vl-search-form" style="display: block; width: 100%;" role="search">
+        <div style="position: relative;">
+          <svg class="vl-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="q" class="vl-search-input" placeholder="Buscar peça..." aria-label="Buscar peça">
+        </div>
+      </form>
+    </div>
+    <div class="vl-mobile-drawer-links">
+      <a href="/categoria/engenharia" class="vl-mobile-drawer-link">Engenharia</a>
+      <a href="/categoria/casa" class="vl-mobile-drawer-link">Casa</a>
+      <a href="/categoria/gadgets" class="vl-mobile-drawer-link">Gadgets</a>
+      <a href="/categoria/figures" class="vl-mobile-drawer-link">Figures</a>
+      <a href="/sob-medida" class="vl-mobile-drawer-link nav-sob-medida">Sob medida</a>
+      <a href="/styleguide" class="vl-mobile-drawer-link text-muted" style="font-size: 0.9375rem;">Design System / Styleguide</a>
+    </div>
+  </div>
+</header>
+

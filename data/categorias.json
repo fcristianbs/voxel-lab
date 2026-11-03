@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "engenharia",
+    "nome": "Engenharia",
+    "descricao": "Suportes, adaptadores e reposições feitos para uso real, dentro e fora de casa. Todas as peças externas saem em PETG com proteção UV.",
+    "icone": "engenharia",
+    "subcategorias": ["starlink", "suportes", "adaptadores", "reposicao"]
+  },
+  {
+    "slug": "casa",
+    "nome": "Casa",
+    "descricao": "Organizadores e utilidades funcionais para o dia a dia.",
+    "icone": "casa",
+    "subcategorias": ["organizadores", "moveis"]
+  },
+  {
+    "slug": "gadgets",
+    "nome": "Gadgets",
+    "descricao": "Suportes de mesa, setup e acessórios tech de alta precisão.",
+    "icone": "gadgets",
+    "subcategorias": ["setup", "suportes"]
+  },
+  {
+    "slug": "figures",
+    "nome": "Figures",
+    "descricao": "Action figures e colecionáveis detalhados sob encomenda.",
+    "icone": "figures",
+    "subcategorias": ["colecionaveis", "anime"]
+  }
+]
+

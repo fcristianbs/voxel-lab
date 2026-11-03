@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {% if categoria %}
+    {{ categoria.nome }} · Peças em Impressão 3D · {{ site.nome }}
+  {% else %}
+    Catálogo Completo · Peças e Projetos · {{ site.nome }}
+  {% endif %}
+{% endblock %}
+
+{% block description %}
+  {% if categoria %}
+    {{ categoria.descricao }}
+  {% else %}
+    Explore todo o catálogo de peças da Voxel Lab: suportes, adaptadores, reposições e itens de engenharia sob medida.
+  {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/catalogo.css') }}">
+{% endblock %}
+
+{% from 'components/buttons.html' import botao_primario, botao_sob_medida %}
+{% from 'components/card_produto.html' import card_produto %}
+{% from 'components/card_nao_achou.html' import card_nao_achou %}
+{% from 'components/chip.html' import chip %}
+
+{% block content %}
+<div class="vl-container" id="catalogo-wrapper">
+
+  <!-- ========================================================================
+       BREADCRUMB (CDU02 / 6_Categoria_desktop.png)
+       ======================================================================== -->
+  <nav class="vl-breadcrumb" aria-label="Trilha de navegação">
+    <a href="/">Início</a>
+    <span class="vl-breadcrumb-sep">/</span>
+    <span class="text-ink">{% if categoria %}{{ categoria.nome }}{% else %}Catálogo Completo{% endif %}</span>
+  </nav>
+
+  <!-- ========================================================================
+       CABEÇALHO DA CATEGORIA (COM MALHA DE VOXEL)
+       ======================================================================== -->
+  <header class="categoria-hero grid-bg">
+    <div class="categoria-hero-inner">
+      <div class="categoria-hero-text">
+        <span class="mono-label text-nozzle">CATÁLOGO TÉCNICO</span>
+        <h1 class="categoria-hero-title">
+          {% if categoria %}{{ categoria.nome }}{% else %}Catálogo Completo{% endif %}
+        </h1>
+        <p class="categoria-hero-desc">
+          {% if categoria %}
+            {{ categoria.descricao }}
+          {% else %}
+            Suportes, adaptadores e reposições feitos para uso real, dentro e fora de casa. Todas as peças externas saem em PETG com proteção UV.
+          {% endif %}
+        </p>
+      </div>
+
+      <!-- Pílulas de Specs à Direita (Conforme 6_Categoria_desktop.png) -->
+      <div class="categoria-hero-pills">
+        <span class="hero-spec-pill">PETG-UV</span>
+        <span class="hero-spec-pill">Uso externo</span>
+        <span class="hero-spec-pill text-cad" style="border-color: var(--cad);">Sob medida disponível</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CHIPS HORIZONTAIS NO CELULAR (2_Categoria_celular.png)
+       ======================================================================== -->
+  <div class="mobile-subcategorias-scroll" aria-label="Subcategorias rápidas">
+    <a href="?sub=" class="vl-chip {% if not request.args.get('sub') %}active{% endif %}">Todos</a>
+    {% if categoria and categoria.subcategorias %}
+      {% for sub in categoria.subcategorias %}
+        {% set is_active = (request.args.get('sub') == sub) %}
+        <a href="?sub={{ sub }}" class="vl-chip {% if is_active %}active{% endif %}">
+          {{ sub|capitalize }}
+        </a>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <!-- ========================================================================
+       ESTRUTURA PRINCIPAL (SIDEBAR + GRID)
+       ======================================================================== -->
+  <div class="catalogo-layout">
+
+    <!-- SIDEBAR DE FILTROS (DESKTOP) -->
+    <aside class="catalogo-sidebar catalogo-sidebar-desktop" aria-label="Filtros do catálogo">
+
+      <!-- Bloco: Subcategoria -->
+      {% if categoria and categoria.subcategorias %}
+      <div class="filtro-bloco">
+        <div class="filtro-titulo">SUBCATEGORIA</div>
+        <div class="filtro-opcoes">
+          {% for sub in categoria.subcategorias %}
+            <label class="filtro-label">
+              <input type="checkbox"
+                     name="subcategoria"
+                     value="{{ sub }}"
+                     class="filtro-input filtro-catalogo-input"
+                     {% if request.args.get('sub') == sub %}checked{% endif %}>
+              <span>
+                {% if sub == 'starlink' %}Starlink
+                {% elif sub == 'suportes' %}Suportes de parede
+                {% elif sub == 'adaptadores' %}Adaptadores
+                {% elif sub == 'reposicao' %}Reposição
+                {% else %}{{ sub|capitalize }}{% endif %}
+              </span>
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Bloco: Material -->
+      <div class="filtro-bloco">
+        <div class="filtro-titulo">MATERIAL</div>
+        <div class="filtro-opcoes">
+          <label class="filtro-label">
+            <input type="checkbox" name="material" value="petg" class="filtro-input filtro-catalogo-input">
+            <span>PETG</span>
+          </label>
+          <label class="filtro-label">
+            <input type="checkbox" name="material" value="pla" class="filtro-input filtro-catalogo-input">
+            <span>PLA</span>
+          </label>
+          <label class="filtro-label">
+            <input type="checkbox" name="material" value="tpu" class="filtro-input filtro-catalogo-input">
+            <span>TPU</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Bloco: Uso -->
+      <div class="filtro-bloco">
+        <div class="filtro-titulo">USO</div>
+        <div class="filtro-opcoes">
+          <label class="filtro-label">
+            <input type="radio" name="uso" value="todos" class="filtro-input filtro-catalogo-input" checked>
+            <span>Todos</span>
+          </label>
+          <label class="filtro-label">
+            <input type="radio" name="uso" value="interno" class="filtro-input filtro-catalogo-input">
+            <span>Interno</span>
+          </label>
+          <label class="filtro-label">
+            <input type="radio" name="uso" value="externo" class="filtro-input filtro-catalogo-input">
+            <span>Externo</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Card Não Achou na Sidebar (6_Categoria_desktop.png) -->
+      {{ card_nao_achou("/sob-medida") }}
+
+    </aside>
+
+    <!-- ÁREA DE PRODUTOS (CONTEÚDO PRINCIPAL) -->
+    <section class="catalogo-content">
+
+      <!-- Top Bar: Chips Ativos + Ordenação -->
+      <div class="catalogo-top-bar">
+        <div class="catalogo-chips-ativos" id="catalogo-chips-ativos">
+          <!-- Gerados dinamicamente via JS (ex: Starlink ×, PETG ×, Externo ×) -->
+        </div>
+
+        <div class="catalogo-ordenacao">
+          <label for="catalogo-sort-select" class="catalogo-ordenacao-label">Ordenar:</label>
+          <select id="catalogo-sort-select" class="catalogo-select" aria-label="Ordenar produtos">
+            <option value="mais_pedidos">mais pedidos</option>
+            <option value="nome">nome (A-Z)</option>
+            <option value="menor_preco">menor preço</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Grid de Produtos -->
+      <div class="catalogo-produtos-grid" id="catalogo-produtos-grid">
+        {% for produto in produtos %}
+          <div class="card-produto-item"
+               data-subcategoria="{{ produto.subcategoria or '' }}"
+               data-material="{{ produto.material or '' }}"
+               data-uso="{{ produto.uso or '' }}"
+               data-nome="{{ produto.nome }}"
+               data-preco="{{ produto.preco or 0 }}"
+               data-ordem="{{ produto.ordem or 999 }}">
+            {{ card_produto(produto) }}
+          </div>
+        {% endfor %}
+
+        <!-- Estado Vazio (CDU02 4a) -->
+        <div class="catalogo-empty-state" id="catalogo-empty-state">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--ink-muted)" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+          <h3>Nenhuma peça com esses filtros</h3>
+          <p>Não encontrou exatamente o que precisa? Limpe os filtros ou mande sua medida para modelarmos sob encomenda.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
+            <button type="button" class="btn-primario" id="btn-limpar-filtros">Limpar filtros</button>
+            <a href="/sob-medida" class="btn-sob-medida">Orçar sob medida</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rodapé com Contador de Peças -->
+      <div class="catalogo-footer-status">
+        <span id="catalogo-count-display">Mostrando {{ produtos|length }} de {{ produtos|length }} peças</span>
+      </div>
+
+    </section>
+
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/catalogo.js') }}"></script>
+{% endblock %}
+

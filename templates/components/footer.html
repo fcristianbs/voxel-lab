@@ -1,0 +1,23 @@
+<!-- Footer Global (CDU 3.4) -->
+<footer class="vl-footer">
+  <div class="vl-container vl-footer-inner">
+    <!-- Identificação e Abrangência -->
+    <div class="vl-footer-brand">
+      <span>{{ site.instagram_handle }} · Enviamos para todo o Brasil</span>
+    </div>
+
+    <!-- Links Externos Oficiais -->
+    <div class="vl-footer-links">
+      {% if site.mercadoLivreLoja %}
+        <a href="{{ site.mercadoLivreLoja }}" target="_blank" rel="noopener noreferrer">Mercado Livre</a>
+      {% else %}
+        <a href="#" class="text-muted" title="Link em breve">Mercado Livre</a>
+      {% endif %}
+      <span aria-hidden="true" class="text-muted">·</span>
+      <a href="{{ site.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <span aria-hidden="true" class="text-muted">·</span>
+      <a href="{{ site_whatsapp_url }}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+

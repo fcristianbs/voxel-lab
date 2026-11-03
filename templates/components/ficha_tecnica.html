@@ -1,0 +1,25 @@
+<!-- Componente FichaTecnica (CDU 3.4) -->
+{#
+  Exemplo de uso:
+  {{ ficha_tecnica([
+    {'chave': 'MATERIAL', 'valor': 'PETG-UV'},
+    {'chave': 'CAMADA', 'valor': '0,20 mm'},
+    {'chave': 'PREENCHIMENTO', 'valor': '40% gyroid'}
+  ]) }}
+#}
+
+{% macro ficha_tecnica(specs, extra_class='') -%}
+<div class="ficha-tecnica-wrapper {{ extra_class }}">
+  <table class="ficha-tecnica-table">
+    <tbody>
+      {% for item in specs %}
+        <tr>
+          <th scope="row">{{ item.chave }}</th>
+          <td>{{ item.valor }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%- endmacro %}
+
