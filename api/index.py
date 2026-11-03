@@ -10,3 +10,4 @@ from app import app
 
 # Ponto de entrada WSGI para o Vercel Python Runtime
 app = app
+

@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, abort, send_from_directory
 from site_config import site, get_whatsapp_url
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -24,6 +24,14 @@ def inject_global_context():
         'site_whatsapp_url': get_whatsapp_url("Olá, Voxel Lab! Vim pelo site e quero tirar uma dúvida."),
         'active_page': request.endpoint or ''
     }
+
+@app.route('/static/<path:filename>')
+def serve_static_file(filename):
+    """Garante que assets estáticos sejam servidos com segurança tanto localmente quanto no Vercel."""
+    for folder in [os.path.join(BASE_DIR, 'public', 'static'), os.path.join(BASE_DIR, 'static')]:
+        if os.path.exists(os.path.join(folder, filename)):
+            return send_from_directory(folder, filename)
+    abort(404)
 
 from data_service import get_mais_pedidos, get_categorias, get_produtos, get_produto_by_slug, get_categoria_by_slug, filtrar_produtos
 from flask import abort

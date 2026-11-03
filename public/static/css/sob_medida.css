@@ -1,0 +1,458 @@
+/* ==========================================================================
+   VOXEL LAB — PÁGINA SOB MEDIDA (CDU05)
+   Fidelidade visual a 8_Sob_medida_desktop.png e 4_Sob_medida_celular.png
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   LAYOUT PRINCIPAL (DUAS COLUNAS NO DESKTOP)
+   -------------------------------------------------------------------------- */
+.sob-medida-page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .sob-medida-page-grid {
+    grid-template-columns: 1fr 1.05fr;
+    gap: var(--space-6);
+    align-items: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   COLUNA ESQUERDA: APRESENTAÇÃO E ETAPAS
+   -------------------------------------------------------------------------- */
+.sob-medida-apresentacao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sob-medida-h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+}
+
+@media (min-width: 1024px) {
+  .sob-medida-h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.sob-medida-sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  max-width: 500px;
+}
+
+/* Lista de Etapas Verticais */
+.sob-medida-passos-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.passo-vert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.passo-vert-num {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cad);
+  line-height: 1.2;
+  min-width: 30px;
+}
+
+.passo-vert-num.num-orange {
+  color: var(--nozzle);
+}
+
+.passo-vert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.passo-vert-title {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.passo-vert-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+}
+
+/* Box Como Funciona o Preço (RN08) */
+.box-como-funciona-preco {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.preco-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.preco-row:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.preco-label {
+  color: var(--ink);
+}
+
+.preco-val-cad {
+  color: var(--cad);
+  font-weight: 600;
+}
+
+.preco-val-orange {
+  color: var(--nozzle);
+  font-weight: 600;
+}
+
+.preco-nota {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   COLUNA DIREITA: FORMULÁRIO DE ORÇAMENTO COM BORDA CIANO
+   -------------------------------------------------------------------------- */
+.form-sob-medida-box {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--cad);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .form-sob-medida-box {
+    padding: var(--space-5);
+  }
+}
+
+.form-sob-medida-title {
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.form-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.form-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tipo-chip-btn {
+  height: 38px;
+  padding: 0 14px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tipo-chip-btn:hover {
+  border-color: var(--cad);
+}
+
+.tipo-chip-btn.selected {
+  background-color: var(--cad-soft);
+  border-color: var(--cad);
+  color: var(--cad);
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 90px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.form-textarea:focus, .form-input:focus {
+  border-color: var(--cad);
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 0 12px;
+}
+
+/* Área de Medidas com Desenho Técnico e Cotas */
+.medidas-container {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--space-3);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  align-items: center;
+}
+
+.medidas-diagrama-svg {
+  width: 100%;
+  height: auto;
+}
+
+.medidas-inputs-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.medida-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.medida-label-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+}
+
+.medida-input {
+  height: 36px;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.medidas-dica {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+/* Slots de Fotos */
+.fotos-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.foto-slot {
+  aspect-ratio: 4 / 3;
+  background-color: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+
+.foto-slot-adicionar {
+  border-color: var(--cad);
+  color: var(--cad);
+}
+
+.fotos-instrucao {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--ink-muted);
+}
+
+/* Campos Inferiores em Linha */
+.form-bottom-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.5fr;
+  gap: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .form-bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.toggle-uso-btns {
+  display: flex;
+  height: 40px;
+}
+
+.toggle-uso-btn {
+  flex: 1;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.toggle-uso-btn:first-child {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  border-right: none;
+}
+
+.toggle-uso-btn:last-child {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.toggle-uso-btn.selected {
+  background-color: var(--cad-soft);
+  border-color: var(--cad);
+  color: var(--cad);
+}
+
+.form-error-msg {
+  color: #ff5252;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   SEÇÃO FEITOS SOB MEDIDA (CASOS REAIS)
+   -------------------------------------------------------------------------- */
+.casos-section {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+  margin-bottom: var(--space-6);
+}
+
+.casos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .casos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.caso-card {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.caso-visual-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--line);
+}
+
+.caso-split-cad {
+  background-color: var(--cad-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cad);
+  border-right: 1px solid var(--line);
+}
+
+.caso-split-peca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.caso-info {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.caso-titulo {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--ink);
+}
+
+.caso-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
