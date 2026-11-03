@@ -1,5 +1,48 @@
 [
   {
+    "slug": "suporte-starlink-mini-veicular",
+    "nome": "Suporte Starlink Mini · Veicular",
+    "categoria": "engenharia",
+    "subcategoria": "starlink",
+    "resumo": "Fixação aerodinâmica de alta resistência para Starlink Mini em teto, rack ou caçamba.",
+    "descricao": "Projetado em PETG-UV com geometria aerodinâmica reforçada, ideal para motorhomes, veículos 4x4, embarcações e uso em estrada sem deformar ao sol e chuva.",
+    "preco": null,
+    "precoParcelado": "ou [n]x no Mercado Livre",
+    "material": "PETG-UV",
+    "uso": "externo",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {"chave": "MATERIAL", "valor": "PETG-UV"},
+      {"chave": "CAMADA", "valor": "0,20 mm"},
+      {"chave": "PREENCHIMENTO", "valor": "60% gyroid"},
+      {"chave": "USO", "valor": "Externo, sol, chuva e estrada"},
+      {"chave": "COMPATÍVEL", "valor": "Starlink Mini"},
+      {"chave": "FIXAÇÃO", "valor": "Rack / Teto / Trilho"},
+      {"chave": "PRAZO", "valor": "[n] dias úteis"}
+    ],
+    "variacoes": [
+      {"nome": "Fixação", "opcoes": ["Rack de Teto", "Ventosa Industrial", "Parafuso Direto"], "padrao": "Rack de Teto", "permiteOutraMedida": true}
+    ],
+    "cores": [
+      {"nome": "Preto fosco", "hex": "#111111", "padrao": true},
+      {"nome": "Cinza", "hex": "#6B7280"},
+      {"nome": "Branco", "hex": "#E8EDF2"}
+    ],
+    "imagens": [
+      {"src": "/static/img/produtos/suporte-starlink-mini-veicular.png", "alt": "Suporte Starlink Mini Veicular", "tipo": "instalada"}
+    ],
+    "instalacao": [
+      "Posicione a base do suporte no rack ou teto do veículo.",
+      "Aperte as travas de fixação com firmeza.",
+      "Encaixe a antena Starlink Mini até o travamento seguro."
+    ],
+    "mercadoLivreUrl": null,
+    "relacionados": ["suporte-starlink-mini-tubo-1", "passa-cabo-parede", "abracadeira-mastro-par"]
+  },
+  {
     "slug": "suporte-starlink-mini-tubo-1",
     "nome": "Suporte Starlink Mini · Tubo 1\"",
     "categoria": "engenharia",
