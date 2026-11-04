@@ -1,5 +1,69 @@
 [
   {
+    "slug": "miniatura-do-groot-feliz",
+    "nome": "Miniatura do Groot feliz",
+    "categoria": "figures",
+    "subcategoria": "Herois",
+    "resumo": "Miniatura Herói",
+    "descricao": "Estatueta do Groot feliz com 12 cm de altura.",
+    "preco": 17.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "1 a 3 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/miniatura-do-groot-feliz.jpg",
+        "alt": "Miniatura do Groot feliz",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": []
+  },
+  {
     "slug": "vareta-giratoria-do-homem-aranha",
     "nome": "Vareta Giratória do Homem Aranha",
     "categoria": "figures",
