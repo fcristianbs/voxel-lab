@@ -1,5 +1,70 @@
 [
   {
+    "slug": "action-figure-hollow-knight-colecionavel-impresso-em-3d",
+    "nome": "Action Figure Hollow Knight – Colecionável Impresso em 3D",
+    "categoria": "figures",
+    "subcategoria": "Games",
+    "resumo": "Hollow Knight - Boneco de Ação",
+    "descricao": "Produzido com tecnologia de alta precisão em impressão 3D, este colecionável captura perfeitamente os traços icônicos do personagem, incluindo sua clássica máscara branca, o manto escuro detalhado, os chifres característicos e o seu fiel ferrão nas costas. Acompanha uma base texturizada que simula o chão de Hallownest, garantindo estabilidade e um visual ainda mais imersivo.",
+    "preco": 24.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Hollow Knight",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Hornet",
+        "hex": "#f00024"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/action-figure-hollow-knight-colecionavel-impresso-em-3d.jpg",
+        "alt": "hollow_knight",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "mandaloriano-e-grogu-sentado-na-borda",
+      "miniatura-do-groot-feliz",
+      "vareta-giratoria-do-homem-aranha",
+      "batman-af"
+    ]
+  },
+  {
     "slug": "mandaloriano-e-grogu-sentado-na-borda",
     "nome": "Mandaloriano e Grogu sentado na borda",
     "categoria": "figures",
