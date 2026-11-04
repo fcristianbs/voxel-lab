@@ -1,5 +1,69 @@
 [
   {
+    "slug": "vareta-giratoria-do-homem-aranha",
+    "nome": "Vareta Giratória do Homem Aranha",
+    "categoria": "figures",
+    "subcategoria": "Herois",
+    "resumo": "Vareta Giratória do Homem Aranha",
+    "descricao": "Transforme a diversão e a decoração com a Vareta Giratória do Aranha! Perfeito para fãs de super-heróis, colecionadores e crianças que adoram itens interativos. Este produto é fabricado com tecnologia de impressão 3D de alta qualidade, garantindo detalhes precisos, durabilidade e um visual incrível inspirado no universo do Aranha. O modelo conta com peças articuladas que tornam a experiência ainda mais divertida.",
+    "preco": 34.99,
+    "precoParcelado": "ou [n]x no Mercado Livre",
+    "material": "PETG-UV",
+    "uso": "externo",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/vareta-giratoria-do-homem-aranha.jpg",
+        "alt": "3d_spiderman",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": []
+  },
+  {
     "slug": "luminaria-a-onda",
     "nome": "Luminária  - A Onda",
     "categoria": "casa",
