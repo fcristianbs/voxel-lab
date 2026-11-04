@@ -1,5 +1,71 @@
 [
   {
+    "slug": "porta-chaves-objetos",
+    "nome": "Porta chaves/objetos",
+    "categoria": "casa",
+    "subcategoria": "starlink",
+    "resumo": "Porta objetos",
+    "descricao": "PORTA OBJETOS PARA CHAVES, OCULOS,PLANTA(JARRO NÃO INCLUSO) E FONE",
+    "preco": 49.0,
+    "precoParcelado": "ou [n]x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "decor",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/porta-chaves-objetos.png",
+        "alt": "Porta chaves/objetos",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "passa-cabo-parede"
+    ]
+  },
+  {
     "slug": "batman-af",
     "nome": "Batman AF",
     "categoria": "figures",
