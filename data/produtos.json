@@ -1,5 +1,71 @@
 [
   {
+    "slug": "luminaria-a-onda",
+    "nome": "Luminária  - A Onda",
+    "categoria": "casa",
+    "subcategoria": "Luzes",
+    "resumo": "Luminária de design moderna impressa em 3D com um efeito de luz",
+    "descricao": "Luminária de design moderna impressa em 3D com um efeito de luz",
+    "preco": 90.0,
+    "precoParcelado": "ou [n]x no Mercado Livre",
+    "material": "PETG-UV",
+    "uso": "externo",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-a-onda.png",
+        "alt": "Luminária  - A Onda",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": "https://web.whatsapp.com/",
+    "relacionados": [
+      "porta-chaves-objetos"
+    ]
+  },
+  {
     "slug": "porta-chaves-objetos",
     "nome": "Porta chaves/objetos",
     "categoria": "casa",
