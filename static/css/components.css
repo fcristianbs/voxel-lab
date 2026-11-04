@@ -61,7 +61,15 @@
 .vl-nav {
   display: none;
   align-items: center;
-  gap: var(--space-4);
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+}
+
+.vl-nav::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -70,13 +78,21 @@
   }
 }
 
+@media (min-width: 1366px) {
+  .vl-nav {
+    gap: 18px;
+  }
+}
+
 .vl-nav-link {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.84375rem;
   font-weight: 500;
   color: var(--ink);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .vl-nav-link:hover {

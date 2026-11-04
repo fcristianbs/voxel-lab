@@ -10,6 +10,7 @@
 {% from 'components/buttons.html' import botao_primario, botao_sob_medida %}
 {% from 'components/spec_tag.html' import spec_tag %}
 {% from 'components/card_produto.html' import card_produto %}
+{% from 'components/icones_categoria.html' import render_icone_categoria %}
 
 {% block content %}
 <div class="vl-container">
@@ -88,59 +89,14 @@
     </div>
 
     <div class="categories-grid">
-      <!-- Engenharia -->
-      <a href="/categoria/engenharia" class="category-card" aria-label="Categoria Engenharia">
-        <div class="category-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2"></path>
-            <path d="M12 20v2"></path>
-            <path d="M4.93 4.93l1.41 1.41"></path>
-            <path d="M17.66 17.66l1.41 1.41"></path>
-            <path d="M2 12h2"></path>
-            <path d="M20 12h2"></path>
-            <path d="M4.93 19.07l1.41-1.41"></path>
-            <path d="M17.66 6.34l1.41-1.41"></path>
-          </svg>
-        </div>
-        <div class="category-card-name">Engenharia</div>
-      </a>
-
-      <!-- Casa -->
-      <a href="/categoria/casa" class="category-card" aria-label="Categoria Casa">
-        <div class="category-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-        </div>
-        <div class="category-card-name">Casa</div>
-      </a>
-
-      <!-- Gadgets -->
-      <a href="/categoria/gadgets" class="category-card" aria-label="Categoria Gadgets">
-        <div class="category-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-        </div>
-        <div class="category-card-name">Gadgets</div>
-      </a>
-
-      <!-- Figures -->
-      <a href="/categoria/figures" class="category-card" aria-label="Categoria Figures">
-        <div class="category-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="7" r="4"></circle>
-            <path d="M5.5 21a8.38 8.38 0 0 1 13 0"></path>
-            <line x1="12" y1="11" x2="12" y2="17"></line>
-            <line x1="9" y1="14" x2="15" y2="14"></line>
-          </svg>
-        </div>
-        <div class="category-card-name">Figures</div>
-      </a>
+      {% for cat in categorias %}
+        <a href="/categoria/{{ cat.slug }}" class="category-card" aria-label="Categoria {{ cat.nome }}">
+          <div class="category-card-icon" aria-hidden="true">
+            {{ render_icone_categoria(cat.icone or cat.slug) }}
+          </div>
+          <div class="category-card-name">{{ cat.nome }}</div>
+        </a>
+      {% endfor %}
     </div>
   </section>
 

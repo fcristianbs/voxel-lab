@@ -69,12 +69,20 @@
        CHIPS HORIZONTAIS NO CELULAR (2_Categoria_celular.png)
        ======================================================================== -->
   <div class="mobile-subcategorias-scroll" aria-label="Subcategorias rápidas">
-    <a href="?sub=" class="vl-chip {% if not request.args.get('sub') %}active{% endif %}">Todos</a>
+    <a href="?sub=" class="vl-chip {% if not request.args.get('sub') and categoria %}active{% elif not categoria and not request.args.get('sub') %}active{% endif %}">Todos</a>
     {% if categoria and categoria.subcategorias %}
       {% for sub in categoria.subcategorias %}
-        {% set is_active = (request.args.get('sub') == sub) %}
-        <a href="?sub={{ sub }}" class="vl-chip {% if is_active %}active{% endif %}">
-          {{ sub|capitalize }}
+        {% set sub_slug = sub.slug if sub is mapping else sub %}
+        {% set sub_nome = sub.nome if sub is mapping else sub|capitalize %}
+        {% set is_active = (request.args.get('sub') == sub_slug) %}
+        <a href="?sub={{ sub_slug }}" class="vl-chip {% if is_active %}active{% endif %}">
+          {{ sub_nome }}
+        </a>
+      {% endfor %}
+    {% else %}
+      {% for cat in todas_categorias %}
+        <a href="/categoria/{{ cat.slug }}" class="vl-chip">
+          {{ cat.nome }}
         </a>
       {% endfor %}
     {% endif %}
@@ -94,20 +102,29 @@
         <div class="filtro-titulo">SUBCATEGORIA</div>
         <div class="filtro-opcoes">
           {% for sub in categoria.subcategorias %}
-            <label class="filtro-label">
+            {% set sub_slug = sub.slug if sub is mapping else sub %}
+            {% set sub_nome = sub.nome if sub is mapping else sub|capitalize %}
+            <label class="filtro-label" {% if sub is mapping and sub.descricao %}title="{{ sub.descricao }}"{% endif %}>
               <input type="checkbox"
                      name="subcategoria"
-                     value="{{ sub }}"
+                     value="{{ sub_slug }}"
                      class="filtro-input filtro-catalogo-input"
-                     {% if request.args.get('sub') == sub %}checked{% endif %}>
-              <span>
-                {% if sub == 'starlink' %}Starlink
-                {% elif sub == 'suportes' %}Suportes de parede
-                {% elif sub == 'adaptadores' %}Adaptadores
-                {% elif sub == 'reposicao' %}Reposição
-                {% else %}{{ sub|capitalize }}{% endif %}
-              </span>
+                     {% if request.args.get('sub') == sub_slug %}checked{% endif %}>
+              <span>{{ sub_nome }}</span>
             </label>
+          {% endfor %}
+        </div>
+      </div>
+      {% elif not categoria %}
+      <!-- Bloco: Categorias (Catálogo Geral) -->
+      <div class="filtro-bloco">
+        <div class="filtro-titulo">CATEGORIAS</div>
+        <div class="filtro-opcoes">
+          {% for cat in todas_categorias %}
+            <a href="/categoria/{{ cat.slug }}" class="filtro-label" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; padding: 4px 0;">
+              <span>{{ cat.nome }}</span>
+              <span class="mono-label text-muted" style="font-size: 0.75rem;">&rarr;</span>
+            </a>
           {% endfor %}
         </div>
       </div>

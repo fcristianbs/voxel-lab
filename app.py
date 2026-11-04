@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, url_for, request, abort, send_from_directory
+from flask import Flask, render_template, redirect, url_for, request, abort, send_from_directory, jsonify
 from site_config import site, get_whatsapp_url
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -11,6 +11,8 @@ app = Flask(
 )
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'voxel-lab-secret-dev-key')
 
+from data_service import get_mais_pedidos, get_categorias, get_produtos, get_produto_by_slug, get_categoria_by_slug, filtrar_produtos
+
 # Registra globals no ambiente Jinja2 para estarem disponíveis dentro de macros importadas
 app.jinja_env.globals['site'] = site
 app.jinja_env.globals['site_whatsapp_url'] = get_whatsapp_url("Olá, Voxel Lab! Vim pelo site e quero tirar uma dúvida.")
@@ -19,10 +21,13 @@ app.jinja_env.globals['get_whatsapp_url'] = get_whatsapp_url
 @app.context_processor
 def inject_global_context():
     """Disponibiliza as variáveis globais de contexto em todos os templates Jinja2."""
+    active_slug = request.view_args.get('slug') if request.view_args and 'slug' in request.view_args else ''
     return {
         'site': site,
         'site_whatsapp_url': get_whatsapp_url("Olá, Voxel Lab! Vim pelo site e quero tirar uma dúvida."),
-        'active_page': request.endpoint or ''
+        'active_page': request.endpoint or '',
+        'active_categoria': active_slug,
+        'todas_categorias': get_categorias()
     }
 
 @app.route('/static/<path:filename>')
@@ -90,6 +95,16 @@ def sob_medida_page():
     ref_slug = request.args.get('ref', '').strip()
     ref_produto = get_produto_by_slug(ref_slug) if ref_slug else None
     return render_template('pages/sob_medida.html', ref_produto=ref_produto, active_page='sob-medida')
+
+@app.route('/api/categorias')
+def api_categorias():
+    """Endpoint JSON público com todas as categorias e subcategorias."""
+    return jsonify(get_categorias())
+
+@app.route('/api/produtos')
+def api_produtos():
+    """Endpoint JSON público com todos os produtos do catálogo."""
+    return jsonify(get_produtos())
 
 @app.route('/robots.txt')
 def robots_txt():

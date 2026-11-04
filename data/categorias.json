@@ -2,30 +2,200 @@
   {
     "slug": "engenharia",
     "nome": "Engenharia",
-    "descricao": "Suportes, adaptadores e reposições feitos para uso real, dentro e fora de casa. Todas as peças externas saem em PETG com proteção UV.",
+    "descricao": "Suportes, adaptadores, gabaritos e reposições feitos para uso real, dentro e fora de casa. Todas as peças externas saem em PETG com proteção UV.",
     "icone": "engenharia",
-    "subcategorias": ["starlink", "suportes", "adaptadores", "reposicao"]
+    "subcategorias": [
+      {
+        "slug": "prototipos",
+        "nome": "Protótipos",
+        "descricao": "Modelagem funcional, validação dimensional e prototipagem rápida."
+      },
+      {
+        "slug": "pecas-reposicao",
+        "nome": "Peças de reposição",
+        "descricao": "Reposição para equipamentos, peças quebradas ou fora de linha."
+      },
+      {
+        "slug": "gabaritos-guias",
+        "nome": "Gabaritos e guias",
+        "descricao": "Gabaritos de corte, furação, solda e montagem de alta precisão."
+      },
+      {
+        "slug": "starlink",
+        "nome": "Starlink",
+        "descricao": "Suportes veiculares, de parede e adaptadores de mastro para antenas Starlink."
+      },
+      {
+        "slug": "adaptadores",
+        "nome": "Adaptadores",
+        "descricao": "Flanges, buchas e adaptadores sob medida."
+      },
+      {
+        "slug": "suportes",
+        "nome": "Suportes",
+        "descricao": "Suportes mecânicos para fixação técnica."
+      }
+    ]
   },
   {
     "slug": "casa",
     "nome": "Casa",
-    "descricao": "Organizadores e utilidades funcionais para o dia a dia.",
+    "descricao": "Cozinha, banheiro, decoração e organização funcional para o dia a dia.",
     "icone": "casa",
-    "subcategorias": ["organizadores", "moveis"]
+    "subcategorias": [
+      {
+        "slug": "cozinha",
+        "nome": "Cozinha",
+        "descricao": "Organizadores de gaveta e tempero, cortadores e moldes, suportes (papel-toalha, cápsulas)."
+      },
+      {
+        "slug": "banheiro-lavanderia",
+        "nome": "Banheiro & Lavanderia",
+        "descricao": "Organizadores, ganchos e suportes de parede resistentes à umidade."
+      },
+      {
+        "slug": "decoracao",
+        "nome": "Decoração",
+        "descricao": "Vasos e cachepôs, luminárias, quadros e letreiros 3D, itens sazonais."
+      },
+      {
+        "slug": "organizacao",
+        "nome": "Organização",
+        "descricao": "Caixas modulares, divisórias de gaveta e ganchos adesivos."
+      },
+      {
+        "slug": "organizadores",
+        "nome": "Organizadores Gerais",
+        "descricao": "Organizadores de uso diário."
+      },
+      {
+        "slug": "moveis",
+        "nome": "Móveis e utilidades",
+        "descricao": "Pés niveladores, puxadores e acessórios para móveis."
+      }
+    ]
+  },
+  {
+    "slug": "setup-games",
+    "nome": "Setup & Games",
+    "descricao": "Acessórios de mesa, suportes para monitores, consoles e inserts para RPG e board games.",
+    "icone": "gamepad",
+    "subcategorias": [
+      {
+        "slug": "desktop",
+        "nome": "Desktop",
+        "descricao": "Suportes de headset e celular, organizadores de cabos, risers de monitor e notebook, docks, porta-canetas, acessórios de teclado."
+      },
+      {
+        "slug": "games",
+        "nome": "Games",
+        "descricao": "Suportes de console e controle, acessórios para portáteis, miniaturas de RPG, inserts para board games."
+      }
+    ]
   },
   {
     "slug": "gadgets",
     "nome": "Gadgets",
-    "descricao": "Suportes de mesa, setup e acessórios tech de alta precisão.",
+    "descricao": "Cases para Arduino, Raspberry Pi, suportes e acessórios para eletrônicos.",
     "icone": "gadgets",
-    "subcategorias": ["setup", "suportes"]
+    "subcategorias": [
+      {
+        "slug": "cases",
+        "nome": "Cases (Arduino, Raspberry Pi)",
+        "descricao": "Cases protetores ventilados e gabinetes para microcontroladores e placas."
+      },
+      {
+        "slug": "suportes-acessorios",
+        "nome": "Suportes e acessórios",
+        "descricao": "Suportes de bancada, docks de carregamento e montagens para dispositivos eletrônicos."
+      },
+      {
+        "slug": "setup",
+        "nome": "Setup Tech",
+        "descricao": "Acessórios e suportes tecnológicos de alta precisão."
+      }
+    ]
+  },
+  {
+    "slug": "ferramentas-oficina",
+    "nome": "Ferramentas & Oficina",
+    "descricao": "Organizadores de ferramentas, bits e suportes para bancada e pegboard.",
+    "icone": "ferramenta",
+    "subcategorias": [
+      {
+        "slug": "organizadores-ferramentas",
+        "nome": "Organizadores de ferramentas e bits",
+        "descricao": "Organizadores de bancada, suportes magnéticos de bits, soquetes e alicates."
+      },
+      {
+        "slug": "pegboard",
+        "nome": "Suportes de pegboard",
+        "descricao": "Ganchos, prateleiras, cestos e porta-ferramentas modulares para painéis pegboard."
+      }
+    ]
+  },
+  {
+    "slug": "educacao-maker",
+    "nome": "Educação & Maker",
+    "descricao": "Modelos didáticos anatômicos, científicos e kits educativos maker para montagem.",
+    "icone": "educacao",
+    "subcategorias": [
+      {
+        "slug": "modelos-didaticos",
+        "nome": "Modelos didáticos",
+        "descricao": "Modelos anatômicos, celulares, matemáticos, relevos topográficos e física interativa."
+      },
+      {
+        "slug": "kits-maker",
+        "nome": "Kits maker",
+        "descricao": "Projetos de robótica educacional, engrenagens, articulados e componentes DIY."
+      }
+    ]
   },
   {
     "slug": "figures",
     "nome": "Figures",
-    "descricao": "Action figures e colecionáveis detalhados sob encomenda.",
+    "descricao": "Action figures e colecionáveis detalhados por tema, pintados ou sem pintura.",
     "icone": "figures",
-    "subcategorias": ["colecionaveis", "anime"]
+    "subcategorias": [
+      {
+        "slug": "por-tema",
+        "nome": "Por tema",
+        "descricao": "Personagens de cinema, quadrinhos, animes, jogos e cultura pop."
+      },
+      {
+        "slug": "pintadas-sem-pintura",
+        "nome": "Pintadas e sem pintura",
+        "descricao": "Versões completas com pintura artística ou em primer para hobby e personalização."
+      },
+      {
+        "slug": "colecionaveis",
+        "nome": "Colecionáveis",
+        "descricao": "Estatuetas e bustos colecionáveis de alta definição."
+      }
+    ]
+  },
+  {
+    "slug": "presentes",
+    "nome": "Presentes",
+    "descricao": "Peças personalizadas com nome, chaveiros criativos e kits temáticos para presentear.",
+    "icone": "presente",
+    "subcategorias": [
+      {
+        "slug": "personalizados",
+        "nome": "Personalizados com nome",
+        "descricao": "Luminárias decorativas, placas de homenagem e letreiros 3D personalizados."
+      },
+      {
+        "slug": "chaveiros",
+        "nome": "Chaveiros",
+        "descricao": "Chaveiros temáticos, abridores embutidos, tags de mala e brindes exclusivos."
+      },
+      {
+        "slug": "kits",
+        "nome": "Kits",
+        "descricao": "Conjuntos especiais para datas comemorativas, aniversários e datas corporativas."
+      }
+    ]
   }
 ]
-

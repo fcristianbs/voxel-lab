@@ -9,10 +9,10 @@
 
     <!-- Navegação Desktop -->
     <nav class="vl-nav" aria-label="Navegação principal">
-      <a href="/categoria/engenharia" class="vl-nav-link {% if active_page == 'engenharia' %}active{% endif %}">Engenharia</a>
-      <a href="/categoria/casa" class="vl-nav-link {% if active_page == 'casa' %}active{% endif %}">Casa</a>
-      <a href="/categoria/gadgets" class="vl-nav-link {% if active_page == 'gadgets' %}active{% endif %}">Gadgets</a>
-      <a href="/categoria/figures" class="vl-nav-link {% if active_page == 'figures' %}active{% endif %}">Figures</a>
+      <a href="/catalogo" class="vl-nav-link {% if active_page == 'catalogo' %}active{% endif %}">Catálogo</a>
+      {% for cat in todas_categorias %}
+        <a href="/categoria/{{ cat.slug }}" class="vl-nav-link {% if active_categoria == cat.slug or active_page == cat.slug %}active{% endif %}">{{ cat.nome }}</a>
+      {% endfor %}
       <a href="/sob-medida" class="vl-nav-link nav-sob-medida {% if active_page == 'sob-medida' %}active{% endif %}">Sob medida</a>
     </nav>
 
@@ -57,11 +57,11 @@
       </form>
     </div>
     <div class="vl-mobile-drawer-links">
-      <a href="/categoria/engenharia" class="vl-mobile-drawer-link">Engenharia</a>
-      <a href="/categoria/casa" class="vl-mobile-drawer-link">Casa</a>
-      <a href="/categoria/gadgets" class="vl-mobile-drawer-link">Gadgets</a>
-      <a href="/categoria/figures" class="vl-mobile-drawer-link">Figures</a>
-      <a href="/sob-medida" class="vl-mobile-drawer-link nav-sob-medida">Sob medida</a>
+      <a href="/catalogo" class="vl-mobile-drawer-link {% if active_page == 'catalogo' %}active{% endif %}">Catálogo Completo</a>
+      {% for cat in todas_categorias %}
+        <a href="/categoria/{{ cat.slug }}" class="vl-mobile-drawer-link {% if active_categoria == cat.slug or active_page == cat.slug %}active{% endif %}">{{ cat.nome }}</a>
+      {% endfor %}
+      <a href="/sob-medida" class="vl-mobile-drawer-link nav-sob-medida {% if active_page == 'sob-medida' %}active{% endif %}">Sob medida</a>
       <a href="/styleguide" class="vl-mobile-drawer-link text-muted" style="font-size: 0.9375rem;">Design System / Styleguide</a>
     </div>
   </div>
