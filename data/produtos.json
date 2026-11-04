@@ -138,7 +138,7 @@
     "subcategoria": "starlink",
     "resumo": "Fixação aerodinâmica de alta resistência para Starlink Mini em teto, rack ou caçamba.",
     "descricao": "Projetado em PETG-UV com geometria aerodinâmica reforçada, ideal para motorhomes, veículos 4x4, embarcações e uso em estrada sem deformar ao sol e chuva.",
-    "preco": null,
+    "preco": 200.0,
     "precoParcelado": "ou [n]x no Mercado Livre",
     "material": "PETG-UV",
     "uso": "externo",
@@ -215,7 +215,7 @@
       "Aperte as travas de fixação com firmeza.",
       "Encaixe a antena Starlink Mini até o travamento seguro."
     ],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://web.whatsapp.com/",
     "relacionados": [
       "suporte-starlink-mini-tubo-1",
       "passa-cabo-parede",
