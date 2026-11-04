@@ -60,7 +60,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": "https://web.whatsapp.com/",
+    "mercadoLivreUrl": null,
     "relacionados": [
       "porta-chaves-objetos"
     ]
@@ -281,7 +281,7 @@
       "Aperte as travas de fixação com firmeza.",
       "Encaixe a antena Starlink Mini até o travamento seguro."
     ],
-    "mercadoLivreUrl": "https://web.whatsapp.com/",
+    "mercadoLivreUrl": null,
     "relacionados": [
       "suporte-starlink-mini-tubo-1",
       "passa-cabo-parede",

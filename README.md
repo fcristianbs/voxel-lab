@@ -88,8 +88,8 @@ Para cadastrar uma nova peça no catálogo sem precisar alterar o código da apl
 
 Os seguintes dados estão centralizados em [`site_config.py`](file:///c:/git/VOXEL%20LAB/site_config.py) e `data/produtos.json` prontos para receber os valores de produção assim que aprovados:
 
-1. `whatsapp`: Número oficial da Voxel Lab com DDI + DDD (atualmente `'55XXXXXXXXXXX'`).
-2. `whatsapp_formatado`: Formatação visual para texto (atualmente `'(XX) 9XXXX-XXXX'`).
+1. `whatsapp`: Número oficial da Voxel Lab com DDI + DDD (`'5588921864755'`).
+2. `whatsapp_formatado`: Formatação visual para texto (`'(88) 92186-4755'`).
 3. `mercadoLivreLoja`: URL da página de vendedor oficial no Mercado Livre.
 4. `dominio`: Domínio de produção final (atualmente configurado como `'https://voxellab.com.br'`).
 5. `prazoRespostaHoras`: Tempo padrão de resposta estimado (atualmente `24` horas úteis).

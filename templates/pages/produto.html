@@ -10,6 +10,7 @@
 {% from 'components/seletores.html' import seletor_opcao, seletor_cor %}
 {% from 'components/ficha_tecnica.html' import ficha_tecnica %}
 {% from 'components/card_produto.html' import card_produto %}
+{% from 'components/barra_whatsapp.html' import barra_whatsapp_fixa %}
 
 {% block content %}
 <div class="vl-container"
@@ -131,7 +132,8 @@
       <!-- Box de Ações de Compra (CDU 3.4 / 7_Produto_desktop.png) -->
       <div class="produto-cta-box">
         <!-- Botão WhatsApp Primário Laranja -->
-        <a href="#"
+        {% set msg_inicial = "Olá, Voxel Lab! Quero este produto:\n• " ~ produto.nome ~ "\n" ~ request.url %}
+        <a href="{{ get_whatsapp_url(msg_inicial) }}"
            id="btn-pedir-whatsapp"
            target="_blank"
            rel="noopener noreferrer"
@@ -232,6 +234,11 @@
   {% endif %}
 
 </div>
+{% endblock %}
+
+{% block barra_whatsapp %}
+  {% set msg_inicial = "Olá, Voxel Lab! Quero este produto:\n• " ~ produto.nome ~ "\n" ~ request.url %}
+  {{ barra_whatsapp_fixa(texto="Pedir pelo WhatsApp", url=get_whatsapp_url(msg_inicial)) }}
 {% endblock %}
 
 {% block extra_js %}

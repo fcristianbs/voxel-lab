@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-sob-medida');
   if (!form) return;
 
-  const whatsappNumero = form.getAttribute('data-whatsapp') || '55XXXXXXXXXXX';
+  const whatsappNumero = form.getAttribute('data-whatsapp') || '5588921864755';
   const refProduto = form.getAttribute('data-ref-produto') || '';
   const refUrl = form.getAttribute('data-ref-url') || '';
 

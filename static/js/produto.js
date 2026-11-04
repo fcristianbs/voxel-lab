@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const produtoNome = produtoContainer.getAttribute('data-produto-nome') || '';
   const produtoSlug = produtoContainer.getAttribute('data-produto-slug') || '';
-  const whatsappNumero = produtoContainer.getAttribute('data-whatsapp-numero') || '55XXXXXXXXXXX';
+  const whatsappNumero = produtoContainer.getAttribute('data-whatsapp-numero') || '5588921864755';
   const produtoUrl = window.location.href.split('?')[0];
 
   // Estado das seleções
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const livePreview = document.getElementById('produto-live-msg');
   const btnWhatsapp = document.getElementById('btn-pedir-whatsapp');
   const btnWhatsappMobile = document.getElementById('barra-whatsapp-fixa-btn');
+  const btnWhatsappHeader = document.getElementById('header-btn-whatsapp');
 
   function atualizarMensagemWhatsApp() {
     let msg = `Olá, Voxel Lab! Quero este produto:\n• ${produtoNome}`;
@@ -58,6 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (btnWhatsappMobile) {
       btnWhatsappMobile.href = waUrl;
+    }
+    if (btnWhatsappHeader) {
+      btnWhatsappHeader.href = waUrl;
     }
 
     if (livePreview) {
