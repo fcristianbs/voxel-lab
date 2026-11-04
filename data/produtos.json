@@ -1,5 +1,71 @@
 [
   {
+    "slug": "batman-af",
+    "nome": "Batman AF",
+    "categoria": "figures",
+    "subcategoria": "Batman",
+    "resumo": "Action figure batman sentado",
+    "descricao": "Action figure batman sentado",
+    "preco": 35.0,
+    "precoParcelado": "ou [n]x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "decor",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/batman-af.jpg",
+        "alt": "Batman AF",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "figure-sob-encomenda"
+    ]
+  },
+  {
     "slug": "suporte-starlink-mini-veicular",
     "nome": "Suporte Starlink Mini · Veicular",
     "categoria": "engenharia",
@@ -15,24 +81,68 @@
     "selo": "NOVO",
     "ordem": 1,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG-UV"},
-      {"chave": "CAMADA", "valor": "0,20 mm"},
-      {"chave": "PREENCHIMENTO", "valor": "60% gyroid"},
-      {"chave": "USO", "valor": "Externo, sol, chuva e estrada"},
-      {"chave": "COMPATÍVEL", "valor": "Starlink Mini"},
-      {"chave": "FIXAÇÃO", "valor": "Rack / Teto / Trilho"},
-      {"chave": "PRAZO", "valor": "[n] dias úteis"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "60% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol, chuva e estrada"
+      },
+      {
+        "chave": "COMPATÍVEL",
+        "valor": "Starlink Mini"
+      },
+      {
+        "chave": "FIXAÇÃO",
+        "valor": "Rack / Teto / Trilho"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "[n] dias úteis"
+      }
     ],
     "variacoes": [
-      {"nome": "Fixação", "opcoes": ["Rack de Teto", "Ventosa Industrial", "Parafuso Direto"], "padrao": "Rack de Teto", "permiteOutraMedida": true}
+      {
+        "nome": "Fixação",
+        "opcoes": [
+          "Rack de Teto",
+          "Ventosa Industrial",
+          "Parafuso Direto"
+        ],
+        "padrao": "Rack de Teto",
+        "permiteOutraMedida": true
+      }
     ],
     "cores": [
-      {"nome": "Preto fosco", "hex": "#111111", "padrao": true},
-      {"nome": "Cinza", "hex": "#6B7280"},
-      {"nome": "Branco", "hex": "#E8EDF2"}
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
     ],
     "imagens": [
-      {"src": "/static/img/produtos/suporte-starlink-mini-veicular.png", "alt": "Suporte Starlink Mini Veicular", "tipo": "instalada"}
+      {
+        "src": "/static/img/produtos/suporte-starlink-mini-veicular.png",
+        "alt": "Suporte Starlink Mini Veicular",
+        "tipo": "instalada"
+      }
     ],
     "instalacao": [
       "Posicione a base do suporte no rack ou teto do veículo.",
@@ -40,7 +150,11 @@
       "Encaixe a antena Starlink Mini até o travamento seguro."
     ],
     "mercadoLivreUrl": null,
-    "relacionados": ["suporte-starlink-mini-tubo-1", "passa-cabo-parede", "abracadeira-mastro-par"]
+    "relacionados": [
+      "suporte-starlink-mini-tubo-1",
+      "passa-cabo-parede",
+      "abracadeira-mastro-par"
+    ]
   },
   {
     "slug": "suporte-starlink-mini-tubo-1",
@@ -58,25 +172,77 @@
     "selo": "MAIS VENDIDO",
     "ordem": 1,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG-UV"},
-      {"chave": "CAMADA", "valor": "0,20 mm"},
-      {"chave": "PREENCHIMENTO", "valor": "40% gyroid"},
-      {"chave": "USO", "valor": "Externo, sol e chuva"},
-      {"chave": "COMPATÍVEL", "valor": "Starlink Mini"},
-      {"chave": "ACOMPANHA", "valor": "[parafusos/abraçadeira]"},
-      {"chave": "PRAZO", "valor": "[n] dias úteis"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo, sol e chuva"
+      },
+      {
+        "chave": "COMPATÍVEL",
+        "valor": "Starlink Mini"
+      },
+      {
+        "chave": "ACOMPANHA",
+        "valor": "[parafusos/abraçadeira]"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "[n] dias úteis"
+      }
     ],
     "variacoes": [
-      {"nome": "Antena", "opcoes": ["Mini", "Standard", "Gen 3"], "padrao": "Mini"},
-      {"nome": "Diâmetro do tubo", "opcoes": ["3/4\"", "1\"", "1 1/4\""], "padrao": "1\"", "permiteOutraMedida": true}
+      {
+        "nome": "Antena",
+        "opcoes": [
+          "Mini",
+          "Standard",
+          "Gen 3"
+        ],
+        "padrao": "Mini"
+      },
+      {
+        "nome": "Diâmetro do tubo",
+        "opcoes": [
+          "3/4\"",
+          "1\"",
+          "1 1/4\""
+        ],
+        "padrao": "1\"",
+        "permiteOutraMedida": true
+      }
     ],
     "cores": [
-      {"nome": "Preto fosco", "hex": "#111111", "padrao": true},
-      {"nome": "Cinza", "hex": "#6B7280"},
-      {"nome": "Branco", "hex": "#E8EDF2"}
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
     ],
     "imagens": [
-      {"src": "", "alt": "Suporte Starlink Mini instalado no tubo", "tipo": "instalada"}
+      {
+        "src": "",
+        "alt": "Suporte Starlink Mini instalado no tubo",
+        "tipo": "instalada"
+      }
     ],
     "instalacao": [
       "Encaixe as duas metades do suporte no tubo.",
@@ -84,7 +250,12 @@
       "Encaixe a antena e ajuste o ângulo pelo app."
     ],
     "mercadoLivreUrl": null,
-    "relacionados": ["passa-cabo-parede", "suporte-roteador-mini", "abracadeira-mastro-par", "suporte-starlink-standard-parede"]
+    "relacionados": [
+      "passa-cabo-parede",
+      "suporte-roteador-mini",
+      "abracadeira-mastro-par",
+      "suporte-starlink-standard-parede"
+    ]
   },
   {
     "slug": "suporte-starlink-standard-parede",
@@ -102,20 +273,46 @@
     "selo": null,
     "ordem": 2,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG-UV"},
-      {"chave": "CAMADA", "valor": "0,20 mm"},
-      {"chave": "USO", "valor": "Externo"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo"
+      }
     ],
     "variacoes": [
-      {"nome": "Modelo", "opcoes": ["Standard V2", "Standard V3"], "padrao": "Standard V2"}
+      {
+        "nome": "Modelo",
+        "opcoes": [
+          "Standard V2",
+          "Standard V3"
+        ],
+        "padrao": "Standard V2"
+      }
     ],
     "cores": [
-      {"nome": "Preto fosco", "hex": "#111111", "padrao": true},
-      {"nome": "Branco", "hex": "#E8EDF2"}
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
     ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["passa-cabo-parede", "suporte-starlink-mini-tubo-1"]
+    "relacionados": [
+      "passa-cabo-parede",
+      "suporte-starlink-mini-tubo-1"
+    ]
   },
   {
     "slug": "suporte-starlink-gen3-mastro",
@@ -133,14 +330,28 @@
     "selo": null,
     "ordem": 3,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG-UV"},
-      {"chave": "USO", "valor": "Externo"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Preto fosco", "hex": "#111111", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["abracadeira-mastro-par"]
+    "relacionados": [
+      "abracadeira-mastro-par"
+    ]
   },
   {
     "slug": "suporte-roteador-mini",
@@ -158,14 +369,28 @@
     "selo": null,
     "ordem": 4,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG"},
-      {"chave": "USO", "valor": "Interno"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Branco", "hex": "#E8EDF2", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["passa-cabo-parede"]
+    "relacionados": [
+      "passa-cabo-parede"
+    ]
   },
   {
     "slug": "passa-cabo-parede",
@@ -183,14 +408,28 @@
     "selo": null,
     "ordem": 5,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG-UV"},
-      {"chave": "USO", "valor": "Externo"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Cinza", "hex": "#6B7280", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["suporte-starlink-mini-tubo-1"]
+    "relacionados": [
+      "suporte-starlink-mini-tubo-1"
+    ]
   },
   {
     "slug": "abracadeira-mastro-par",
@@ -208,14 +447,28 @@
     "selo": null,
     "ordem": 6,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG-UV"},
-      {"chave": "USO", "valor": "Externo"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG-UV"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Preto fosco", "hex": "#111111", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["suporte-starlink-mini-tubo-1"]
+    "relacionados": [
+      "suporte-starlink-mini-tubo-1"
+    ]
   },
   {
     "slug": "adaptador-mangueira-3-4-1-2",
@@ -233,11 +486,23 @@
     "selo": null,
     "ordem": 7,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG"},
-      {"chave": "USO", "valor": "Externo"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG"
+      },
+      {
+        "chave": "USO",
+        "valor": "Externo"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Preto fosco", "hex": "#111111", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
     "relacionados": []
@@ -258,11 +523,23 @@
     "selo": null,
     "ordem": 8,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PETG"},
-      {"chave": "USO", "valor": "Interno"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Branco", "hex": "#E8EDF2", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
     "relacionados": []
@@ -283,14 +560,28 @@
     "selo": null,
     "ordem": 9,
     "specs": [
-      {"chave": "MATERIAL", "valor": "TPU"},
-      {"chave": "USO", "valor": "Interno"}
+      {
+        "chave": "MATERIAL",
+        "valor": "TPU"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Preto", "hex": "#111111", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["organizador-cabos-kit6"]
+    "relacionados": [
+      "organizador-cabos-kit6"
+    ]
   },
   {
     "slug": "organizador-cabos-kit6",
@@ -308,14 +599,28 @@
     "selo": null,
     "ordem": 4,
     "specs": [
-      {"chave": "MATERIAL", "valor": "TPU"},
-      {"chave": "USO", "valor": "Interno"}
+      {
+        "chave": "MATERIAL",
+        "valor": "TPU"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Preto fosco", "hex": "#111111", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["suporte-headset-mesa"]
+    "relacionados": [
+      "suporte-headset-mesa"
+    ]
   },
   {
     "slug": "suporte-headset-mesa",
@@ -333,14 +638,28 @@
     "selo": null,
     "ordem": 3,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PLA"},
-      {"chave": "USO", "valor": "Interno"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Preto fosco", "hex": "#111111", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
-    "relacionados": ["organizador-cabos-kit6"]
+    "relacionados": [
+      "organizador-cabos-kit6"
+    ]
   },
   {
     "slug": "figure-sob-encomenda",
@@ -358,11 +677,23 @@
     "selo": null,
     "ordem": 12,
     "specs": [
-      {"chave": "MATERIAL", "valor": "PLA"},
-      {"chave": "USO", "valor": "Interno"}
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      }
     ],
     "variacoes": [],
-    "cores": [{"nome": "Cinza primer", "hex": "#6B7280", "padrao": true}],
+    "cores": [
+      {
+        "nome": "Cinza primer",
+        "hex": "#6B7280",
+        "padrao": true
+      }
+    ],
     "imagens": [],
     "mercadoLivreUrl": null,
     "relacionados": []
