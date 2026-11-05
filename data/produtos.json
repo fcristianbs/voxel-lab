@@ -1,5 +1,86 @@
 [
   {
+    "slug": "suporte-de-controle-mao-do-heroi-aranha-gamer",
+    "nome": "Suporte de Controle Mão do Herói Aranha · Gamer",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Mão de herói aranha em 3 cores que segura o controle.",
+    "descricao": "Suporte decorativo em forma de mão com luva de herói aranha, feita em partes coloridas e montada sem AMS. Compatível com DualSense e controles de tamanho similar. Peça grande para mesa ou estante, impressa em PLA.",
+    "preco": 183.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 12,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-mao-do-heroi-aranha-gamer.jpg",
+        "alt": "suporte-controle-mao-aranha",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-controle-organico-design-voronoi",
     "nome": "Suporte de Controle Orgânico · Design Voronoi",
     "categoria": "setup-games",
