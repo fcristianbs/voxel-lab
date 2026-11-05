@@ -1,5 +1,75 @@
 [
   {
+    "slug": "organizador-de-cabos-6-vias-para-mesa-ou-parede",
+    "nome": "Organizador de Cabos · 6 Vias para Mesa ou Parede",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Clipe que mantém até 6 cabos alinhados na mesa ou parede.",
+    "descricao": "Clipe organizador de cabos para fixar na mesa ou na parede (fita dupla face ou parafuso). Mantém os cabos de carregadores, mouse e teclado no lugar, sem cair atrás da mesa. Disponível em 4, 6, 8 e 10 vias. Peça leve e rápida de produzir, impressa em PLA.",
+    "preco": 5.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "MAIS VENDIDO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "1 a 2 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/organizador-de-cabos-6-vias-para-mesa-ou-parede.jpg",
+        "alt": "Gestão de cabos",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": []
+  },
+  {
     "slug": "suporte-de-controle-tita-atlas-xbox-ps5",
     "nome": "Suporte de Controle Titã Atlas · Xbox/PS5",
     "categoria": "setup-games",
