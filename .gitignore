@@ -42,6 +42,7 @@ ENV/
 .agent/
 .idea/
 .vscode/
+*.code-workspace
 *.suo
 *.ntvs*
 *.njsproj

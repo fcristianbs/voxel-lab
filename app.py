@@ -39,7 +39,7 @@ def serve_static_file(filename):
     abort(404)
 
 from data_service import get_mais_pedidos, get_categorias, get_produtos, get_produto_by_slug, get_categoria_by_slug, filtrar_produtos
-from flask import abort
+from flask import abort   
 
 @app.route('/')
 def index():
@@ -109,14 +109,14 @@ def api_produtos():
 @app.route('/robots.txt')
 def robots_txt():
     """Arquivo robots.txt para SEO (RNF04)."""
-    dominio = site.get('dominio', 'https://voxellab.com.br')
+    dominio = site.get('dominio', 'https://voxel-lab-black.vercel.app').rstrip('/')
     content = f"User-agent: *\nAllow: /\nSitemap: {dominio}/sitemap.xml\n"
     return content, 200, {'Content-Type': 'text/plain'}
 
 @app.route('/sitemap.xml')
 def sitemap_xml():
     """Sitemap XML dinâmico para SEO (RNF04)."""
-    dominio = site.get('dominio', 'https://voxellab.com.br')
+    dominio = site.get('dominio', 'https://voxel-lab-black.vercel.app').rstrip('/')
     produtos = get_produtos()
     categorias = get_categorias()
     
