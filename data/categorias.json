@@ -59,6 +59,11 @@
         "descricao": "Vasos e cachepôs, luminárias, quadros e letreiros 3D, itens sazonais."
       },
       {
+        "slug": "luminaria",
+        "nome": "Luminárias",
+        "descricao": "Luminárias de design, iluminação decorativa e abajures em impressão 3D."
+      },
+      {
         "slug": "organizacao",
         "nome": "Organização",
         "descricao": "Caixas modulares, divisórias de gaveta e ganchos adesivos."
