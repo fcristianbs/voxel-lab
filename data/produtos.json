@@ -1,5 +1,80 @@
 [
   {
+    "slug": "luminaria-dragao-negro-na-chama-fantasia",
+    "nome": "Luminária Dragão Negro na Chama · Fantasia",
+    "categoria": "casa",
+    "subcategoria": "luminaria",
+    "resumo": "Dragão negro de asas abertas suspenso sobre uma coluna de fogo luminosa.",
+    "descricao": "Luminária com dragão negro de asas abertas que parece flutuar sobre uma coluna de chamas iluminada. Silhueta dramática e dinâmica, em três cores produzidas separadamente. Acompanha kit de iluminação LED com controle.",
+    "preco": 96.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": false,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 7,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-dragao-negro-na-chama-fantasia.jpg",
+        "alt": "luminaria-dragao-negro-chama",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "porta-controles-remotos-organizador-triplo"
+    ]
+  },
+  {
     "slug": "luminaria-dragao-cuspindo-fogo-fantasia",
     "nome": "Luminária Dragão Cuspindo Fogo · Fantasia",
     "categoria": "casa",
