@@ -1,5 +1,82 @@
 [
   {
+    "slug": "capa-ripada-para-suporte-de-controle-acessorio",
+    "nome": "Capa Ripada para Suporte de Controle · Acessório",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Capa intercambiável com visual ripado para personalizar o suporte de controle.",
+    "descricao": "Capa com acabamento ripado que encaixa sobre a base do suporte de controle, permitindo trocar o visual sem trocar o suporte. Compatível com controles de PlayStation, Xbox e Nintendo Switch quando usada com a base correspondente. Peça leve, impressa em PLA. Vendida como acessório (a base do suporte não acompanha).",
+    "preco": 19.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 9,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#70320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/capa-ripada-para-suporte-de-controle-acessorio.jpg",
+        "alt": "capa-ripada-suporte-controle",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-controle-sob-a-mesa-encaixe-grampo",
     "nome": "Suporte de Controle Sob a Mesa · Encaixe Grampo",
     "categoria": "setup-games",
