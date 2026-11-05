@@ -1,5 +1,80 @@
 [
   {
+    "slug": "luminaria-montanha-luz-indireta",
+    "nome": "Luminária Montanha · Luz Indireta",
+    "categoria": "casa",
+    "subcategoria": "luminaria",
+    "resumo": "Luminária de camadas que forma uma silhueta de montanha com luz indireta.",
+    "descricao": "Luminária minimalista de camadas sobrepostas que formam uma silhueta de montanha, com luz quente e indireta. Impressa em PLA com fibra de carbono (PLA-CF), de acabamento fosco e premium. Acompanha kit de iluminação LED com controle.",
+    "preco": 178.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": false,
+    "selo": "SOB MEDIDA",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 8,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-montanha-luz-indireta.jpg",
+        "alt": "luminaria-montanha-design",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "porta-controles-remotos-organizador-triplo"
+    ]
+  },
+  {
     "slug": "luminaria-dragao-negro-na-chama-fantasia",
     "nome": "Luminária Dragão Negro na Chama · Fantasia",
     "categoria": "casa",
