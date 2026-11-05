@@ -1,5 +1,83 @@
 [
   {
+    "slug": "luminaria-lua-com-base-ondulada-textura-aveludada",
+    "nome": "Luminária Lua com Base Ondulada · Textura Aveludada",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Lua texturizada sobre base ondulada aveludada, para soquete E27.",
+    "descricao": "Luminária em forma de lua com relevo de crateras, impressa com preenchimento 100% para difundir a luz, sobre base ondulada com acabamento aveludado (fuzzy skin). Feita para soquete E27 padrão. Acompanha iluminação LED com controle.",
+    "preco": 217.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": false,
+    "selo": "SOB MEDIDA",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 16,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "4 a 3 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-lua-com-base-ondulada-textura-aveludada.jpg",
+        "alt": "luminaria-lua-base-ondulada",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "luminaria-montanha-luz-indireta",
+      "luminaria-dragao-negro-na-chama-fantasia",
+      "luminaria-dragao-cuspindo-fogo-fantasia",
+      "luminaria-lanterna-de-blocos-pixel-art",
+      "luminaria-shoji-japonesa-sakura-e-grande-onda",
+      "abajur-minimalista-torcido-design",
+      "luminaria-cristal-mineral-decorativa"
+    ]
+  },
+  {
     "slug": "luminaria-zen-ondas-relaxante",
     "nome": "Luminária Zen Ondas · Relaxante",
     "categoria": "setup-games",
