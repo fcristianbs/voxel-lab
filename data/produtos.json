@@ -1,5 +1,80 @@
 [
   {
+    "slug": "luminaria-cristal-mineral-decorativa",
+    "nome": "Luminária Cristal Mineral · Decorativa",
+    "categoria": "casa",
+    "subcategoria": "luminaria",
+    "resumo": "Luminária com cristais translúcidos que brilham sobre uma base de rocha.",
+    "descricao": "Luminária decorativa inspirada em formações de cristais e minerais. Os cristais são impressos em PETG translúcido, que difunde a luz, sobre base em PLA com acabamento de rocha. Ideal para quarto, sala ou estante. Acompanha kit de iluminação LED com controle.",
+    "preco": 133.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PETG + PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PETG + PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-cristal-mineral-decorativa.jpg",
+        "alt": "luminaria-cristal-mineral",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "porta-controles-remotos-organizador-triplo"
+    ]
+  },
+  {
     "slug": "painel-pegboard-compativel-skadis-sob-medida",
     "nome": "Painel Pegboard Compatível Skadis · Sob Medida",
     "categoria": "setup-games",
