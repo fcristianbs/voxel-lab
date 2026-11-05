@@ -1,5 +1,69 @@
 [
   {
+    "slug": "suporte-de-fone-de-ouvido-duas-cores-design-colmeia",
+    "nome": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
+    "categoria": "engenharia",
+    "subcategoria": "desktop",
+    "resumo": "Duas Cores – Design Colmeia",
+    "descricao": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
+    "preco": 39.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "DUAL COLOR",
+    "destaque": true,
+    "selo": "NOVO",
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "INTERNO"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#c5865a"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-fone-de-ouvido-duas-cores-design-colmeia.png",
+        "alt": "Suporte de headset",
+        "tipo": "escala"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "luminaria-a-onda",
+      "porta-chaves-objetos",
+      "passa-cabo-parede"
+    ]
+  },
+  {
     "slug": "batman-o-cavaleiro-das-trevas-edicao-ultradetalhada",
     "nome": "Batman O Cavaleiro das Trevas: edição ultradetalhada",
     "categoria": "figures",
