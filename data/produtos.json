@@ -1,5 +1,78 @@
 [
   {
+    "slug": "suporte-de-headset-swing-mesa",
+    "nome": "Suporte de Headset Swing · Mesa",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Suporte em balanço para headset, minimalista e estável, inclusive para fones grandes.",
+    "descricao": "Suporte de mesa com design em balanço para headsets e fones de ouvido, inclusive modelos grandes. Dimensões aproximadas de 244 x 122 x 120 mm. Estrutura impressa com 3 paredes para maior rigidez, sem necessidade de parafusos. Ideal para setups gamer e home office.",
+    "preco": 57.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitario",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 7,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#662900"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#002eb8"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-headset-swing-mesa.jpg",
+        "alt": "Suporte-de-headset",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-controle-cavaleiro-vazio-gamer",
     "nome": "Suporte de Controle Cavaleiro Vazio · Gamer",
     "categoria": "setup-games",
