@@ -1,5 +1,81 @@
 [
   {
+    "slug": "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+    "nome": "Suporte de Controle Sob a Mesa · Encaixe Grampo",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Libera espaço na mesa: prende na borda e guarda o controle por baixo.",
+    "descricao": "Suporte tipo grampo que encaixa na borda da mesa, sem parafusos, e mantém o controle por baixo ou na lateral. Compatível com controles de Xbox e PlayStation, funciona nos dois sentidos mesmo com cabo conectado. Serve em tampos de 10 a 21 mm (versão para 36 mm sob medida). Impresso com 3 paredes e 20% de preenchimento para resistir à pressão do encaixe.",
+    "preco": 43.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 2,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#70320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-sob-a-mesa-encaixe-grampo.jpg",
+        "alt": "suporte-controle-sob-mesa-grampo",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-controle-ps5-cobra-e-caveira",
     "nome": "Suporte de Controle PS5 · Cobra e Caveira",
     "categoria": "setup-games",
