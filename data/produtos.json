@@ -2093,16 +2093,18 @@
     "slug": "mandaloriano-e-grogu-sentado-na-borda",
     "nome": "Mandaloriano e Grogu sentado na borda",
     "categoria": "figures",
-    "subcategoria": "Ficção",
+    "subcategoria": "por-tema",
     "resumo": "Mandaloriano e Grogu sentado na borda",
     "descricao": "Figura colecionável de Din Djarin sentado segurando Grogu, feita para ficar na borda de prateleiras. Otimizada para FDM, preserva detalhes da armadura.",
-    "preco": 48.99,
+    "preco": 32.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
-    "specs_resumo": "aerodinâmico · UV",
+    "specs_resumo": "pla",
     "destaque": true,
     "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
     "ordem": 1,
     "specs": [
       {
@@ -2146,7 +2148,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://wa.me/5588921864755?text=Ol%C3%A1%2C%20Voxel%20Lab%21%20Vim%20pelo%20site%20e%20quero%20tirar%20uma%20d%C3%BAvida.",
     "relacionados": [
       "miniatura-do-groot-feliz",
       "vareta-giratoria-do-homem-aranha",
