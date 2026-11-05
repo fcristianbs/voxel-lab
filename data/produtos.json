@@ -1,5 +1,86 @@
 [
   {
+    "slug": "suporte-de-controle-ps5-trono-de-ferro",
+    "nome": "Suporte de Controle PS5 · Trono de Ferro",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Trono de espadas em estilo fantasia medieval para o controle do PS5.",
+    "descricao": "Suporte para controle de PS5 em forma de trono feito de espadas, inspirado em fantasia medieval. Peça grande e detalhada, impressa em PLA com 3 paredes e 20% de preenchimento para peso e estabilidade.",
+    "preco": 156.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 17,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-trono-de-ferro.jpg",
+        "alt": "suporte-controle-ps5-trono-de-ferro",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-mascara-fantasma",
+      "suporte-de-controle-ps5-guerreira-de-seda",
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni"
+    ]
+  },
+  {
     "slug": "porta-controles-remotos-organizador-triplo",
     "nome": "Porta Controles Remotos · Organizador Triplo",
     "categoria": "casa",
