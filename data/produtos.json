@@ -1,5 +1,79 @@
 [
   {
+    "slug": "porta-controles-remotos-organizador-triplo",
+    "nome": "Porta Controles Remotos · Organizador Triplo",
+    "categoria": "casa",
+    "subcategoria": "organizadores",
+    "resumo": "Organizador de mesa para 3 controles remotos, moderno e funcional.",
+    "descricao": "Porta-controles de mesa com três compartimentos para manter os controles remotos da sala sempre no lugar. Versões com compartimentos maiores (66 x 30 mm) ou com 6 espaços sob medida. Impresso em PLA.",
+    "preco": 40.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 16,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/porta-controles-remotos-organizador-triplo.jpg",
+        "alt": "porta-controles-remotos-triplo",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "porta-controle-remoto-de-parede-slim-duplo",
+      "suporte-para-2-controles-e-headset-organizador-gamer",
+      "suporte-de-headset-swing-mesa"
+    ]
+  },
+  {
     "slug": "porta-controle-remoto-de-parede-slim-duplo",
     "nome": "Porta Controle Remoto de Parede · Slim Duplo",
     "categoria": "casa",
