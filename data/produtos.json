@@ -1,5 +1,85 @@
 [
   {
+    "slug": "suporte-de-controle-organico-design-voronoi",
+    "nome": "Suporte de Controle Orgânico · Design Voronoi",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Suporte moderno com treliça orgânica, leve e estável.",
+    "descricao": "Suporte de controle com estrutura vazada em padrão orgânico, que une estética moderna e estabilidade. Versões para controles padrão e edição específica para DualSense (PS5). Impresso em PLA, sem necessidade de suportes de impressão.",
+    "preco": 45.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 3,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-organico-design-voronoi.jpg",
+        "alt": "suporte-controle-organico",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-controle-mao-sombria-fantasia",
     "nome": "Suporte de Controle Mão Sombria · Fantasia",
     "categoria": "setup-games",
