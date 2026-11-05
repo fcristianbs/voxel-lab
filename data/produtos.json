@@ -1,5 +1,69 @@
 [
   {
+    "slug": "suporte-de-controle-cavaleiro-vazio-gamer",
+    "nome": "Suporte de Controle Cavaleiro Vazio · Gamer",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Suporte decorativo de mesa inspirado no cavaleiro do jogo indie para guardar seu controle.",
+    "descricao": "Suporte de controle em formato do pequeno cavaleiro de máscara branca, ícone dos games indie. Peça robusta, impressa em PLA com 2 paredes e 15% de preenchimento, base larga para estabilidade sobre mesa ou estante. Compatível com controles padrão de PS4, PS5, Xbox e similares. Acabamento em duas cores (corpo escuro e máscara clara).",
+    "preco": 30.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitario",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 6,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-cavaleiro-vazio-gamer.jpg",
+        "alt": "sc_001_suporte-controle-cavaleiro-vazio",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-fone-de-ouvido-duas-cores-design-colmeia",
     "nome": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
     "categoria": "engenharia",
