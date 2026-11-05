@@ -1,5 +1,79 @@
 [
   {
+    "slug": "organizador-de-mesa-moderno-celular-relogio-e-fones",
+    "nome": "Organizador de Mesa Moderno · Celular, Relógio e Fones",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Organizador com espaços para celular, relógio, fones, chaves e canetas.",
+    "descricao": "Organizador de mesa com compartimentos dedicados para celular, relógio, fones de ouvido (case), chaves e itens de escritório. Design moderno e limpo que mantém o essencial do dia a dia organizado no home office ou setup gamer. Impresso em PLA.",
+    "preco": 97.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "MAIS VENDIDO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 4,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/organizador-de-mesa-moderno-celular-relogio-e-fones.jpg",
+        "alt": "organizador-de-mesa-moderno",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ]
+  },
+  {
     "slug": "suporte-de-celular-estilo-vice-city",
     "nome": "Suporte de Celular · Estilo Vice City",
     "categoria": "setup-games",
