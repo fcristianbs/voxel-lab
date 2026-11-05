@@ -1,5 +1,81 @@
 [
   {
+    "slug": "pes-elevados-para-gabinete-de-pc-kit",
+    "nome": "Pés Elevados para Gabinete de PC · Kit",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Pés geométricos que elevam o gabinete e melhoram a ventilação.",
+    "descricao": "Kit de pés com design geométrico minimalista que eleva o gabinete do PC do tampo ou do chão, melhorando a entrada de ar e reduzindo a sucção de poeira. Estrutura reforçada com 4 paredes e 25% de preenchimento para suportar o peso do gabinete. Impresso em PLA.",
+    "preco": 209.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": false,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 7,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/pes-elevados-para-gabinete-de-pc-kit.jpg",
+        "alt": "suporte-gabinete-pc-pes",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-cabos-para-borda-de-mesa-encaixe",
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ]
+  },
+  {
     "slug": "organizador-de-cabos-para-borda-de-mesa-encaixe",
     "nome": "Organizador de Cabos para Borda de Mesa · Encaixe",
     "categoria": "setup-games",
