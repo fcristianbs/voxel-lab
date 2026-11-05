@@ -1,5 +1,80 @@
 [
   {
+    "slug": "organizador-de-cabos-para-borda-de-mesa-encaixe",
+    "nome": "Organizador de Cabos para Borda de Mesa · Encaixe",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Prende na borda da mesa sem parafuso e segura vários cabos ao alcance.",
+    "descricao": "Organizador modular que encaixa na borda da mesa, sem parafusos nem cola, e segura vários cabos para não caírem no chão. Disponível para tampos de 20-25 mm, 25-30 mm e 30-40 mm. Impresso em PLA, sem necessidade de suportes.",
+    "preco": 18.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 6,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/organizador-de-cabos-para-borda-de-mesa-encaixe.jpg",
+        "alt": "organizador-cabos-borda-mesa",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ]
+  },
+  {
     "slug": "organizador-de-mesa-moderno-celular-relogio-e-fones",
     "nome": "Organizador de Mesa Moderno · Celular, Relógio e Fones",
     "categoria": "setup-games",
