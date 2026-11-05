@@ -1,5 +1,79 @@
 [
   {
+    "slug": "suporte-de-controle-ps5-mascara-oni",
+    "nome": "Suporte de Controle PS5 · Máscara Oni",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Máscara de demônio Oni que encaixa o DualSense com firmeza.",
+    "descricao": "Suporte de parede ou mesa em formato de máscara de demônio Oni, desenhado sob medida para o controle DualSense (PS5). O controle encaixa com clique e fica estável sem apoio extra. Possui recorte atrás do nariz para não pressionar botões quando o controle está apoiado. Impresso em PLA, 2 paredes e 15% de preenchimento.",
+    "preco": 43.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitario",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#663600"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000e1"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-mascara-oni.jpg",
+        "alt": "suporte-controle-ps5-mascara-oni",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-headset-swing-mesa",
     "nome": "Suporte de Headset Swing · Mesa",
     "categoria": "setup-games",
