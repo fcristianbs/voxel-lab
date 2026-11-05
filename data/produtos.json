@@ -1,5 +1,77 @@
 [
   {
+    "slug": "suporte-de-caneca-lateral-setup-gamer",
+    "nome": "Suporte de Caneca Lateral · Setup Gamer",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Suporte que prende na borda da mesa e mantém a caneca ao alcance, sem ocupar espaço.",
+    "descricao": "Suporte lateral de caneca/copo que encaixa na borda da mesa, liberando espaço no tampo e evitando derramar bebida perto do teclado e do PC. Estrutura reforçada com 5 paredes para suportar o peso de uma caneca cheia. Acabamento em duas cores, impresso em PLA.",
+    "preco": 173.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 5,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-caneca-lateral-setup-gamer.jpg",
+        "alt": "suporte-caneca-lateral-mesa-gamer",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ]
+  },
+  {
     "slug": "organizador-de-cabos-6-vias-para-mesa-ou-parede",
     "nome": "Organizador de Cabos · 6 Vias para Mesa ou Parede",
     "categoria": "setup-games",
