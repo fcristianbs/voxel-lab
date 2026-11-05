@@ -1,13 +1,1402 @@
 [
   {
+    "slug": "suporte-de-controle-tita-atlas-xbox-ps5",
+    "nome": "Suporte de Controle Titã Atlas · Xbox/PS5",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Escultura do titã que sustenta o mundo, segurando seu controle.",
+    "descricao": "Suporte escultural do titã mitológico carregando o controle sobre os ombros. Versões específicas para DualSense (PS5) e controle de Xbox One. Peça grande, impressa em PLA, ideal como destaque no setup.",
+    "preco": 138.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 18,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-tita-atlas-xbox-ps5.jpg",
+        "alt": "suporte-controle-tita-atlas",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-trono-de-ferro",
+      "suporte-de-controle-ps5-mascara-fantasma",
+      "suporte-de-controle-ps5-guerreira-de-seda",
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-controle-cavaleiro-vazio-gamer"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-ps5-trono-de-ferro",
+    "nome": "Suporte de Controle PS5 · Trono de Ferro",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Trono de espadas em estilo fantasia medieval para o controle do PS5.",
+    "descricao": "Suporte para controle de PS5 em forma de trono feito de espadas, inspirado em fantasia medieval. Peça grande e detalhada, impressa em PLA com 3 paredes e 20% de preenchimento para peso e estabilidade.",
+    "preco": 156.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 17,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-trono-de-ferro.jpg",
+        "alt": "suporte-controle-ps5-trono-de-ferro",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-mascara-fantasma",
+      "suporte-de-controle-ps5-guerreira-de-seda",
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni"
+    ]
+  },
+  {
+    "slug": "porta-controles-remotos-organizador-triplo",
+    "nome": "Porta Controles Remotos · Organizador Triplo",
+    "categoria": "casa",
+    "subcategoria": "organizadores",
+    "resumo": "Organizador de mesa para 3 controles remotos, moderno e funcional.",
+    "descricao": "Porta-controles de mesa com três compartimentos para manter os controles remotos da sala sempre no lugar. Versões com compartimentos maiores (66 x 30 mm) ou com 6 espaços sob medida. Impresso em PLA.",
+    "preco": 40.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 16,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/porta-controles-remotos-organizador-triplo.jpg",
+        "alt": "porta-controles-remotos-triplo",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "porta-controle-remoto-de-parede-slim-duplo",
+      "suporte-para-2-controles-e-headset-organizador-gamer",
+      "suporte-de-headset-swing-mesa"
+    ]
+  },
+  {
+    "slug": "porta-controle-remoto-de-parede-slim-duplo",
+    "nome": "Porta Controle Remoto de Parede · Slim Duplo",
+    "categoria": "casa",
+    "subcategoria": "organizacao",
+    "resumo": "Porta-controle de parede para 2 controles finos, fixado com 1 parafuso.",
+    "descricao": "Porta-controle de parede para dois controles remotos finos (tipo Apple TV e similares). Cada compartimento mede 16,6 x 47 mm internos. Fixação com um parafuso. Ideal para sala ou quarto, impresso em PLA.",
+    "preco": 19.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 15,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Nova Cor",
+        "hex": "#6e320av"
+      },
+      {
+        "nome": "Nova Cor",
+        "hex": "#33D1E0"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/porta-controle-remoto-de-parede-slim-duplo.jpg",
+        "alt": "porta-controle-remoto-parede-slim",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-para-2-controles-e-headset-organizador-gamer",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-headset-swing-mesa"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-ps5-mascara-fantasma",
+    "nome": "Suporte de Controle PS5 · Máscara Fantasma",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Máscara de guerreiro fantasma que encaixa o DualSense com clique.",
+    "descricao": "Suporte em formato de máscara de guerreiro fantasma, desenhado sob medida para o DualSense. Encaixe por clique, estável sem apoio extra, com recorte para não pressionar botões. Leve e rápido de produzir, impresso em PLA.",
+    "preco": 29.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 5,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-mascara-fantasma.jpg",
+        "alt": "suporte-controle-ps5-mascara-fantasma",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-guerreira-de-seda",
+      "suporte-universal-de-controle-cranio-de-monstrinho",
+      "suporte-para-2-controles-e-headset-organizador-gamer",
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-controle-cavaleiro-vazio-gamer"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-ps5-guerreira-de-seda",
+    "nome": "Suporte de Controle PS5 · Guerreira de Seda",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Personagem guerreira de game indie segurando o DualSense, em 3 cores.",
+    "descricao": "Suporte para controle DualSense com personagem guerreira inspirada em games indie. Pode ser feito em partes coloridas sem AMS. Base estável, impresso em PLA com 2 paredes e 15% de preenchimento.",
+    "preco": 42.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 14,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-guerreira-de-seda.jpg",
+        "alt": "suporte-controle-ps5-guerreira-silk",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-universal-de-controle-cranio-de-monstrinho",
+      "suporte-para-2-controles-e-headset-organizador-gamer",
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-controle-cavaleiro-vazio-gamer"
+    ]
+  },
+  {
+    "slug": "suporte-universal-de-controle-cranio-de-monstrinho",
+    "nome": "Suporte Universal de Controle · Crânio de Monstrinho",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Crânio de monstrinho de anime que serve de suporte universal para controle.",
+    "descricao": "Suporte universal em forma de crânio de criatura de anime, compatível com a maioria dos controles de videogame. Peça compacta e decorativa para mesa ou estante, impressa em PLA.",
+    "preco": 47.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 13,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-universal-de-controle-cranio-de-monstrinho.jpg",
+        "alt": "suporte-controle-cranio-pokemon",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-para-2-controles-e-headset-organizador-gamer",
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-controle-cavaleiro-vazio-gamer"
+    ]
+  },
+  {
+    "slug": "suporte-para-2-controles-e-headset-organizador-gamer",
+    "nome": "Suporte para 2 Controles e Headset · Organizador Gamer",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Organiza até 2 controles e 1 headset em uma única base.",
+    "descricao": "Organizador de mesa para até dois controles e um headset, mantendo o setup limpo e organizado. Base larga e estável, compatível com controles de PS4, PS5, Xbox e similares. Impresso em PLA (opção em ASA para maior resistência térmica).",
+    "preco": 86.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 4,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Cinza",
+        "hex": "#6B7280"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-para-2-controles-e-headset-organizador-gamer.jpg",
+        "alt": "2-controles-headset",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-mao-do-heroi-aranha-gamer",
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-controle-cavaleiro-vazio-gamer"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-mao-do-heroi-aranha-gamer",
+    "nome": "Suporte de Controle Mão do Herói Aranha · Gamer",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Mão de herói aranha em 3 cores que segura o controle.",
+    "descricao": "Suporte decorativo em forma de mão com luva de herói aranha, feita em partes coloridas e montada sem AMS. Compatível com DualSense e controles de tamanho similar. Peça grande para mesa ou estante, impressa em PLA.",
+    "preco": 183.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "aerodinâmico · UV",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 12,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-mao-do-heroi-aranha-gamer.jpg",
+        "alt": "suporte-controle-mao-aranha",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-organico-design-voronoi",
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-organico-design-voronoi",
+    "nome": "Suporte de Controle Orgânico · Design Voronoi",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Suporte moderno com treliça orgânica, leve e estável.",
+    "descricao": "Suporte de controle com estrutura vazada em padrão orgânico, que une estética moderna e estabilidade. Versões para controles padrão e edição específica para DualSense (PS5). Impresso em PLA, sem necessidade de suportes de impressão.",
+    "preco": 45.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 3,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-organico-design-voronoi.jpg",
+        "alt": "suporte-controle-organico",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-mao-sombria-fantasia",
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-mao-sombria-fantasia",
+    "nome": "Suporte de Controle Mão Sombria · Fantasia",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Mão de armadura sombria em estilo fantasia épica que segura seu controle.",
+    "descricao": "Suporte escultural em forma de mão de armadura com garras, inspirado em fantasia épica medieval. A mão foi adaptada para apoiar controles de videogame com firmeza. Peça grande, com alto nível de detalhe, impressa em PLA com preenchimento otimizado para reduzir peso.",
+    "preco": 149.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 3,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-mao-sombria-fantasia.jpg",
+        "alt": "suporte-controle-mao-sombria",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-xbox-tentaculos",
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-xbox-tentaculos",
+    "nome": "Suporte de Controle Xbox · Tentáculos",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Tentáculos de polvo que abraçam o controle do Xbox.",
+    "descricao": "Suporte decorativo em formato de tentáculos de polvo, projetado para o controle de Xbox. Disponível em uma cor ou em duas cores. Base estável para mesa ou estante, impresso em PLA.",
+    "preco": 32.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 10,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-xbox-tentaculos.jpg",
+        "alt": "suporte-controle-xbox-tentaculos",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "capa-ripada-para-suporte-de-controle-acessorio",
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "capa-ripada-para-suporte-de-controle-acessorio",
+    "nome": "Capa Ripada para Suporte de Controle · Acessório",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Capa intercambiável com visual ripado para personalizar o suporte de controle.",
+    "descricao": "Capa com acabamento ripado que encaixa sobre a base do suporte de controle, permitindo trocar o visual sem trocar o suporte. Compatível com controles de PlayStation, Xbox e Nintendo Switch quando usada com a base correspondente. Peça leve, impressa em PLA. Vendida como acessório (a base do suporte não acompanha).",
+    "preco": 19.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 9,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#70320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/capa-ripada-para-suporte-de-controle-acessorio.jpg",
+        "alt": "capa-ripada-suporte-controle",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-sob-a-mesa-encaixe-grampo",
+    "nome": "Suporte de Controle Sob a Mesa · Encaixe Grampo",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Libera espaço na mesa: prende na borda e guarda o controle por baixo.",
+    "descricao": "Suporte tipo grampo que encaixa na borda da mesa, sem parafusos, e mantém o controle por baixo ou na lateral. Compatível com controles de Xbox e PlayStation, funciona nos dois sentidos mesmo com cabo conectado. Serve em tampos de 10 a 21 mm (versão para 36 mm sob medida). Impresso com 3 paredes e 20% de preenchimento para resistir à pressão do encaixe.",
+    "preco": 43.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 2,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#70320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-sob-a-mesa-encaixe-grampo.jpg",
+        "alt": "suporte-controle-sob-mesa-grampo",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-cobra-e-caveira",
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-ps5-cobra-e-caveira",
+    "nome": "Suporte de Controle PS5 · Cobra e Caveira",
+    "categoria": "setup-games",
+    "subcategoria": "games",
+    "resumo": "Escultura de caveira com cobra que segura o controle do PS5.",
+    "descricao": "Suporte escultural com caveira envolta por uma cobra, pensado para o controle de PS5. Peça grande e pesada, com base estável para mesa, estante ou ao lado do console. Impresso em PLA com camada de 0,28 mm.",
+    "preco": 130.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 8,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#823c0a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-cobra-e-caveira.jpg",
+        "alt": "suporte-controle-ps5-cobra-e-caveira",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-ps5-mascara-oni",
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-ps5-mascara-oni",
+    "nome": "Suporte de Controle PS5 · Máscara Oni",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Máscara de demônio Oni que encaixa o DualSense com firmeza.",
+    "descricao": "Suporte de parede ou mesa em formato de máscara de demônio Oni, desenhado sob medida para o controle DualSense (PS5). O controle encaixa com clique e fica estável sem apoio extra. Possui recorte atrás do nariz para não pressionar botões quando o controle está apoiado. Impresso em PLA, 2 paredes e 15% de preenchimento.",
+    "preco": 43.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitario",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#663600"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000e1"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-ps5-mascara-oni.jpg",
+        "alt": "suporte-controle-ps5-mascara-oni",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-headset-swing-mesa",
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-headset-swing-mesa",
+    "nome": "Suporte de Headset Swing · Mesa",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Suporte em balanço para headset, minimalista e estável, inclusive para fones grandes.",
+    "descricao": "Suporte de mesa com design em balanço para headsets e fones de ouvido, inclusive modelos grandes. Dimensões aproximadas de 244 x 122 x 120 mm. Estrutura impressa com 3 paredes para maior rigidez, sem necessidade de parafusos. Ideal para setups gamer e home office.",
+    "preco": 57.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitario",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 7,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#662900"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#002eb8"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-headset-swing-mesa.jpg",
+        "alt": "Suporte-de-headset",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-controle-cavaleiro-vazio-gamer",
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
+    "slug": "suporte-de-controle-cavaleiro-vazio-gamer",
+    "nome": "Suporte de Controle Cavaleiro Vazio · Gamer",
+    "categoria": "setup-games",
+    "subcategoria": "desktop",
+    "resumo": "Suporte decorativo de mesa inspirado no cavaleiro do jogo indie para guardar seu controle.",
+    "descricao": "Suporte de controle em formato do pequeno cavaleiro de máscara branca, ícone dos games indie. Peça robusta, impressa em PLA com 2 paredes e 15% de preenchimento, base larga para estabilidade sobre mesa ou estante. Compatível com controles padrão de PS4, PS5, Xbox e similares. Acabamento em duas cores (corpo escuro e máscara clara).",
+    "preco": 30.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitario",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 6,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto fosco",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/suporte-de-controle-cavaleiro-vazio-gamer.jpg",
+        "alt": "sc_001_suporte-controle-cavaleiro-vazio",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ]
+  },
+  {
     "slug": "suporte-de-fone-de-ouvido-duas-cores-design-colmeia",
     "nome": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
-    "categoria": "setup-games",
+    "categoria": "engenharia",
     "subcategoria": "desktop",
     "resumo": "Duas Cores – Design Colmeia",
     "descricao": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
-    "preco": 40.0,
-    "precoParcelado": "ou [n]x no Mercado Livre",
+    "preco": 39.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
     "specs_resumo": "DUAL COLOR",
