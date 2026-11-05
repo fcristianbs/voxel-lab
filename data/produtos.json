@@ -1,5 +1,80 @@
 [
   {
+    "slug": "abajur-minimalista-torcido-design",
+    "nome": "Abajur Minimalista Torcido · Design",
+    "categoria": "casa",
+    "subcategoria": "luminaria",
+    "resumo": "Abajur de linhas torcidas e minimalistas para sala ou quarto.",
+    "descricao": "Abajur de mesa com cúpula em formato torcido, de visual minimalista e elegante. A forma espiralada cria um jogo de luz e sombra suave no ambiente. Impresso em PLA com camada fina de 0,16 mm para acabamento liso. Acompanha kit de iluminação LED com controle.",
+    "preco": 90.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/abajur-minimalista-torcido-design.jpg",
+        "alt": "002_abajur-minimalista-torcido",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "porta-controles-remotos-organizador-triplo"
+    ]
+  },
+  {
     "slug": "luminaria-cristal-mineral-decorativa",
     "nome": "Luminária Cristal Mineral · Decorativa",
     "categoria": "casa",
