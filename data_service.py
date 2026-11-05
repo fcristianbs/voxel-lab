@@ -20,8 +20,20 @@ def validar_produto(p: Dict[str, Any]):
     """Valida produto de acordo com regras de negócio, incluindo RN05."""
     assert p.get('slug'), "Produto sem slug"
     assert p.get('nome'), f"Produto {p.get('slug')} sem nome"
-    assert p.get('categoria'), f"Produto {p.get('slug')} sem categoria"
+    assert p.get('categoria') or p.get('categorias'), f"Produto {p.get('slug')} sem categoria"
     assert p.get('material'), f"Produto {p.get('slug')} sem material"
+
+    # Normalização bidirecional de categorias para suporte multi-categoria retrocompatível
+    if p.get('categoria') and not p.get('categorias'):
+        p['categorias'] = [p['categoria']]
+    elif p.get('categorias') and not p.get('categoria'):
+        p['categoria'] = p['categorias'][0]
+
+    # Normalização de subcategorias
+    if p.get('subcategoria') and not p.get('subcategorias'):
+        p['subcategorias'] = [p['subcategoria']]
+    elif p.get('subcategorias') and not p.get('subcategoria'):
+        p['subcategoria'] = p['subcategorias'][0]
 
     # RN05: Peças com uso: externo só podem ter os materiais PETG-UV, PETG ou ASA
     if p.get('uso') == 'externo':
@@ -82,14 +94,22 @@ def filtrar_produtos(
     """Filtra e ordena produtos de acordo com os critérios fornecidos."""
     prods = get_produtos()
 
-    # Filtro por Categoria (slug)
+    # Filtro por Categoria (slug) - suporta multi-categoria
     if categoria and categoria != 'todas':
-        prods = [p for p in prods if p.get('categoria') == categoria]
+        prods = [
+            p for p in prods
+            if p.get('categoria') == categoria or categoria in p.get('categorias', [])
+        ]
 
-    # Filtro por Subcategoria (múltipla)
+    # Filtro por Subcategoria (múltipla) - suporta multi-subcategoria
     if subcategorias:
         subs_norm = [s.lower() for s in subcategorias]
-        prods = [p for p in prods if p.get('subcategoria', '').lower() in subs_norm]
+        def match_sub(p: Dict[str, Any]) -> bool:
+            p_subs = [s.lower() for s in p.get('subcategorias', [])]
+            if p.get('subcategoria'):
+                p_subs.append(p['subcategoria'].lower())
+            return any(s in subs_norm for s in p_subs)
+        prods = [p for p in prods if match_sub(p)]
 
     # Filtro por Material
     if materiais:
@@ -113,7 +133,9 @@ def filtrar_produtos(
                 p.get('descricao', ''),
                 p.get('categoria', ''),
                 p.get('subcategoria', ''),
-                p.get('material', '')
+                p.get('material', ''),
+                ' '.join(p.get('categorias', [])),
+                ' '.join(p.get('subcategorias', []))
             ]
             return any(q_norm in normalizar_texto(c) for c in campos)
         prods = [p for p in prods if match_busca(p)]

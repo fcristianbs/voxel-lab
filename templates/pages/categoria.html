@@ -196,7 +196,8 @@
       <div class="catalogo-produtos-grid" id="catalogo-produtos-grid">
         {% for produto in produtos %}
           <div class="card-produto-item"
-               data-subcategoria="{{ produto.subcategoria or '' }}"
+               data-subcategoria="{{ (produto.subcategorias|join(' ') if produto.subcategorias else produto.subcategoria) or '' }}"
+               data-categoria="{{ (produto.categorias|join(' ') if produto.categorias else produto.categoria) or '' }}"
                data-material="{{ produto.material or '' }}"
                data-uso="{{ produto.uso or '' }}"
                data-nome="{{ produto.nome }}"

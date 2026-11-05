@@ -154,12 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filtra cards
     productCards.forEach(card => {
-      const pSub = (card.getAttribute('data-subcategoria') || '').toLowerCase();
+      const pSubRaw = (card.getAttribute('data-subcategoria') || '').toLowerCase();
+      const pSubs = pSubRaw.split(/[,\s]+/).filter(Boolean);
       const pMat = (card.getAttribute('data-material') || '').toLowerCase();
       const pUso = (card.getAttribute('data-uso') || '').toLowerCase();
 
       // Critério Subcategoria: se selecionado, produto deve ter uma das subs
-      const matchSub = filters.subs.length === 0 || filters.subs.includes(pSub);
+      const matchSub = filters.subs.length === 0 || filters.subs.some(s => pSubs.includes(s) || pSubRaw === s);
 
       // Critério Material: se selecionado, deve conter um dos materiais
       const matchMat = filters.mats.length === 0 || filters.mats.some(m => pMat.includes(m));

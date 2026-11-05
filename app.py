@@ -85,7 +85,12 @@ def produto_page(slug):
             if p_rel:
                 relacionados.append(p_rel)
     if not relacionados:
-        relacionados = [p for p in get_produtos() if p.get('categoria') == produto.get('categoria') and p.get('slug') != produto.get('slug')][:4]
+        p_cats = set(produto.get('categorias', [produto.get('categoria')]))
+        relacionados = [
+            p for p in get_produtos()
+            if (p.get('categoria') in p_cats or any(c in p_cats for c in p.get('categorias', [])))
+            and p.get('slug') != produto.get('slug')
+        ][:4]
 
     return render_template('pages/produto.html', produto=produto, relacionados=relacionados, active_page=produto.get('categoria', ''))
 
