@@ -1,5 +1,80 @@
 [
   {
+    "slug": "luminaria-dragao-cuspindo-fogo-fantasia",
+    "nome": "Luminária Dragão Cuspindo Fogo · Fantasia",
+    "categoria": "casa",
+    "subcategoria": "luminaria",
+    "resumo": "Dragão em voo cuja baforada de fogo é a própria luz.",
+    "descricao": "Luminária decorativa com um dragão em voo, em que a nuvem de fogo translúcida acende e vira a fonte de luz. Duas cores (dragão e chama), montadas sem AMS. Acompanha kit de iluminação LED com controle.",
+    "preco": 71.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": true,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-dragao-cuspindo-fogo-fantasia.jpg",
+        "alt": "luminaria-dragao-cuspindo-fogo",
+        "tipo": "isolada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "organizador-de-mesa-moderno-celular-relogio-e-fones",
+      "suporte-de-celular-estilo-vice-city",
+      "suporte-de-caneca-lateral-setup-gamer",
+      "porta-controles-remotos-organizador-triplo"
+    ]
+  },
+  {
     "slug": "luminaria-lanterna-de-blocos-pixel-art",
     "nome": "Luminária Lanterna de Blocos · Pixel Art",
     "categoria": "casa",
