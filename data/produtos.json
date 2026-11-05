@@ -1,5 +1,83 @@
 [
   {
+    "slug": "luminaria-ratinho-chef-surpresa-iluminada",
+    "nome": "Luminária Ratinho Chef · Surpresa Iluminada",
+    "categoria": "casa",
+    "subcategoria": "luminaria",
+    "resumo": "Luminária que revela a silhueta de um ratinho cozinheiro ao acender.",
+    "descricao": "Luminária com surpresa: ao acender, revela por dentro a silhueta de um ratinho chef de cozinha. Peça leve e divertida, ótima para cozinha, quarto infantil ou presente. Acompanha kit de iluminação LED com controle.",
+    "preco": 198.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": false,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 10,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Preto",
+        "hex": "#111111",
+        "padrao": true
+      },
+      {
+        "nome": "Branco",
+        "hex": "#E8EDF2"
+      },
+      {
+        "nome": "Marrom",
+        "hex": "#6e320a"
+      },
+      {
+        "nome": "Azul",
+        "hex": "#0000ff"
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/luminaria-ratinho-chef-surpresa-iluminada.jpg",
+        "alt": "luminaria-tocha-blocos-parede-mesa",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "luminaria-montanha-luz-indireta",
+      "luminaria-dragao-negro-na-chama-fantasia",
+      "luminaria-dragao-cuspindo-fogo-fantasia",
+      "luminaria-lanterna-de-blocos-pixel-art",
+      "luminaria-shoji-japonesa-sakura-e-grande-onda",
+      "abajur-minimalista-torcido-design",
+      "luminaria-cristal-mineral-decorativa"
+    ]
+  },
+  {
     "slug": "luminaria-montanha-luz-indireta",
     "nome": "Luminária Montanha · Luz Indireta",
     "categoria": "casa",
