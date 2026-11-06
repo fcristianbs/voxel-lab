@@ -2478,9 +2478,15 @@
     "nome": "Suporte para 2 Controles e Headset · Organizador Gamer",
     "categoria": "setup-games",
     "subcategoria": "games",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
+    ],
     "resumo": "Organiza até 2 controles e 1 headset em uma única base.",
     "descricao": "Organizador de mesa para até dois controles e um headset, mantendo o setup limpo e organizado. Base larga e estável, compatível com controles de PS4, PS5, Xbox e similares. Impresso em PLA (opção em ASA para maior resistência térmica).",
-    "preco": 86.99,
+    "preco": 47.93,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -2540,7 +2546,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "suporte-de-controle-mao-do-heroi-aranha-gamer",
       "suporte-de-controle-organico-design-voronoi",
@@ -2551,12 +2557,6 @@
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-controle-cavaleiro-vazio-gamer"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "games"
     ]
   },
   {
