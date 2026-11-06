@@ -1971,9 +1971,15 @@
     "nome": "Suporte de Controle PS5 · Trono de Ferro",
     "categoria": "setup-games",
     "subcategoria": "games",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
+    ],
     "resumo": "Trono de espadas em estilo fantasia medieval para o controle do PS5.",
     "descricao": "Suporte para controle de PS5 em forma de trono feito de espadas, inspirado em fantasia medieval. Peça grande e detalhada, impressa em PLA com 3 paredes e 20% de preenchimento para peso e estabilidade.",
-    "preco": 156.99,
+    "preco": 60.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -2033,7 +2039,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "suporte-de-controle-ps5-mascara-fantasma",
       "suporte-de-controle-ps5-guerreira-de-seda",
@@ -2045,12 +2051,6 @@
       "suporte-de-controle-sob-a-mesa-encaixe-grampo",
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "games"
     ]
   },
   {
