@@ -85,9 +85,15 @@
     "nome": "Luminária Lua com Base Ondulada · Textura Aveludada",
     "categoria": "setup-games",
     "subcategoria": "desktop",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
+    ],
     "resumo": "Lua texturizada sobre base ondulada aveludada, para soquete E27.",
     "descricao": "Luminária em forma de lua com relevo de crateras, impressa com preenchimento 100% para difundir a luz, sobre base ondulada com acabamento aveludado (fuzzy skin). Feita para soquete E27 padrão. Acompanha iluminação LED com controle.",
-    "preco": 217.99,
+    "preco": 100.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -147,7 +153,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "luminaria-montanha-luz-indireta",
       "luminaria-dragao-negro-na-chama-fantasia",
@@ -156,12 +162,6 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "desktop"
     ]
   },
   {
@@ -421,9 +421,15 @@
     "nome": "Luminária Buraco Negro · Espacial",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Luminária que simula um buraco negro com disco de luz.",
     "descricao": "Luminária de exibição que reproduz um buraco negro com seu disco de acreção iluminado. Duas cores, peça maciça e estável. Ótima para fãs de astronomia e setups temáticos. Acompanha kit de iluminação LED com controle.",
-    "preco": 138.99,
+    "preco": 79.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -483,7 +489,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "luminaria-montanha-luz-indireta",
       "luminaria-dragao-negro-na-chama-fantasia",
@@ -492,12 +498,6 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
-    ],
-    "categorias": [
-      "casa"
-    ],
-    "subcategorias": [
-      "luminaria"
     ]
   },
   {
@@ -3070,9 +3070,15 @@
     "nome": "Suporte de Controle PS5 · Cobra e Caveira",
     "categoria": "setup-games",
     "subcategoria": "games",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
+    ],
     "resumo": "Escultura de caveira com cobra que segura o controle do PS5.",
     "descricao": "Suporte escultural com caveira envolta por uma cobra, pensado para o controle de PS5. Peça grande e pesada, com base estável para mesa, estante ou ao lado do console. Impresso em PLA com camada de 0,28 mm.",
-    "preco": 130.99,
+    "preco": 74.99,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -3132,18 +3138,12 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "Nonehttps://voxel-lab-black.vercel.app/",
     "relacionados": [
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "games"
     ]
   },
   {
