@@ -169,6 +169,16 @@
         "descricao": "Personagens de cinema, quadrinhos, animes, jogos e cultura pop."
       },
       {
+        "slug": "herois",
+        "nome": "Heróis & Quadrinhos",
+        "descricao": "Personagens de quadrinhos, super-heróis e cultura pop."
+      },
+      {
+        "slug": "games",
+        "nome": "Games & Jogos",
+        "descricao": "Personagens e colecionáveis de jogos eletrônicos e RPG."
+      },
+      {
         "slug": "pintadas-sem-pintura",
         "nome": "Pintadas e sem pintura",
         "descricao": "Versões completas com pintura artística ou em primer para hobby e personalização."

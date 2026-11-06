@@ -75,6 +75,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -153,6 +159,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -231,6 +243,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -309,6 +327,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -387,6 +411,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -465,6 +495,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -543,6 +579,12 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -550,9 +592,15 @@
     "nome": "Luminária Ratinho Chef · Surpresa Iluminada",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Luminária que revela a silhueta de um ratinho cozinheiro ao acender.",
     "descricao": "Luminária com surpresa: ao acender, revela por dentro a silhueta de um ratinho chef de cozinha. Peça leve e divertida, ótima para cozinha, quarto infantil ou presente. Acompanha kit de iluminação LED com controle.",
-    "preco": 198.99,
+    "preco": 75.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -612,7 +660,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/catalogo",
     "relacionados": [
       "luminaria-montanha-luz-indireta",
       "luminaria-dragao-negro-na-chama-fantasia",
@@ -696,6 +744,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -771,6 +825,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -846,6 +906,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -921,6 +987,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -996,6 +1068,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -1071,6 +1149,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -1146,6 +1230,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -1223,6 +1313,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -1299,6 +1395,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -1374,6 +1476,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -1448,6 +1556,12 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -1521,6 +1635,12 @@
     "relacionados": [
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -1593,6 +1713,12 @@
     "mercadoLivreUrl": null,
     "relacionados": [
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -1663,7 +1789,13 @@
     ],
     "instalacao": [],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
+    ]
   },
   {
     "slug": "suporte-de-controle-tita-atlas-xbox-ps5",
@@ -1745,6 +1877,12 @@
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-controle-cavaleiro-vazio-gamer"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -1826,6 +1964,12 @@
       "suporte-de-controle-sob-a-mesa-encaixe-grampo",
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -1900,6 +2044,12 @@
       "porta-controle-remoto-de-parede-slim-duplo",
       "suporte-para-2-controles-e-headset-organizador-gamer",
       "suporte-de-headset-swing-mesa"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "organizadores"
     ]
   },
   {
@@ -1974,6 +2124,12 @@
       "suporte-para-2-controles-e-headset-organizador-gamer",
       "suporte-de-controle-sob-a-mesa-encaixe-grampo",
       "suporte-de-headset-swing-mesa"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "organizacao"
     ]
   },
   {
@@ -2055,6 +2211,12 @@
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-controle-cavaleiro-vazio-gamer"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2136,6 +2298,12 @@
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-controle-cavaleiro-vazio-gamer"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2216,6 +2384,12 @@
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-controle-cavaleiro-vazio-gamer"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2296,6 +2470,12 @@
       "suporte-de-controle-ps5-cobra-e-caveira",
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-controle-cavaleiro-vazio-gamer"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2377,6 +2557,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2457,6 +2643,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2535,6 +2727,12 @@
       "suporte-de-controle-ps5-mascara-oni",
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2613,6 +2811,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2690,6 +2894,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2766,6 +2976,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2841,6 +3057,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games"
     ]
   },
   {
@@ -2915,6 +3137,12 @@
       "suporte-de-headset-swing-mesa",
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -2988,6 +3216,12 @@
     "relacionados": [
       "suporte-de-controle-cavaleiro-vazio-gamer",
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
@@ -3052,12 +3286,18 @@
     "mercadoLivreUrl": null,
     "relacionados": [
       "suporte-de-fone-de-ouvido-duas-cores-design-colmeia"
+    ],
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
     "slug": "suporte-de-fone-de-ouvido-duas-cores-design-colmeia",
     "nome": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
-    "categoria": "engenharia",
+    "categoria": "setup-games",
     "subcategoria": "desktop",
     "resumo": "Duas Cores – Design Colmeia",
     "descricao": "Suporte de Fone de Ouvido Duas Cores – Design Colmeia",
@@ -3115,13 +3355,20 @@
     "relacionados": [
       "luminaria-a-onda",
       "porta-chaves-objetos"
+    ],
+    "categorias": [
+      "setup-games",
+      "engenharia"
+    ],
+    "subcategorias": [
+      "desktop"
     ]
   },
   {
     "slug": "batman-o-cavaleiro-das-trevas-edicao-ultradetalhada",
     "nome": "Batman O Cavaleiro das Trevas: edição ultradetalhada",
     "categoria": "figures",
-    "subcategoria": "Herois",
+    "subcategoria": "herois",
     "resumo": "Batman Boneco de Acão",
     "descricao": "Produzida com tecnologia de alta precisão em impressão 3D, esta peça colecionável destaca o herói em uma pose clássica e heroica, evidenciando sua musculatura detalhada, o cinto de utilidades, o capuz icônico e a capa imponente ao vento.",
     "preco": 59.99,
@@ -3171,13 +3418,21 @@
     ],
     "instalacao": [],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "figures"
+    ],
+    "subcategorias": [
+      "herois",
+      "por-tema",
+      "colecionaveis"
+    ]
   },
   {
     "slug": "action-figure-hollow-knight-colecionavel-impresso-em-3d",
     "nome": "Action Figure Hollow Knight – Colecionável Impresso em 3D",
     "categoria": "figures",
-    "subcategoria": "Games",
+    "subcategoria": "games",
     "resumo": "Hollow Knight - Boneco de Ação",
     "descricao": "Produzido com tecnologia de alta precisão em impressão 3D, este colecionável captura perfeitamente os traços icônicos do personagem, incluindo sua clássica máscara branca, o manto escuro detalhado, os chifres característicos e o seu fiel ferrão nas costas. Acompanha uma base texturizada que simula o chão de Hallownest, garantindo estabilidade e um visual ainda mais imersivo.",
     "preco": 24.99,
@@ -3236,6 +3491,15 @@
       "miniatura-do-groot-feliz",
       "vareta-giratoria-do-homem-aranha",
       "batman-af"
+    ],
+    "categorias": [
+      "figures",
+      "setup-games"
+    ],
+    "subcategorias": [
+      "games",
+      "por-tema",
+      "colecionaveis"
     ]
   },
   {
@@ -3302,13 +3566,19 @@
       "miniatura-do-groot-feliz",
       "vareta-giratoria-do-homem-aranha",
       "batman-af"
+    ],
+    "categorias": [
+      "figures"
+    ],
+    "subcategorias": [
+      "por-tema"
     ]
   },
   {
     "slug": "miniatura-do-groot-feliz",
     "nome": "Miniatura do Groot feliz",
     "categoria": "figures",
-    "subcategoria": "Herois",
+    "subcategoria": "herois",
     "resumo": "Miniatura Herói",
     "descricao": "Estatueta do Groot feliz com 12 cm de altura.",
     "preco": 17.99,
@@ -3366,13 +3636,21 @@
     ],
     "instalacao": [],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "figures"
+    ],
+    "subcategorias": [
+      "herois",
+      "por-tema",
+      "colecionaveis"
+    ]
   },
   {
     "slug": "vareta-giratoria-do-homem-aranha",
     "nome": "Vareta Giratória do Homem Aranha",
     "categoria": "figures",
-    "subcategoria": "Herois",
+    "subcategoria": "herois",
     "resumo": "Vareta Giratória do Homem Aranha",
     "descricao": "Transforme a diversão e a decoração com a Vareta Giratória do Aranha! Perfeito para fãs de super-heróis, colecionadores e crianças que adoram itens interativos. Este produto é fabricado com tecnologia de impressão 3D de alta qualidade, garantindo detalhes precisos, durabilidade e um visual incrível inspirado no universo do Aranha. O modelo conta com peças articuladas que tornam a experiência ainda mais divertida.",
     "preco": 34.99,
@@ -3430,7 +3708,14 @@
     ],
     "instalacao": [],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "figures"
+    ],
+    "subcategorias": [
+      "herois",
+      "por-tema"
+    ]
   },
   {
     "slug": "luminaria-a-onda",
@@ -3496,6 +3781,12 @@
     "mercadoLivreUrl": null,
     "relacionados": [
       "porta-chaves-objetos"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
     ]
   },
   {
@@ -3560,7 +3851,13 @@
     ],
     "instalacao": [],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "organizacao"
+    ]
   },
   {
     "slug": "batman-af",
@@ -3624,7 +3921,13 @@
     ],
     "instalacao": [],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "figures"
+    ],
+    "subcategorias": [
+      "por-tema"
+    ]
   },
   {
     "slug": "suporte-starlink-mini-veicular",
@@ -3711,6 +4014,12 @@
       "Encaixe a antena Starlink Mini até o travamento seguro."
     ],
     "mercadoLivreUrl": null,
-    "relacionados": []
+    "relacionados": [],
+    "categorias": [
+      "engenharia"
+    ],
+    "subcategorias": [
+      "starlink"
+    ]
   }
 ]
