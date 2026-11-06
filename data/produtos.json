@@ -1324,9 +1324,15 @@
     "nome": "Painel Pegboard Compatível Skadis · Sob Medida",
     "categoria": "setup-games",
     "subcategoria": "desktop",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
+    ],
     "resumo": "Painel perfurado compatível com Skadis, em formatos e tamanhos sob medida.",
     "descricao": "Painel perfurado (pegboard) compatível com o sistema IKEA SKÅDIS, produzido sob medida para o seu espaço. Oito formatos disponíveis (pentágono, triângulo, retângulo e outros) com dimensões ajustáveis e furação alinhada ao padrão. Ideal para organizar ferramentas, acessórios e periféricos na parede. Impresso em PLA. Preço de referência para o módulo pentágono.",
-    "preco": 249.99,
+    "preco": 175.0,
     "precoParcelado": "ou [n]de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -1386,7 +1392,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "pes-elevados-para-gabinete-de-pc-kit",
       "organizador-de-cabos-para-borda-de-mesa-encaixe",
@@ -1394,12 +1400,6 @@
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "desktop"
     ]
   },
   {
