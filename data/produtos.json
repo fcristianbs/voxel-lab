@@ -72,6 +72,12 @@
       "action-figure-hollow-knight-colecionavel-impresso-em-3d",
       "mandaloriano-e-grogu-sentado-na-borda",
       "miniatura-do-groot-feliz"
+    ],
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "decoracao"
     ]
   },
   {
@@ -163,9 +169,15 @@
     "nome": "Luminária Zen Ondas · Relaxante",
     "categoria": "setup-games",
     "subcategoria": "desktop",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
+    ],
     "resumo": "Luminária de textura ondulada que lembra água e papel dobrado.",
     "descricao": "Luminária de mesa ou cabeceira com textura ondulada que evoca água corrente e papel dobrado, criando uma luz calma e difusa. Duas cores produzidas separadamente. Acompanha kit de iluminação LED com controle.",
-    "preco": 165.99,
+    "preco": 89.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -225,7 +237,7 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "luminaria-montanha-luz-indireta",
       "luminaria-dragao-negro-na-chama-fantasia",
@@ -234,12 +246,6 @@
       "luminaria-shoji-japonesa-sakura-e-grande-onda",
       "abajur-minimalista-torcido-design",
       "luminaria-cristal-mineral-decorativa"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "desktop"
     ]
   },
   {
