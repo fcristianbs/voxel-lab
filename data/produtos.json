@@ -1000,9 +1000,15 @@
     "nome": "Luminária Lanterna de Blocos · Pixel Art",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Lanterna em estilo blocos/pixel, perfeita como luz de mesa ou noturna.",
     "descricao": "Luminária em formato de lanterna com visual de blocos pixelados, inspirada em jogos de construção. Montagem por encaixe, sem cola nem parafusos. Versão compacta para vela LED, com difusor em PETG. Ótima como luz noturna para quarto gamer ou infantil. Acompanha vela LED com controle.",
-    "preco": 85.99,
+    "preco": 55.99,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PETG + PLA",
     "uso": "interno",
@@ -1062,18 +1068,12 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "organizador-de-mesa-moderno-celular-relogio-e-fones",
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
-    ],
-    "categorias": [
-      "casa"
-    ],
-    "subcategorias": [
-      "luminaria"
     ]
   },
   {
