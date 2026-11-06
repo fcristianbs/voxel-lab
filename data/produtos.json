@@ -1243,9 +1243,15 @@
     "nome": "Luminária Cristal Mineral · Decorativa",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Luminária com cristais translúcidos que brilham sobre uma base de rocha.",
     "descricao": "Luminária decorativa inspirada em formações de cristais e minerais. Os cristais são impressos em PETG translúcido, que difunde a luz, sobre base em PLA com acabamento de rocha. Ideal para quarto, sala ou estante. Acompanha kit de iluminação LED com controle.",
-    "preco": 133.99,
+    "preco": 79.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PETG + PLA",
     "uso": "interno",
@@ -1305,18 +1311,12 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "organizador-de-mesa-moderno-celular-relogio-e-fones",
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
-    ],
-    "categorias": [
-      "casa"
-    ],
-    "subcategorias": [
-      "luminaria"
     ]
   },
   {
