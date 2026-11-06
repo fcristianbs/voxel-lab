@@ -335,3 +335,4 @@ document.addEventListener('DOMContentLoaded', () => {
 const style = document.createElement('style');
 style.textContent = `@keyframes spin { 100% { transform: rotate(360deg); } }`;
 document.head.appendChild(style);
+

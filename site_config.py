@@ -5,6 +5,11 @@ Valores pendentes estão marcados como [DEFINIR].
 """
 
 import os
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 site = {
     'nome': 'Voxel Lab',
@@ -21,7 +26,10 @@ site = {
     # Painel Administrativo e Integração Google Sheets
     'admin_user': os.environ.get('ADMIN_USER', 'admin'),
     'admin_password': os.environ.get('ADMIN_PASSWORD', 'voxel2026'),
-    'google_sheets_webhook_url': os.environ.get('GOOGLE_SHEETS_WEBHOOK_URL', ''),
+    'google_sheets_webhook_url': os.environ.get(
+        'GOOGLE_SHEETS_WEBHOOK_URL',
+        'https://script.google.com/macros/s/AKfycbyAyMmGnc56ZaCx11742woUJkW7MkkJFbIjf99AygHoL_sIkpDMLnxhIgAJtz29RXFd/exec'
+    ),
 }
 
 def get_whatsapp_url(text: str = '') -> str:

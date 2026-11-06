@@ -132,3 +132,4 @@ function doGet(e) {
     message: "Endpoint de integração Voxel Lab Google Sheets ativo. Use POST para registrar vendas."
   })).setMimeType(ContentService.MimeType.JSON);
 }
+
