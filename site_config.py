@@ -4,6 +4,8 @@ Conforme especificação na seção 2.2 do CDU.
 Valores pendentes estão marcados como [DEFINIR].
 """
 
+import os
+
 site = {
     'nome': 'Voxel Lab',
     'slogan': 'Precisão em cada camada.',
@@ -15,6 +17,11 @@ site = {
     'dominio': 'https://voxel-lab-black.vercel.app',    # Domínio oficial Vercel
     'prazoRespostaHoras': 24,                # [DEFINIR] Tempo estimado de resposta para orçamentos
     'mostrarPrecos': True,                   # Se False, exibe "Sob consulta" para todos os produtos
+    
+    # Painel Administrativo e Integração Google Sheets
+    'admin_user': os.environ.get('ADMIN_USER', 'admin'),
+    'admin_password': os.environ.get('ADMIN_PASSWORD', 'voxel2026'),
+    'google_sheets_webhook_url': os.environ.get('GOOGLE_SHEETS_WEBHOOK_URL', ''),
 }
 
 def get_whatsapp_url(text: str = '') -> str:

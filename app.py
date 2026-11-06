@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, url_for, request, abort, send_from_directory, jsonify
+from flask import Flask, render_template, redirect, url_for, request, abort, send_from_directory, jsonify, session
 from site_config import site, get_whatsapp_url
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -115,7 +115,7 @@ def api_produtos():
 def robots_txt():
     """Arquivo robots.txt para SEO (RNF04)."""
     dominio = site.get('dominio', 'https://voxel-lab-black.vercel.app').rstrip('/')
-    content = f"User-agent: *\nAllow: /\nSitemap: {dominio}/sitemap.xml\n"
+    content = f"User-agent: *\nDisallow: /admin\nAllow: /\nSitemap: {dominio}/sitemap.xml\n"
     return content, 200, {'Content-Type': 'text/plain'}
 
 @app.route('/sitemap.xml')
@@ -145,6 +145,111 @@ def page_not_found(e):
 def styleguide():
     """Página viva de Design System & Styleguide da Fase 1."""
     return render_template('pages/styleguide.html')
+
+# ==============================================================================
+# PAINEL ADMINISTRATIVO & REGISTRO DE VENDAS (GOOGLE SHEETS)
+# ==============================================================================
+
+@app.route('/admin')
+def admin_dashboard():
+    """Painel de Gestão e Registro de Vendas."""
+    if not session.get('admin_logged_in'):
+        return redirect(url_for('admin_login'))
+    
+    produtos = get_produtos()
+    produtos_ordenados = sorted(produtos, key=lambda x: x.get('nome', '').lower())
+    
+    return render_template(
+        'admin/index.html',
+        produtos=produtos_ordenados,
+        webhook_url=site.get('google_sheets_webhook_url', '')
+    )
+
+@app.route('/admin/login', methods=['GET', 'POST'])
+def admin_login():
+    """Tela e autenticação do Painel Administrativo."""
+    if request.method == 'POST':
+        username = request.form.get('username', '').strip()
+        password = request.form.get('password', '').strip()
+
+        admin_user = site.get('admin_user', 'admin')
+        admin_pass = site.get('admin_password', 'voxel2026')
+
+        if username == admin_user and password == admin_pass:
+            session['admin_logged_in'] = True
+            return redirect(url_for('admin_dashboard'))
+        else:
+            return render_template('admin/login.html', erro='Usuário ou senha incorretos.')
+
+    if session.get('admin_logged_in'):
+        return redirect(url_for('admin_dashboard'))
+
+    return render_template('admin/login.html')
+
+@app.route('/admin/logout')
+def admin_logout():
+    """Encerra a sessão do administrador."""
+    session.pop('admin_logged_in', None)
+    return redirect(url_for('admin_login'))
+
+@app.route('/admin/api/registrar-venda', methods=['POST'])
+def admin_api_registrar_venda():
+    """Envia o registro de venda para o script do Google Sheets."""
+    if not session.get('admin_logged_in'):
+        return jsonify({'success': False, 'message': 'Sessão expirada. Faça login novamente.'}), 401
+
+    payload = request.get_json() or {}
+    webhook_url = (payload.get('webhook_url') or site.get('google_sheets_webhook_url') or os.environ.get('GOOGLE_SHEETS_WEBHOOK_URL', '')).strip()
+
+    if not webhook_url:
+        return jsonify({
+            'success': False,
+            'message': 'URL da planilha não configurada. Cole o link do Webhook do Google Apps Script nas configurações.'
+        }), 400
+
+    if not payload.get('cliente_nome'):
+        return jsonify({'success': False, 'message': 'Nome do cliente é obrigatório.'}), 400
+
+    try:
+        import requests
+        res = requests.post(webhook_url, json=payload, timeout=20, allow_redirects=True)
+        
+        try:
+            res_json = res.json()
+            if res_json.get('success'):
+                return jsonify({'success': True, 'message': res_json.get('message', 'Venda registrada com sucesso no Google Sheets!')})
+            else:
+                return jsonify({'success': False, 'message': res_json.get('message', 'Erro reportado pelo script do Google.')}), 400
+        except Exception:
+            if res.status_code == 200:
+                return jsonify({'success': True, 'message': 'Venda enviada para a planilha com sucesso!'})
+            return jsonify({'success': False, 'message': f'Resposta inesperada da planilha: Código {res.status_code}'}), 502
+
+    except requests.exceptions.Timeout:
+        return jsonify({'success': False, 'message': 'Tempo limite esgotado ao conectar com o Google Sheets.'}), 504
+    except Exception as e:
+        return jsonify({'success': False, 'message': f'Erro ao conectar com Google Sheets: {str(e)}'}), 500
+
+@app.route('/admin/api/testar-planilha', methods=['POST'])
+def admin_api_testar_planilha():
+    """Envia um ping de teste para o Webhook do Google Apps Script."""
+    if not session.get('admin_logged_in'):
+        return jsonify({'success': False, 'message': 'Não autorizado'}), 401
+
+    data = request.get_json() or {}
+    webhook_url = (data.get('webhook_url') or site.get('google_sheets_webhook_url') or '').strip()
+
+    if not webhook_url:
+        return jsonify({'success': False, 'message': 'Informe a URL do Webhook do Apps Script.'}), 400
+
+    try:
+        import requests
+        res = requests.post(webhook_url, json={'action': 'ping'}, timeout=15, allow_redirects=True)
+        if res.status_code == 200:
+            return jsonify({'success': True, 'message': 'Comunicação com a planilha estabelecida com sucesso!'})
+        return jsonify({'success': False, 'message': f'Status recebido da planilha: {res.status_code}'}), 400
+    except Exception as e:
+        return jsonify({'success': False, 'message': f'Falha ao conectar: {str(e)}'}), 500
 
 if __name__ == '__main__':
     # Roda em modo debug na porta 5000

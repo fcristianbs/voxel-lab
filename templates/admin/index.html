@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Vendas · Painel Admin Voxel Lab</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo/voxel-icone.svg') }}">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body class="admin-body">
+
+  <!-- Header Superior Admin -->
+  <header class="admin-header">
+    <div class="admin-header-inner">
+      <div class="admin-brand">
+        <a href="/admin" class="admin-logo-link">
+          <img src="{{ url_for('static', filename='img/logo/voxel-icone.svg') }}" alt="Voxel Lab" width="28" height="28">
+          <span style="font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.02em;">VOXEL LAB</span>
+        </a>
+        <span class="admin-badge">ADMIN // VENDAS</span>
+      </div>
+
+      <div class="admin-actions">
+        <span id="status-webhook-indicator" class="admin-status-indicator">
+          <span class="admin-status-dot offline"></span> Verificando...
+        </span>
+        <a href="/" target="_blank" class="admin-btn-secondary" title="Abrir catálogo em nova aba">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Ver Loja
+        </a>
+        <a href="/admin/logout" class="admin-btn-secondary admin-btn-logout">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Sair
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="admin-main">
+    <div style="margin-bottom: 24px;">
+      <h1 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; margin: 0 0 4px; color: var(--ink);">
+        Registro de Vendas
+      </h1>
+      <p style="color: var(--ink-muted); margin: 0; font-size: 14px;">
+        Cadastre os pedidos fechados e envie automaticamente para a sua planilha Google Sheets.
+      </p>
+    </div>
+
+    <!-- Container de Alertas e Notificações -->
+    <div id="admin-alert-container"></div>
+
+    <div class="admin-grid">
+      <!-- Coluna Esquerda: Formulário de Nova Venda -->
+      <section>
+        <div class="admin-card">
+          <h2 class="admin-card-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--nozzle)" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Novo Registro de Venda
+          </h2>
+          <p class="admin-card-subtitle">
+            Selecione o produto do catálogo, informe o cliente e o prazo para registrar o pedido.
+          </p>
+
+          <form id="form-venda">
+            <!-- 1. Seleção do Produto -->
+            <div class="admin-form-group">
+              <label class="admin-label" for="venda-produto">
+                Produto da Loja <span class="req">*</span>
+              </label>
+              <select id="venda-produto" class="admin-select" required>
+                <option value="">-- Selecione uma peça do catálogo ({{ produtos|length }} itens) --</option>
+                {% for p in produtos %}
+                  <option value="{{ p.slug }}"
+                          data-nome="{{ p.nome }}"
+                          data-preco="{{ p.preco or 0 }}"
+                          data-material="{{ p.material or '' }}"
+                          data-categoria="{{ p.categoria or '' }}"
+                          data-img="{{ (p.imagens and p.imagens[0].src) or '' }}"
+                          data-cores='{{ (p.cores or [])|tojson }}'>
+                    {{ p.nome }} {% if p.preco %}— R$ {{ "%.2f"|format(p.preco)|replace('.', ',') }}{% else %}— (Sob consulta){% endif %}
+                  </option>
+                {% endfor %}
+              </select>
+
+              <!-- Prévia do Produto Selecionado -->
+              <div id="produto-preview-box" class="admin-product-preview" style="display: none;">
+                <img id="preview-img" src="" alt="Produto">
+                <div class="admin-product-preview-info">
+                  <h4 id="preview-nome">-</h4>
+                  <p id="preview-specs">-</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Variação / Cor -->
+            <div class="admin-form-group">
+              <label class="admin-label" for="venda-cor">Cor / Variação Escolhida</label>
+              <select id="venda-cor" class="admin-select">
+                <option value="">Padrão da loja / Não especificada</option>
+              </select>
+            </div>
+
+            <!-- Quantidade, Preço Unitário e Total -->
+            <div class="admin-form-row admin-form-row-2">
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-qtd">
+                  Quantidade <span class="req">*</span>
+                </label>
+                <input type="number" id="venda-qtd" class="admin-input" min="1" value="1" required>
+              </div>
+
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-valor-unitario">
+                  Valor Unitário (R$) <span class="req">*</span>
+                </label>
+                <input type="number" id="venda-valor-unitario" class="admin-input" step="0.01" min="0" placeholder="0.00" required>
+              </div>
+            </div>
+
+            <!-- Destaque do Valor Total -->
+            <div class="admin-total-box">
+              <span class="admin-total-label">Valor Total do Pedido:</span>
+              <span id="display-total" class="admin-total-value">R$ 0,00</span>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--line); margin: 24px 0;">
+
+            <!-- 2. Informações do Cliente -->
+            <div class="admin-form-row admin-form-row-2">
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-cliente-nome">
+                  Nome do Cliente <span class="req">*</span>
+                </label>
+                <input type="text" id="venda-cliente-nome" class="admin-input" placeholder="Ex: João Silva" required>
+              </div>
+
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-cliente-whatsapp">
+                  WhatsApp / Telefone
+                </label>
+                <input type="text" id="venda-cliente-whatsapp" class="admin-input" placeholder="Ex: (88) 99999-9999">
+              </div>
+            </div>
+
+            <div class="admin-form-row admin-form-row-2">
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-cliente-cidade">
+                  Cidade / UF (ou Endereço de Envio)
+                </label>
+                <input type="text" id="venda-cliente-cidade" class="admin-input" placeholder="Ex: Fortaleza - CE">
+              </div>
+
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-canal">
+                  Canal da Venda
+                </label>
+                <select id="venda-canal" class="admin-select">
+                  <option value="WhatsApp" selected>WhatsApp Oficial</option>
+                  <option value="Instagram">Instagram Direct (@1voxellab.3d)</option>
+                  <option value="Mercado Livre">Mercado Livre</option>
+                  <option value="Indicação">Indicação / Amigos</option>
+                  <option value="Presencial / Balcão">Presencial / Balcão</option>
+                  <option value="Outro">Outro Canal</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 3. Pagamento, Prazos e Status -->
+            <div class="admin-form-row admin-form-row-3">
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-pagamento">
+                  Forma de Pagamento
+                </label>
+                <select id="venda-pagamento" class="admin-select">
+                  <option value="Pix" selected>Pix</option>
+                  <option value="Cartão de Crédito">Cartão de Crédito</option>
+                  <option value="Cartão de Débito">Cartão de Débito</option>
+                  <option value="Mercado Pago">Mercado Pago</option>
+                  <option value="Dinheiro">Dinheiro</option>
+                  <option value="Boleto">Boleto</option>
+                </select>
+              </div>
+
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-prazo">
+                  Prazo de Entrega / Produção <span class="req">*</span>
+                </label>
+                <input type="text" id="venda-prazo" class="admin-input" placeholder="Ex: 3 dias úteis ou 15/11" required>
+              </div>
+
+              <div class="admin-form-group">
+                <label class="admin-label" for="venda-status">
+                  Status Inicial
+                </label>
+                <select id="venda-status" class="admin-select">
+                  <option value="Em Produção" selected>Em Produção</option>
+                  <option value="Pendente">Pendente</option>
+                  <option value="Aguardando Envio">Aguardando Envio</option>
+                  <option value="Enviado">Enviado</option>
+                  <option value="Concluído / Entregue">Concluído / Entregue</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Observações Adicionais -->
+            <div class="admin-form-group">
+              <label class="admin-label" for="venda-observacoes">Observações Técnicas / Pedido</label>
+              <textarea id="venda-observacoes" class="admin-textarea" placeholder="Ex: Cliente pediu acabamento fosco, embalagem para presente, etc."></textarea>
+            </div>
+
+            <!-- Botão de Ação -->
+            <button type="submit" id="btn-registrar-venda" class="admin-btn-submit">
+              Salvar e Enviar para Planilha →
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Coluna Direita: Configurações & Instruções -->
+      <aside>
+        <!-- Card 1: Configuração da Planilha Google Sheets -->
+        <div class="admin-card">
+          <h3 class="admin-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Planilha Google Sheets
+          </h3>
+          <p class="admin-card-subtitle">
+            Informe a URL do Webhook do Google Apps Script conectado à sua planilha.
+          </p>
+
+          <div class="admin-form-group">
+            <label class="admin-label" for="sheets-webhook-url">URL do Webhook do Apps Script</label>
+            <input type="url" id="sheets-webhook-url" class="admin-input" 
+                   value="{{ webhook_url or '' }}" 
+                   placeholder="https://script.google.com/macros/s/.../exec">
+          </div>
+
+          <div style="display: flex; gap: 8px;">
+            <button type="button" id="btn-salvar-webhook" class="admin-btn-secondary" style="flex: 1; justify-content: center;">
+              Salvar URL
+            </button>
+            <button type="button" id="btn-testar-conexao" class="admin-btn-secondary" style="flex: 1; justify-content: center; color: var(--cad); border-color: rgba(51, 209, 224, 0.4);">
+              Testar Conexão
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Como Instalar no Google Sheets -->
+        <div class="admin-card">
+          <h3 class="admin-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cad)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Como Configurar a Planilha
+          </h3>
+          <p class="admin-card-subtitle" style="margin-bottom: 12px;">
+            Siga estes 4 passos simples na sua conta do Google:
+          </p>
+
+          <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.6; color: var(--ink-muted);">
+            <li>Abra uma planilha no <a href="https://sheets.google.com" target="_blank" style="color: var(--cad);">Google Sheets</a>.</li>
+            <li>No menu superior, vá em <strong>Extensões → Apps Script</strong>.</li>
+            <li>Apague o código padrão e <strong>cole o código abaixo</strong>.</li>
+            <li>Clique em <strong>Implantar → Nova implantação</strong>:
+              <ul style="padding-left: 16px; margin: 4px 0;">
+                <li>Tipo: <em>App da Web</em></li>
+                <li>Quem pode acessar: <strong>Qualquer pessoa</strong></li>
+              </ul>
+            </li>
+            <li>Copie a <strong>URL do app da Web</strong> gerada e cole no campo acima!</li>
+          </ol>
+
+          <pre class="admin-code-box" id="google-apps-script-code">function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000);
+  try {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = ss.getActiveSheet();
+    var payload = JSON.parse(e.postData.contents);
+
+    if (payload.action === "ping") {
+      return ContentService.createTextOutput(JSON.stringify({success: true, message: "Conectado!"}))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(["Data/Hora", "Cliente", "WhatsApp", "Cidade/UF", "Canal", "Produto", "Variação/Cor", "Qtd", "Valor Unitário (R$)", "Valor Total (R$)", "Pagamento", "Prazo", "Status", "Observações"]);
+    }
+
+    sheet.appendRow([
+      payload.data_hora || new Date().toLocaleString("pt-BR"),
+      payload.cliente_nome || "",
+      payload.cliente_whatsapp || "",
+      payload.cliente_cidade || "",
+      payload.canal_venda || "WhatsApp",
+      payload.produto_nome || "",
+      payload.variacao_cor || "",
+      Number(payload.quantidade) || 1,
+      Number(payload.valor_unitario) || 0,
+      Number(payload.valor_total) || 0,
+      payload.forma_pagamento || "Pix",
+      payload.prazo || "",
+      payload.status || "Em Produção",
+      payload.observacoes || ""
+    ]);
+
+    return ContentService.createTextOutput(JSON.stringify({success: true, message: "Venda gravada!"}))
+      .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}</pre>
+
+          <button type="button" id="btn-copiar-script" class="admin-btn-secondary" style="width: 100%; justify-content: center; margin-top: 8px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copiar Código do Script
+          </button>
+        </div>
+
+        <!-- Card 3: Histórico de Vendas da Sessão -->
+        <div class="admin-card">
+          <h3 class="admin-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Lançamentos desta Sessão
+          </h3>
+          <p class="admin-card-subtitle" style="margin-bottom: 8px;">
+            Histórico das vendas enviadas enquanto você estiver nesta página:
+          </p>
+          <div id="admin-history-list" class="admin-history-list"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

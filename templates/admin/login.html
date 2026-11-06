@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Administrativo · {{ site.nome }}</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo/voxel-icone.svg') }}">
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body class="admin-body">
+
+  <div class="admin-login-wrap">
+    <div class="admin-login-card">
+      <div class="admin-login-header">
+        <img src="{{ url_for('static', filename='img/logo/voxel-icone.svg') }}" alt="Voxel Lab" width="48" height="48">
+        <h1 class="admin-login-title">Área Restrita</h1>
+        <p class="admin-login-subtitle">Acesso administrativo para gestão e vendas</p>
+      </div>
+
+      {% if erro %}
+        <div class="admin-alert admin-alert-error" style="margin-bottom: 20px;">
+          <span>{{ erro }}</span>
+        </div>
+      {% endif %}
+
+      <form method="POST" action="/admin/login">
+        <div class="admin-form-group">
+          <label class="admin-label" for="username">Usuário</label>
+          <input type="text" id="username" name="username" class="admin-input" placeholder="admin" required autofocus autocomplete="username">
+        </div>
+
+        <div class="admin-form-group" style="margin-bottom: 24px;">
+          <label class="admin-label" for="password">Senha</label>
+          <input type="password" id="password" name="password" class="admin-input" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="admin-btn-submit">
+          Entrar no Painel →
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="/" style="color: var(--ink-muted); font-size: 12px; text-decoration: none;">← Voltar ao site da loja</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
