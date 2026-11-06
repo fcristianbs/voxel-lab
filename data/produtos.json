@@ -1570,9 +1570,15 @@
     "nome": "Organizador de Mesa Moderno · Celular, Relógio e Fones",
     "categoria": "setup-games",
     "subcategoria": "desktop",
+    "categorias": [
+      "setup-games"
+    ],
+    "subcategorias": [
+      "desktop"
+    ],
     "resumo": "Organizador com espaços para celular, relógio, fones, chaves e canetas.",
     "descricao": "Organizador de mesa com compartimentos dedicados para celular, relógio, fones de ouvido (case), chaves e itens de escritório. Design moderno e limpo que mantém o essencial do dia a dia organizado no home office ou setup gamer. Impresso em PLA.",
-    "preco": 97.99,
+    "preco": 47.99,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -1632,17 +1638,11 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "organizador-de-cabos-6-vias-para-mesa-ou-parede"
-    ],
-    "categorias": [
-      "setup-games"
-    ],
-    "subcategorias": [
-      "desktop"
     ]
   },
   {
