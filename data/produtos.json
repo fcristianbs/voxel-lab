@@ -1081,9 +1081,15 @@
     "nome": "Luminária Shoji Japonesa · Sakura e Grande Onda",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Luminária estilo shoji japonês com janelas de cerejeira e onda.",
     "descricao": "Luminária inspirada nas portas shoji japonesas, com painéis translúcidos ilustrados (cerejeira em flor e a grande onda). Moldura e painéis em três cores, produzidos com troca automática de cor. Janelas temáticas extras disponíveis. Acompanha kit de iluminação LED com controle.",
-    "preco": 141.99,
+    "preco": 95.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -1143,18 +1149,12 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "organizador-de-mesa-moderno-celular-relogio-e-fones",
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
-    ],
-    "categorias": [
-      "casa"
-    ],
-    "subcategorias": [
-      "luminaria"
     ]
   },
   {
