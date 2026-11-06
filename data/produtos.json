@@ -757,9 +757,15 @@
     "nome": "Luminária Montanha · Luz Indireta",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Luminária de camadas que forma uma silhueta de montanha com luz indireta.",
     "descricao": "Luminária minimalista de camadas sobrepostas que formam uma silhueta de montanha, com luz quente e indireta. Impressa em PLA com fibra de carbono (PLA-CF), de acabamento fosco e premium. Acompanha kit de iluminação LED com controle.",
-    "preco": 178.99,
+    "preco": 99.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -819,18 +825,12 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "organizador-de-mesa-moderno-celular-relogio-e-fones",
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
-    ],
-    "categorias": [
-      "casa"
-    ],
-    "subcategorias": [
-      "luminaria"
     ]
   },
   {
