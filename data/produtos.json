@@ -919,9 +919,15 @@
     "nome": "Luminária Dragão Cuspindo Fogo · Fantasia",
     "categoria": "casa",
     "subcategoria": "luminaria",
+    "categorias": [
+      "casa"
+    ],
+    "subcategorias": [
+      "luminaria"
+    ],
     "resumo": "Dragão em voo cuja baforada de fogo é a própria luz.",
     "descricao": "Luminária decorativa com um dragão em voo, em que a nuvem de fogo translúcida acende e vira a fonte de luz. Duas cores (dragão e chama), montadas sem AMS. Acompanha kit de iluminação LED com controle.",
-    "preco": 71.99,
+    "preco": 99.0,
     "precoParcelado": "ou [n] de x no Mercado Livre",
     "material": "PLA",
     "uso": "interno",
@@ -981,18 +987,12 @@
       }
     ],
     "instalacao": [],
-    "mercadoLivreUrl": null,
+    "mercadoLivreUrl": "https://voxel-lab-black.vercel.app/",
     "relacionados": [
       "organizador-de-mesa-moderno-celular-relogio-e-fones",
       "suporte-de-celular-estilo-vice-city",
       "suporte-de-caneca-lateral-setup-gamer",
       "porta-controles-remotos-organizador-triplo"
-    ],
-    "categorias": [
-      "casa"
-    ],
-    "subcategorias": [
-      "luminaria"
     ]
   },
   {
