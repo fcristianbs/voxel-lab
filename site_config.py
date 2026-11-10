@@ -30,6 +30,14 @@ site = {
         'GOOGLE_SHEETS_WEBHOOK_URL',
         'https://script.google.com/macros/s/AKfycbyAyMmGnc56ZaCx11742woUJkW7MkkJFbIjf99AygHoL_sIkpDMLnxhIgAJtz29RXFd/exec'
     ),
+
+    # Integração MakerWorld (Catálogo Expandido)
+    'makerworld': {
+        'ativo': True,  # Se false, oculta toda a integração e rota /makerworld responde 404
+        'buscaUrl': 'https://makerworld.com/en/search/models?keyword=',
+        'hostsAceitos': ['makerworld.com', 'www.makerworld.com'],
+        'prazoDias': '3 a 5',  # [DEFINIR] Dias úteis estimados para impressão
+    },
 }
 
 def get_whatsapp_url(text: str = '') -> str:

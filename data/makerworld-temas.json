@@ -1,0 +1,44 @@
+[
+  {
+    "id": "setup-de-mesa",
+    "titulo": "Setup de mesa",
+    "termo": "desk setup",
+    "descricao": "Suportes para fones, organizadores e apoios para teclado e monitor",
+    "icone": "monitor"
+  },
+  {
+    "id": "suportes-de-controle",
+    "titulo": "Suportes de controle",
+    "termo": "controller stand",
+    "descricao": "Bases temáticas e suportes para controles de PS5, Xbox e Switch",
+    "icone": "gamepad"
+  },
+  {
+    "id": "luminarias",
+    "titulo": "Luminárias",
+    "termo": "lamp",
+    "descricao": "Luminárias de design, cúpulas para fita LED e arandelas decorativas",
+    "icone": "lamp"
+  },
+  {
+    "id": "organizacao",
+    "titulo": "Organização",
+    "termo": "organization gridfinity skadis",
+    "descricao": "Sistemas modulares, caixas empilháveis, Skadis e guias de cabos",
+    "icone": "boxes"
+  },
+  {
+    "id": "figures-e-decoracao",
+    "titulo": "Figures e decoração",
+    "termo": "articulated figure decor",
+    "descricao": "Modelos colecionáveis, esculturas, vasos geométricos e arte 3D",
+    "icone": "figure"
+  },
+  {
+    "id": "casa-e-cozinha",
+    "titulo": "Casa e cozinha",
+    "termo": "kitchen home gadgets",
+    "descricao": "Acessórios para café, porta-cápsulas, dosadores e suportes práticos",
+    "icone": "coffee"
+  }
+]

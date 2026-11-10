@@ -1,0 +1,835 @@
+/* ==============================================================================
+   VOXEL LAB · ESTILOS INTEGRAÇÃO MAKERWORLD
+   Conforme especificações do PROMPT_Antigravity_MakerWorld.md
+   ============================================================================== */
+
+/* -----------------------------------------------------------------------------
+   Aba do Header Desktop (Ponto A)
+   ----------------------------------------------------------------------------- */
+.mw-header-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--line);
+  margin: 0 4px;
+}
+
+.mw-header-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--nozzle-soft);
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  height: 34px;
+  box-sizing: border-box;
+}
+
+.mw-header-tab:hover {
+  background: rgba(255, 107, 44, 0.25);
+  border-color: var(--nozzle-hover);
+}
+
+.mw-header-tab[aria-current="page"],
+.mw-header-tab.active {
+  border-width: 2px;
+  box-shadow: 0 0 12px rgba(255, 107, 44, 0.25);
+}
+
+.mw-header-tab-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--nozzle);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* -----------------------------------------------------------------------------
+   Chip Celular (Ponto B)
+   ----------------------------------------------------------------------------- */
+.mw-mobile-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--nozzle-soft);
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--nozzle);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.mw-mobile-chip[aria-current="page"],
+.mw-mobile-chip.active {
+  border-width: 2px;
+}
+
+/* -----------------------------------------------------------------------------
+   FormLinkMakerWorld (Grande e Compacto)
+   ----------------------------------------------------------------------------- */
+.mw-link-island {
+  width: 100%;
+}
+
+.mw-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .mw-input-wrap {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.mw-input-field-group {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.mw-input-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+
+.mw-link-input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 14px 10px 38px;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.mw-link-input:focus {
+  outline: none;
+  border-color: var(--nozzle);
+  box-shadow: 0 0 0 2px rgba(255, 107, 44, 0.2);
+}
+
+.mw-link-input[aria-invalid="true"] {
+  border-color: #ff5c5c;
+  box-shadow: 0 0 0 2px rgba(255, 92, 92, 0.2);
+}
+
+.mw-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--nozzle);
+  color: var(--on-nozzle);
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.mw-link-btn:hover {
+  background: var(--nozzle-hover);
+  border-color: var(--nozzle-hover);
+  transform: translateY(-1px);
+}
+
+/* Variante Grande */
+.mw-link-island-grande .mw-link-input {
+  padding: 14px 16px 14px 42px;
+  font-size: 15px;
+}
+
+.mw-link-island-grande .mw-input-icon {
+  left: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+.mw-link-island-grande .mw-link-btn {
+  padding: 14px 24px;
+  font-size: 14px;
+}
+
+/* Botão em Contorno (usado na página /makerworld) */
+.mw-link-btn-outline {
+  background: transparent;
+  color: var(--nozzle);
+  border: 1px solid var(--nozzle);
+}
+
+.mw-link-btn-outline:hover {
+  background: rgba(255, 107, 44, 0.15);
+  color: var(--nozzle-hover);
+}
+
+.mw-form-error {
+  background: var(--surface-raised);
+  color: var(--nozzle);
+  border-left: 3px solid var(--nozzle);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* -----------------------------------------------------------------------------
+   Faixa da Home (Ponto G)
+   ----------------------------------------------------------------------------- */
+.mw-home-banner {
+  background: radial-gradient(circle at 85% 50%, rgba(255, 107, 44, 0.08), transparent 60%), var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 32px 24px;
+  margin: 48px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mw-home-banner-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .mw-home-banner-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+  }
+}
+
+.mw-home-banner-content {
+  flex: 1;
+}
+
+.mw-home-banner-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 8px 0;
+}
+
+.mw-home-banner-title span {
+  color: var(--nozzle);
+}
+
+.mw-home-banner-subtitle {
+  color: var(--ink-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.mw-home-banner-form {
+  flex: 1;
+  max-width: 520px;
+}
+
+/* -----------------------------------------------------------------------------
+   Card de Fim de Categoria (Ponto D)
+   ----------------------------------------------------------------------------- */
+.mw-category-end-card {
+  grid-column: 1 / -1;
+  background: radial-gradient(circle at 90% 20%, rgba(255, 107, 44, 0.08), transparent 50%), var(--surface-raised);
+  border: 1px solid var(--nozzle);
+  border-radius: var(--radius-sm);
+  padding: 28px 24px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 800px) {
+  .mw-category-end-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mw-category-end-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.mw-category-end-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 4px 0 8px;
+}
+
+.mw-category-end-title span {
+  color: var(--nozzle);
+}
+
+/* -----------------------------------------------------------------------------
+   Card Lateral de Filtros (Ponto E)
+   ----------------------------------------------------------------------------- */
+.mw-sidebar-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.mw-sidebar-option {
+  display: block;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.mw-sidebar-option-mw {
+  background: var(--surface);
+  border-color: rgba(255, 107, 44, 0.25);
+}
+
+.mw-sidebar-option-mw:hover {
+  background: var(--nozzle-soft);
+  border-color: var(--nozzle);
+}
+
+.mw-sidebar-option-cad {
+  background: var(--cad-soft);
+  border-color: rgba(51, 209, 224, 0.3);
+}
+
+.mw-sidebar-option-cad:hover {
+  background: rgba(51, 209, 224, 0.15);
+  border-color: var(--cad);
+}
+
+.mw-sidebar-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.mw-sidebar-badge-mw { color: var(--nozzle); }
+.mw-sidebar-badge-cad { color: var(--cad); }
+
+.mw-sidebar-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* -----------------------------------------------------------------------------
+   Página /busca sem resultado (Ponto C)
+   ----------------------------------------------------------------------------- */
+.mw-empty-state-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+@media (min-width: 900px) {
+  .mw-empty-state-grid {
+    grid-template-columns: 1.6fr 1fr;
+  }
+}
+
+.mw-empty-caminho-1 {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mw-empty-caminho-2 {
+  background: var(--cad-soft);
+  border: 1px solid var(--cad);
+  border-radius: var(--radius-sm);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mw-steps-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mw-step-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.mw-step-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--nozzle);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* -----------------------------------------------------------------------------
+   PÁGINA DEDICADA /makerworld (Aba Catálogo Expandido)
+   ----------------------------------------------------------------------------- */
+.mw-page-hero {
+  background: radial-gradient(circle at 50% 20%, rgba(255, 107, 44, 0.1), transparent 70%), var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 64px 24px 56px;
+  text-align: center;
+}
+
+.mw-hero-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--nozzle);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.mw-hero-brand-collab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mw-hero-brand-collab .brand-voxel {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.mw-hero-brand-collab .brand-x {
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.mw-hero-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  max-width: 780px;
+  margin: 0 auto 16px;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .mw-hero-title {
+    font-size: 46px;
+  }
+}
+
+.mw-hero-title span {
+  color: var(--nozzle);
+}
+
+.mw-hero-subtitle {
+  color: var(--ink-muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.5;
+}
+
+.mw-hero-search-box {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.mw-search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .mw-search-form {
+    flex-direction: row;
+  }
+}
+
+.mw-search-input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 12px 16px;
+}
+
+.mw-search-input:focus {
+  outline: none;
+  border-color: var(--nozzle);
+}
+
+.mw-divider-dashed {
+  border: none;
+  border-top: 1px dashed var(--line);
+  margin: 20px 0;
+}
+
+/* Explore por Tema */
+.mw-temas-section {
+  padding: 64px 24px;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.mw-section-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.mw-section-desc {
+  color: var(--ink-muted);
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+.mw-temas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.mw-tema-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mw-tema-card:hover {
+  border-color: var(--nozzle);
+  transform: translateY(-2px);
+  background: radial-gradient(circle at 100% 0%, rgba(255, 107, 44, 0.08), var(--surface-raised));
+}
+
+.mw-tema-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mw-tema-desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+.mw-tema-action {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--nozzle);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+/* Vitrine "Já Impressos" */
+.mw-vitrine-section {
+  padding: 0 24px 64px;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.mw-vitrine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.mw-vitrine-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s;
+}
+
+.mw-vitrine-card:hover {
+  border-color: var(--nozzle);
+}
+
+.mw-vitrine-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mw-vitrine-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mw-vitrine-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(12, 16, 20, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mw-vitrine-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.mw-vitrine-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.mw-vitrine-author {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin: 0 0 12px;
+}
+
+.mw-vitrine-author a {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.mw-vitrine-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.mw-vitrine-price {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nozzle);
+}
+
+/* Como Funciona */
+.mw-how-section {
+  background: var(--surface-raised);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 64px 24px;
+}
+
+.mw-how-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.mw-how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.mw-how-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mw-how-num {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--nozzle);
+}
+
+.mw-how-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.mw-how-desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Aviso Legal de Rodapé */
+.mw-legal-note {
+  max-width: var(--container-max-width);
+  margin: 48px auto 0;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------------------------------------
+   Sugestões da Busca do Header (Ponto F)
+   ----------------------------------------------------------------------------- */
+.vl-search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 6px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.vl-search-suggestion-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.12s ease;
+  cursor: pointer;
+}
+
+.vl-search-suggestion-item:hover,
+.vl-search-suggestion-item.active {
+  background: var(--surface);
+  outline: none;
+}
+
+.vl-search-suggestion-mw {
+  background: var(--nozzle-soft);
+  color: var(--nozzle);
+  font-weight: 500;
+  border-bottom: none;
+}
+
+.vl-search-suggestion-mw:hover,
+.vl-search-suggestion-mw.active {
+  background: rgba(255, 107, 44, 0.25);
+  color: var(--nozzle-hover);
+}
+

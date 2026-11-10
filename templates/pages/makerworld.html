@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+
+{% block title %}Catálogo expandido · modelos do MakerWorld impressos pela Voxel Lab · {{ site.nome }}{% endblock %}
+
+{% block description %}Milhares de modelos do MakerWorld impressos pela Voxel Lab em alta definição. Suportes, organizadores e decorações prontos para orçamento direto no WhatsApp.{% endblock %}
+
+{% from 'components/makerworld_logo.html' import logo_makerworld %}
+{% from 'components/makerworld_form.html' import form_link_makerworld %}
+
+{% block content %}
+<div class="mw-page-wrapper">
+
+  <!-- ========================================================================
+       HERO COM MALHA DE VOXEL (1. Hero com malha de voxel)
+       ======================================================================== -->
+  <header class="mw-hero-section grid-bg">
+    <div class="vl-container mw-hero-inner">
+      
+      <!-- Selo e Colaboração -->
+      <div class="mw-hero-badge-wrap">
+        <span class="mw-hero-badge">CATÁLOGO EXPANDIDO</span>
+      </div>
+
+      <div class="mw-hero-collab">
+        <span class="mw-collab-brand">VOXEL LAB</span>
+        <span class="mw-collab-x">&times;</span>
+        <div class="mw-collab-logo">
+          {{ logo_makerworld(tipo='horizontal', altura=38, alt='MakerWorld') }}
+        </div>
+      </div>
+
+      <!-- Título Principal -->
+      <h1 class="mw-hero-title">
+        Milhares de modelos. <span class="text-nozzle">A gente imprime.</span>
+      </h1>
+
+      <p class="mw-hero-subtitle">
+        Não achou o que procurava em nosso catálogo próprio? Explore a biblioteca global do MakerWorld, 
+        cole o link do modelo e a gente imprime para você com precisão e acabamento técnico.
+      </p>
+
+      <!-- Painel Principal de Ações (Busca + Formulário de Link) -->
+      <div class="mw-hero-panel">
+        
+        <!-- Busca Direta no MakerWorld -->
+        <div class="mw-search-box">
+          <form action="{{ site.makerworld.buscaUrl if site.makerworld.buscaUrl else 'https://makerworld.com/en/search/models' }}" 
+                method="GET" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="mw-external-search-form"
+                onsubmit="if(window.MakerWorld) MakerWorld.trackEvent('makerworld_busca', { termo: this.keyword.value, origem: 'hero_makerworld' });">
+            
+            <label for="mw-hero-search-input" class="sr-only">Buscar modelo no MakerWorld</label>
+            <div class="mw-search-input-wrap">
+              <svg class="mw-search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="search" 
+                     id="mw-hero-search-input"
+                     name="keyword" 
+                     class="mw-search-input" 
+                     placeholder="Ex: suporte headphone, luminária lua, gridfinity..." 
+                     autocomplete="off"
+                     required>
+            </div>
+            
+            <button type="submit" class="mw-search-btn">
+              <span>Buscar no MakerWorld</span>
+              <span class="ext-arrow">&nearr;</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Linha tracejada separadora -->
+        <div class="mw-dashed-divider">
+          <span>OU SE PREFERIR</span>
+        </div>
+
+        <!-- Bloco: Já escolheu? Cole o link -->
+        <div class="mw-paste-section">
+          <div class="mw-paste-title">JÁ ESCOLHEU? COLE O LINK</div>
+          {{ form_link_makerworld(variante='grande', origem='pagina_makerworld', btn_texto='Orçar') }}
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       EXPLORE POR TEMA (2. "Explore por tema" · 6 cartões)
+       ======================================================================== -->
+  <section class="mw-themes-section vl-container" aria-label="Explore por tema">
+    <div class="section-label-bar">
+      <span class="mono-label text-nozzle">EXPLORE POR TEMA</span>
+      <span class="mono-label text-muted">BUSCAS PRONTAS NO MAKERWORLD</span>
+    </div>
+
+    <div class="mw-themes-grid">
+      {% for tema in temas %}
+        {% set mw_busca_link = (site.makerworld.buscaUrl if site.makerworld.buscaUrl else 'https://makerworld.com/en/search/models?keyword=') ~ (tema.termo|urlencode) %}
+        <a href="{{ mw_busca_link }}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="mw-theme-card"
+           data-mw-search="{{ tema.termo }}"
+           data-mw-origem="tema_{{ tema.id }}">
+          
+          <div class="mw-theme-card-icon" aria-hidden="true">
+            {% if tema.icone == 'monitor' %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            {% elif tema.icone == 'gamepad' %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg>
+            {% elif tema.icone == 'lamp' %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+            {% elif tema.icone == 'boxes' %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            {% elif tema.icone == 'figure' %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/></svg>
+            {% else %}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            {% endif %}
+          </div>
+
+          <div class="mw-theme-card-body">
+            <h3 class="mw-theme-card-title">{{ tema.titulo }}</h3>
+            <p class="mw-theme-card-desc">{{ tema.descricao }}</p>
+          </div>
+
+          <div class="mw-theme-card-action">
+            <span>Buscar no MakerWorld</span>
+            <span class="ext-arrow">&nearr;</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       JÁ IMPRESSOS PELA VOXEL LAB (3. Vitrine makerworld)
+       ======================================================================== -->
+  {% if vitrine and vitrine|length > 0 %}
+  <section class="mw-showcase-section vl-container" aria-label="Já impressos pela Voxel Lab">
+    <div class="section-label-bar">
+      <span class="mono-label text-nozzle">JÁ IMPRESSOS PELA VOXEL LAB</span>
+      <span class="mono-label text-muted">MODELOS TESTADOS E APROVADOS</span>
+    </div>
+
+    <div class="mw-showcase-grid">
+      {% for item in vitrine %}
+        <article class="mw-showcase-card">
+          <!-- Foto Própria ou Placeholder Técnico -->
+          <div class="mw-showcase-media grid-bg">
+            {% if item.foto %}
+              <img src="{{ url_for('static', filename=item.foto) }}" alt="{{ item.nome }}" class="mw-showcase-img" loading="lazy">
+            {% else %}
+              <div class="mw-showcase-placeholder">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="var(--ink-muted)" stroke-width="1.5">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                <span class="mono-label text-muted" style="font-size: 10px; margin-top: 6px;">FOTO DA PEÇA</span>
+              </div>
+            {% endif %}
+
+            <!-- Selo via MakerWorld -->
+            <div class="mw-showcase-badge">
+              {{ logo_makerworld(tipo='icone', altura=14, alt='', extra_class='mw-badge-icon') }}
+              <span>via MakerWorld</span>
+            </div>
+          </div>
+
+          <div class="mw-showcase-content">
+            <h3 class="mw-showcase-title">
+              <a href="{{ item.modeloUrl }}" target="_blank" rel="noopener noreferrer" title="Ver modelo no MakerWorld">
+                {{ item.nome }}
+              </a>
+            </h3>
+
+            <div class="mw-showcase-meta">
+              <span>por <a href="{{ item.autorUrl }}" target="_blank" rel="noopener noreferrer" class="mw-author-link">@{{ item.autor }}</a></span>
+              <span class="mw-meta-dot">&middot;</span>
+              <span class="mw-material-tag">{{ item.material }}</span>
+            </div>
+
+            <div class="mw-showcase-footer">
+              <div class="mw-showcase-price">
+                {% if item.preco %}
+                  <span class="mw-price-val">R$ {{ "%.2f"|format(item.preco)|replace('.', ',') }}</span>
+                {% else %}
+                  <span class="mw-price-consulta">Sob consulta</span>
+                {% endif %}
+              </div>
+
+              {# Montagem da mensagem WhatsApp 6.4b #}
+              {% set wa_msg = "Olá, Voxel Lab! Quero este modelo do MakerWorld impresso por vocês:\n• " ~ item.nome ~ " (por " ~ item.autor ~ ")\n• Material: " ~ item.material %}
+              {% if item.cores and item.cores|length > 0 %}
+                {% set wa_msg = wa_msg ~ "\n• Cor: " ~ item.cores[0] %}
+              {% endif %}
+              {% set wa_msg = wa_msg ~ "\n" ~ item.modeloUrl ~ "\n" ~ request.url %}
+
+              {% set wa_url = "https://wa.me/" ~ (site.whatsapp or '5588921864755') ~ "?text=" ~ (wa_msg|urlencode) %}
+
+              <a href="{{ wa_url }}" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="mw-btn-pedir"
+                 onclick="if(window.MakerWorld) MakerWorld.trackEvent('whatsapp_makerworld_vitrine', { slug: '{{ item.slug }}' });">
+                <span>Pedir</span>
+                <span class="ext-arrow">&nearr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ========================================================================
+       COMO FUNCIONA (4. "Como funciona" · 4 passos)
+       ======================================================================== -->
+  <section class="mw-how-section vl-container" aria-label="Como funciona a impressão de modelos do MakerWorld">
+    <div class="section-label-bar">
+      <span class="mono-label text-nozzle">PROCESSO</span>
+      <h2 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink); margin: 0;">Como funciona</h2>
+    </div>
+
+    <div class="mw-how-grid">
+      <div class="mw-how-card">
+        <span class="mw-how-num">01</span>
+        <h3 class="mw-how-title">Escolha no MakerWorld</h3>
+        <p class="mw-how-desc">Navegue por milhares de modelos 3D utilitários, suportes e decorações criados por designers de todo o mundo.</p>
+      </div>
+
+      <div class="mw-how-card">
+        <span class="mw-how-num">02</span>
+        <h3 class="mw-how-title">Cole o link aqui</h3>
+        <p class="mw-how-desc">Cole o link no formulário acima ou envie no WhatsApp. Não precisa baixar arquivos nem instalar programas.</p>
+      </div>
+
+      <div class="mw-how-card">
+        <span class="mw-how-num">03</span>
+        <h3 class="mw-how-title">A gente confere</h3>
+        <p class="mw-how-desc">Nossa equipe verifica a licença do autor, dimensões e viabilidade técnica para garantir a melhor qualidade de impressão.</p>
+      </div>
+
+      <div class="mw-how-card">
+        <span class="mw-how-num">04</span>
+        <h3 class="mw-how-title">Imprime e envia</h3>
+        <p class="mw-how-desc">Fabricamos no material ideal (PLA, PETG com proteção UV ou TPU flexível) e despachamos com cuidado para você.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       NOTA DE RODAPÉ LEGAL (5. RN11, RN12, RN13)
+       ======================================================================== -->
+  <aside class="mw-legal-note vl-container" role="note">
+    <p style="margin: 0;">
+      MakerWorld é uma marca de terceiros, usada aqui para indicar onde estão os modelos. Só imprimimos modelos cuja licença permite a venda de impressões, ou com autorização do autor, e o crédito ao autor vai junto com a peça.
+    </p>
+  </aside>
+
+</div>
+{% endblock %}

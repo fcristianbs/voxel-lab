@@ -1,0 +1,27 @@
+{#
+  Macro para renderização centralizada do logotipo e ícone do MakerWorld
+  Conforme seção 4 do PROMPT_Antigravity_MakerWorld.md
+#}
+
+{% macro logo_makerworld(tipo='horizontal', altura=22, alt='MakerWorld', extra_class='', estilo='') -%}
+  {% if tipo == 'icone' %}
+    {# Proporção 1:1 (512x512) #}
+    <img src="{{ url_for('static', filename='img/makerworld/makerworld-icone-branco.png') }}" 
+         alt="{{ alt }}" 
+         width="{{ altura }}" 
+         height="{{ altura }}" 
+         class="mw-logo-img mw-logo-icone {{ extra_class }}" 
+         style="height: {{ altura }}px; width: {{ altura }}px; object-fit: contain; {{ estilo }}"
+         loading="lazy">
+  {% else %}
+    {# Proporção horizontal 720x246 (~2.926:1) #}
+    {% set largura = (altura * 2.926)|round|int %}
+    <img src="{{ url_for('static', filename='img/makerworld/makerworld-logo-horizontal-branco.png') }}" 
+         alt="{{ alt }}" 
+         width="{{ largura }}" 
+         height="{{ altura }}" 
+         class="mw-logo-img mw-logo-horizontal {{ extra_class }}" 
+         style="height: {{ altura }}px; width: auto; object-fit: contain; {{ estilo }}"
+         loading="lazy">
+  {% endif %}
+{%- endmacro %}

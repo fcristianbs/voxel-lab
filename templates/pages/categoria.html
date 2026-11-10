@@ -66,9 +66,16 @@
   </header>
 
   <!-- ========================================================================
-       CHIPS HORIZONTAIS NO CELULAR (2_Categoria_celular.png)
+       CHIPS HORIZONTAIS NO CELULAR (2_Categoria_celular.png / Ponto B)
        ======================================================================== -->
   <div class="mobile-subcategorias-scroll" aria-label="Subcategorias rápidas">
+    {% if site.makerworld and site.makerworld.ativo %}
+      <a href="/makerworld" class="mw-mobile-chip {% if active_page == 'makerworld' %}active{% endif %}" aria-label="MakerWorld + Modelos">
+        {% from 'components/makerworld_logo.html' import logo_makerworld %}
+        {{ logo_makerworld(tipo='horizontal', altura=20, alt='MakerWorld') }}
+        <span class="mw-mobile-chip-plus">+</span>
+      </a>
+    {% endif %}
     <a href="?sub=" class="vl-chip {% if not request.args.get('sub') and categoria %}active{% elif not categoria and not request.args.get('sub') %}active{% endif %}">Todos</a>
     {% if categoria and categoria.subcategorias %}
       {% for sub in categoria.subcategorias %}
@@ -192,41 +199,180 @@
         </div>
       </div>
 
-      <!-- Grid de Produtos -->
-      <div class="catalogo-produtos-grid" id="catalogo-produtos-grid">
-        {% for produto in produtos %}
-          <div class="card-produto-item"
-               data-subcategoria="{{ (produto.subcategorias|join(' ') if produto.subcategorias else produto.subcategoria) or '' }}"
-               data-categoria="{{ (produto.categorias|join(' ') if produto.categorias else produto.categoria) or '' }}"
-               data-material="{{ produto.material or '' }}"
-               data-uso="{{ produto.uso or '' }}"
-               data-nome="{{ produto.nome }}"
-               data-preco="{{ produto.preco or 0 }}"
-               data-ordem="{{ produto.ordem or 999 }}">
-            {{ card_produto(produto) }}
-          </div>
-        {% endfor %}
+      {% if busca_query is defined and busca_query and produtos|length == 0 %}
+        <!-- Ponto C: /busca sem resultado -->
+        {% if site.makerworld and site.makerworld.ativo %}
+          <div class="mw-busca-sem-resultado">
+            <div class="mw-busca-header" style="margin-bottom: 24px;">
+              <h2 class="mw-busca-title" style="font-family: var(--font-display); font-size: 24px; color: var(--ink); margin-bottom: 8px;">
+                Nenhuma peça para “{{ busca_query }}”
+              </h2>
+              <p class="mw-busca-subtitle" style="color: var(--ink-muted); font-size: 15px; margin: 0;">
+                Não encontramos esse modelo específico no catálogo próprio da Voxel Lab, mas temos duas opções rápidas para você:
+              </p>
+            </div>
 
-        <!-- Estado Vazio (CDU02 4a) -->
-        <div class="catalogo-empty-state" id="catalogo-empty-state">
-          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--ink-muted)" stroke-width="1.5">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-          <h3>Nenhuma peça com esses filtros</h3>
-          <p>Não encontrou exatamente o que precisa? Limpe os filtros ou mande sua medida para modelarmos sob encomenda.</p>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
-            <button type="button" class="btn-primario" id="btn-limpar-filtros">Limpar filtros</button>
-            <a href="/sob-medida" class="btn-sob-medida">Orçar sob medida</a>
+            <div class="mw-empty-state-grid">
+              <!-- Caminho 1 · Modelo Pronto -->
+              <div class="mw-empty-caminho-1">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+                  <span class="mono-label text-nozzle">CAMINHO 1 · MODELO PRONTO</span>
+                  {% from 'components/makerworld_logo.html' import logo_makerworld %}
+                  {{ logo_makerworld(tipo='horizontal', altura=34, alt='MakerWorld') }}
+                </div>
+
+                <div>
+                  <h3 style="font-size: 20px; font-weight: 700; margin: 12px 0 16px; font-family: var(--font-display); color: var(--ink);">
+                    Não encontrou o que queria? Busque no MakerWorld e <span style="color: var(--nozzle);">a gente imprime.</span>
+                  </h3>
+                  <a href="{{ site.makerworld.buscaUrl ~ (busca_query|urlencode) }}" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn-outline-nozzle" 
+                     data-mw-search="{{ busca_query }}" 
+                     data-mw-origem="busca_sem_resultado"
+                     style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; margin-bottom: 16px; font-weight: 600; text-decoration: none;">
+                    <span>Buscar “{{ busca_query }}” no MakerWorld</span>
+                    <span class="ext-arrow">&nearr;</span>
+                  </a>
+                </div>
+
+                {% from 'components/makerworld_form.html' import form_link_makerworld %}
+                {{ form_link_makerworld(variante='grande', termo_busca=busca_query, origem='busca_sem_resultado', placeholder='Já achou? Cole o link do MakerWorld aqui...') }}
+
+                <!-- 3 passos -->
+                <ol class="mw-steps-list">
+                  <li class="mw-step-item">
+                    <span class="mw-step-num">01</span>
+                    <div>Busque o modelo no MakerWorld</div>
+                  </li>
+                  <li class="mw-step-item">
+                    <span class="mw-step-num">02</span>
+                    <div>Cole o link aqui ou envie no WhatsApp</div>
+                  </li>
+                  <li class="mw-step-item">
+                    <span class="mw-step-num">03</span>
+                    <div>A gente confere a licença e imprime</div>
+                  </li>
+                </ol>
+
+                <!-- Linha técnica -->
+                <div class="mw-tech-line" style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); border-top: 1px solid var(--line); padding-top: 12px;">
+                  PLA · PETG · TPU · prazo {{ site.makerworld.prazoDias or '3 a 5' }} dias úteis · envio para todo o Brasil
+                </div>
+              </div>
+
+              <!-- Caminho 2 · Sob Medida -->
+              <div class="mw-empty-caminho-2">
+                <div>
+                  <span class="mono-label text-cad">CAMINHO 2 · SOB MEDIDA</span>
+                  <h3 style="font-size: 20px; font-weight: 700; margin: 12px 0 8px; font-family: var(--font-display); color: var(--ink);">
+                    Precisa de uma peça personalizada?
+                  </h3>
+                  <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5; margin-bottom: 24px;">
+                    Mande a medida, desenho ou referência que nossa equipe de engenharia modela em CAD 3D e imprime sob encomenda para você.
+                  </p>
+                </div>
+
+                <div>
+                  <a href="/sob-medida?ref=busca:{{ busca_query|urlencode }}" class="btn-sob-medida" style="display: inline-flex; width: 100%; justify-content: center; padding: 12px 20px; font-weight: 600; text-decoration: none;">
+                    <span>Orçar sob medida</span>
+                    <span style="margin-left: 8px;">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seção Talvez Sirva -->
+            {% if sugestoes %}
+              <div class="mw-talvez-sirva" style="margin-top: 48px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                  <h3 style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--ink); margin: 0;">Talvez sirva</h3>
+                  <span class="mono-label text-muted" style="font-size: 11px;">Peças similares do catálogo</span>
+                </div>
+                <div class="catalogo-produtos-grid" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
+                  {% for p_sug in sugestoes %}
+                    <div class="card-produto-item">
+                      {{ card_produto(p_sug) }}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {% else %}
+          <!-- Estado Vazio Tradicional -->
+          <div class="catalogo-empty-state" style="display: flex;">
+            <h3>Nenhuma peça para “{{ busca_query }}”</h3>
+            <p>Não encontrou o que procurava? Mande sua medida que modelamos sob encomenda.</p>
+            <div style="margin-top: 16px;">
+              <a href="/sob-medida" class="btn-sob-medida">Orçar sob medida</a>
+            </div>
+          </div>
+        {% endif %}
+      {% else %}
+        <!-- Grid de Produtos -->
+        <div class="catalogo-produtos-grid" id="catalogo-produtos-grid">
+          {% for produto in produtos %}
+            <div class="card-produto-item"
+                 data-subcategoria="{{ (produto.subcategorias|join(' ') if produto.subcategorias else produto.subcategoria) or '' }}"
+                 data-categoria="{{ (produto.categorias|join(' ') if produto.categorias else produto.categoria) or '' }}"
+                 data-material="{{ produto.material or '' }}"
+                 data-uso="{{ produto.uso or '' }}"
+                 data-nome="{{ produto.nome }}"
+                 data-preco="{{ produto.preco or 0 }}"
+                 data-ordem="{{ produto.ordem or 999 }}">
+              {{ card_produto(produto) }}
+            </div>
+          {% endfor %}
+
+          <!-- Estado Vazio para filtros dinâmicos JS -->
+          <div class="catalogo-empty-state" id="catalogo-empty-state">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--ink-muted)" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <h3>Nenhuma peça com esses filtros</h3>
+            <p>Não encontrou exatamente o que precisa? Limpe os filtros ou mande sua medida para modelarmos sob encomenda.</p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
+              <button type="button" class="btn-primario" id="btn-limpar-filtros">Limpar filtros</button>
+              <a href="/sob-medida" class="btn-sob-medida">Orçar sob medida</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Rodapé com Contador de Peças -->
-      <div class="catalogo-footer-status">
-        <span id="catalogo-count-display">Mostrando {{ produtos|length }} de {{ produtos|length }} peças</span>
-      </div>
+        <!-- Ponto D: Card de Fim de Categoria -->
+        {% if site.makerworld and site.makerworld.ativo %}
+          {% from 'components/makerworld_logo.html' import logo_makerworld %}
+          {% from 'components/makerworld_form.html' import form_link_makerworld %}
+          <div class="mw-category-end-card">
+            <div class="mw-category-end-info">
+              <div class="mw-category-end-header">
+                <span class="mono-label text-nozzle">MODELO PRONTO</span>
+                {{ logo_makerworld(tipo='horizontal', altura=28, alt='MakerWorld') }}
+              </div>
+              <h3 class="mw-category-end-title">Não achou? Busque no MakerWorld e <span>a gente imprime.</span></h3>
+              <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 12px;">
+                <a href="{{ site.makerworld.buscaUrl if site.makerworld.buscaUrl else 'https://makerworld.com' }}" target="_blank" rel="noopener noreferrer" class="btn-outline-nozzle" data-mw-search="" data-mw-origem="fim_categoria" style="padding: 8px 14px; font-size: 13px; font-weight: 600; text-decoration: none;">
+                  Abrir o MakerWorld <span class="ext-arrow">&nearr;</span>
+                </a>
+                <a href="/sob-medida" class="text-cad" style="font-size: 13px; text-decoration: none; font-weight: 500;">
+                  Nem lá existe? Orçar sob medida &rarr;
+                </a>
+              </div>
+            </div>
+            <div class="mw-category-end-form-wrap" style="flex: 1; max-width: 480px;">
+              {{ form_link_makerworld(variante='compacto', origem='fim_categoria', placeholder='Ou cole o link do modelo aqui...') }}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Rodapé com Contador de Peças -->
+        <div class="catalogo-footer-status">
+          <span id="catalogo-count-display">Mostrando {{ produtos|length }} de {{ produtos|length }} peças</span>
+        </div>
+      {% endif %}
 
     </section>
 

@@ -120,6 +120,35 @@
   </section>
 
   <!-- ========================================================================
+       FAIXA MAKERWORLD (Ponto G · Expansão do Catálogo)
+       ======================================================================== -->
+  {% if site.makerworld and site.makerworld.ativo %}
+  <section class="mw-home-banner" aria-label="Expansão de catálogo MakerWorld">
+    <div class="mw-home-banner-inner">
+      <div class="mw-home-banner-content">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+          <span class="mono-label text-nozzle">EXPANSÃO DE CATÁLOGO</span>
+          {% from 'components/makerworld_logo.html' import logo_makerworld %}
+          {{ logo_makerworld(tipo='horizontal', altura=22, alt='MakerWorld') }}
+        </div>
+        <h2 class="mw-home-banner-title">Viu no MakerWorld? <span>A gente imprime.</span></h2>
+        <p class="mw-home-banner-subtitle">
+          Milhares de suportes, adaptadores e decorações prontos para impressão 3D.
+          <a href="{{ site.makerworld.buscaUrl if site.makerworld.buscaUrl else 'https://makerworld.com' }}" target="_blank" rel="noopener noreferrer" class="text-nozzle" data-mw-search="" data-mw-origem="faixa_home" style="margin-left: 6px; text-decoration: none; font-weight: 500;">
+            Ainda não escolheu? Abrir o MakerWorld &nearr;
+          </a>
+        </p>
+      </div>
+
+      <div class="mw-home-banner-form">
+        {% from 'components/makerworld_form.html' import form_link_makerworld %}
+        {{ form_link_makerworld(variante='compacto', origem='faixa_home', placeholder='Cole o link do modelo no MakerWorld...', btn_texto='Orçar') }}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ========================================================================
        BANNER SOB MEDIDA (CDU01 passo 5 / Moldura com Ciano e Etapas)
        ======================================================================== -->
   <section class="sob-medida-banner">

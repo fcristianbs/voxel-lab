@@ -11,7 +11,16 @@ app = Flask(
 )
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'voxel-lab-secret-dev-key')
 
-from data_service import get_mais_pedidos, get_categorias, get_produtos, get_produto_by_slug, get_categoria_by_slug, filtrar_produtos
+from data_service import (
+    get_mais_pedidos, 
+    get_categorias, 
+    get_produtos, 
+    get_produto_by_slug, 
+    get_categoria_by_slug, 
+    filtrar_produtos,
+    get_makerworld_temas,
+    get_makerworld_vitrine
+)
 
 # Registra globals no ambiente Jinja2 para estarem disponíveis dentro de macros importadas
 app.jinja_env.globals['site'] = site
@@ -38,7 +47,16 @@ def serve_static_file(filename):
             return send_from_directory(folder, filename)
     abort(404)
 
-from data_service import get_mais_pedidos, get_categorias, get_produtos, get_produto_by_slug, get_categoria_by_slug, filtrar_produtos
+from data_service import (
+    get_mais_pedidos, 
+    get_categorias, 
+    get_produtos, 
+    get_produto_by_slug, 
+    get_categoria_by_slug, 
+    filtrar_produtos,
+    get_makerworld_temas,
+    get_makerworld_vitrine
+)
 from flask import abort   
 
 @app.route('/')
@@ -65,10 +83,35 @@ def categoria_page(slug):
 
 @app.route('/busca')
 def busca_page():
-    """Página de Busca de Produtos (CDU02)."""
+    """Página de Busca de Produtos (CDU02 e Ponto C MakerWorld)."""
     q = request.args.get('q', '').strip()
-    produtos = filtrar_produtos(busca=q)
-    return render_template('pages/categoria.html', categoria=None, produtos=produtos, busca_query=q, active_page='busca')
+    produtos = filtrar_produtos(busca=q) if q else []
+    
+    # Sugestões "Talvez sirva" quando a busca não retornar peças próprias
+    sugestoes = []
+    if q and not produtos:
+        tokens = [t.lower() for t in q.split() if len(t) >= 2]
+        todos = get_produtos()
+        for p in todos:
+            p_text = f"{p.get('nome','')} {p.get('descricao','')} {p.get('categoria','')} {' '.join(p.get('categorias',[]))}".lower()
+            if any(t in p_text for t in tokens):
+                sugestoes.append(p)
+            if len(sugestoes) >= 4:
+                break
+        if not sugestoes:
+            sugestoes = get_mais_pedidos(4)
+
+    return render_template('pages/categoria.html', categoria=None, produtos=produtos, busca_query=q, sugestoes=sugestoes, active_page='busca')
+
+@app.route('/makerworld')
+def makerworld_page():
+    """Catálogo Expandido · MakerWorld (CDU MakerWorld)."""
+    mw_config = site.get('makerworld', {})
+    if not mw_config.get('ativo', True):
+        abort(404)
+    temas = get_makerworld_temas()
+    vitrine = get_makerworld_vitrine()
+    return render_template('pages/makerworld.html', temas=temas, vitrine=vitrine, active_page='makerworld')
 
 @app.route('/produto/<slug>')
 def produto_page(slug):

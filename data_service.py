@@ -66,6 +66,20 @@ def get_produto_by_slug(slug: str) -> Optional[Dict[str, Any]]:
 def get_categorias() -> List[Dict[str, Any]]:
     return load_json('categorias.json')
 
+def get_makerworld_temas() -> List[Dict[str, Any]]:
+    """Carrega os temas para exploração rápida do MakerWorld."""
+    return load_json('makerworld-temas.json')
+
+def get_makerworld_vitrine() -> List[Dict[str, Any]]:
+    """RN: Itens com licencaPermiteVenda = false ou ativo = false não aparecem."""
+    itens = load_json('makerworld.json')
+    validos = [
+        item for item in itens
+        if item.get('ativo', True) and item.get('licencaPermiteVenda', True)
+    ]
+    validos.sort(key=lambda x: x.get('ordem', 999))
+    return validos
+
 def get_categoria_by_slug(slug: str) -> Optional[Dict[str, Any]]:
     for c in get_categorias():
         if c.get('slug') == slug:

@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+  {% if site.makerworld and site.makerworld.ativo %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/makerworld.css') }}">
+  {% endif %}
   {% block extra_css %}{% endblock %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
@@ -38,9 +41,20 @@
     {% include 'components/barra_whatsapp.html' %}
   {% endblock %}
 
+  <!-- Configuração Global do Site para JS -->
+  <script>
+    window.VoxelConfig = {
+      whatsapp: {{ site.whatsapp|tojson if site.whatsapp else '""' }},
+      makerworld: {{ site.makerworld|tojson if site.makerworld else '{}'|safe }}
+    };
+  </script>
+
   <!-- Scripts Vanilla JS -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   <script src="{{ url_for('static', filename='js/components.js') }}"></script>
+  {% if site.makerworld and site.makerworld.ativo %}
+  <script src="{{ url_for('static', filename='js/makerworld.js') }}"></script>
+  {% endif %}
   {% block extra_js %}{% endblock %}
 </body>
 </html>

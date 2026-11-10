@@ -451,6 +451,68 @@
 
   </section>
 
+  <!-- ========================================================================
+       SEÇÃO 15: INTEGRAÇÃO MAKERWORLD
+       ======================================================================== -->
+  {% from 'components/makerworld_logo.html' import logo_makerworld %}
+  {% from 'components/makerworld_form.html' import form_link_makerworld %}
+
+  <section class="sg-section" id="makerworld-components">
+    <div class="sg-section-header">
+      <span class="mono-label text-nozzle">15 · EXPANSÃO DE CATÁLOGO</span>
+      <h2 class="sg-section-title">Componentes MakerWorld</h2>
+      <p class="sg-section-desc">Logos centralizados, ilhas de formulário (variantes grande e compacta) e validação de URLs.</p>
+    </div>
+
+    <div class="sg-component-demo">
+      <div class="sg-demo-label">Logotipo MakerWorld (Centralizado em assets)</div>
+      <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span class="mono-label text-muted">Horizontal (altura 34px)</span>
+          {{ logo_makerworld(tipo='horizontal', altura=34) }}
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span class="mono-label text-muted">Horizontal (altura 22px · Header)</span>
+          {{ logo_makerworld(tipo='horizontal', altura=22) }}
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span class="mono-label text-muted">Ícone (altura 28px)</span>
+          {{ logo_makerworld(tipo='icone', altura=28) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-component-demo" style="margin-top: 24px;">
+      <div class="sg-demo-label">FormLinkMakerWorld · Variante Grande</div>
+      <div style="padding: 24px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-sm);">
+        {{ form_link_makerworld(variante='grande', termo_busca='suporte starlink', origem='styleguide_demo', btn_texto='Orçar impressão') }}
+      </div>
+    </div>
+
+    <div class="sg-component-demo" style="margin-top: 24px;">
+      <div class="sg-demo-label">FormLinkMakerWorld · Variante Compacta</div>
+      <div style="padding: 24px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-sm); max-width: 520px;">
+        {{ form_link_makerworld(variante='compacto', origem='styleguide_compact_demo', btn_texto='Orçar') }}
+      </div>
+    </div>
+
+    <div class="sg-component-demo" style="margin-top: 24px;">
+      <div class="sg-demo-label">Testes Rápidos de Validação de URL</div>
+      <div style="padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);">
+        <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 12px;">Clique para testar URLs válidas e inválidas no validador do cliente:</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="sg-test-url-btns">
+          <button type="button" class="vl-chip" data-test-url="https://makerworld.com/en/models/408321">✓ Válido com https e en</button>
+          <button type="button" class="vl-chip" data-test-url="makerworld.com/models/12345?ref=track#anchor">✓ Válido sem protocolo com query</button>
+          <button type="button" class="vl-chip" data-test-url="https://makerworld.com/en/models/499957-nome-do-modelo">✓ Válido com slug</button>
+          <button type="button" class="vl-chip" data-test-url="https://makerworld.com/en/search">✗ Inválido (sem /models/)</button>
+          <button type="button" class="vl-chip" data-test-url="https://makerworld.com.evil.com/models/123">✗ Inválido (domínio falso)</button>
+          <button type="button" class="vl-chip" data-test-url="apenas texto solto">✗ Inválido (texto solto)</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
 </div>
 {% endblock %}
 
@@ -482,6 +544,22 @@
     document.addEventListener('vl:color-change', (e) => {
       selectedCor = e.detail.color;
       updateMsg();
+    });
+
+    // Testes de URL do MakerWorld no Styleguide
+    document.querySelectorAll('#sg-test-url-btns button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const testUrl = btn.getAttribute('data-test-url');
+        const input = document.querySelector('#makerworld-components .mw-link-input');
+        if (input) {
+          input.value = testUrl;
+          input.focus();
+          const form = input.closest('form');
+          if (form) {
+            form.dispatchEvent(new Event('submit', { cancelable: true }));
+          }
+        }
+      });
     });
   });
 </script>

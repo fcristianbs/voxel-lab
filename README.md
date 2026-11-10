@@ -47,7 +47,43 @@ Acesse no seu navegador: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 | `/produto/[slug]` | Detalhe do produto, galeria, seletores reativos e prévia de mensagem | `3_Produto_celular.png` / `7_Produto_desktop.png` |
 | `/sob-medida` | Formulário de modelagem sob demanda com diagrama de cotas | `4_Sob_medida_celular.png` / `8_Sob_medida_desktop.png` |
 | `/busca?q=` | Busca textual instantânea de peças | CDU02 |
+| `/makerworld` | Catálogo Expandido · Modelos do MakerWorld impressos pela Voxel Lab | PROMPT_MakerWorld |
 | `/styleguide` | Documentação viva de todos os tokens e 14 componentes base | Fase 1 |
+
+---
+
+## 🌐 6.4 Mensagens do WhatsApp · MakerWorld
+
+### 6.4a Link colado pelo cliente
+```text
+Olá, Voxel Lab! Quero orçar a impressão deste modelo do MakerWorld:
+{link normalizado}
+Vim pela busca: "{termo}"            ← só quando existir termoBusca
+Página: {url da página de origem}
+```
+
+### 6.4b Modelo da vitrine "Já impressos pela Voxel Lab"
+```text
+Olá, Voxel Lab! Quero este modelo do MakerWorld impresso por vocês:
+• {nome} (por {autor})
+• Material: {material}
+• Cor: {cor, se escolhida}
+{modeloUrl}
+{url da página do item no site}
+```
+
+---
+
+## ⚙️ Configuração do MakerWorld (`site_config.py`)
+
+```python
+'makerworld': {
+    'ativo': True,  # Se False, oculta todas as entradas e retorna 404 em /makerworld
+    'buscaUrl': 'https://makerworld.com/en/search/models?keyword=',
+    'hostsAceitos': ['makerworld.com', 'www.makerworld.com'],
+    'prazoDias': '3 a 5'
+}
+```
 
 ---
 
@@ -68,7 +104,7 @@ Para cadastrar uma nova peça no catálogo sem precisar alterar o código da apl
 
 ---
 
-## ✅ Checklist de Critérios de Aceite (Seção 9 do CDU)
+## ✅ Checklist de Critérios de Aceite (Seção 9 do CDU e MakerWorld)
 
 - [x] As 4 páginas principais seguem as referências visuais em celular (390px) e desktop (1440px).
 - [x] Cores, fontes, cantos de 2px e malha de voxel seguem rigorosamente a seção 3 do CDU.
@@ -81,12 +117,21 @@ Para cadastrar uma nova peça no catálogo sem precisar alterar o código da apl
 - [x] SEO estruturado: meta tags Open Graph, `robots.txt`, `sitemap.xml` e `schema.org/Product` em JSON-LD.
 - [x] Os 12 produtos do seed e as 4 categorias oficiais estão cadastrados e validados.
 - [x] Guia "como adicionar um produto em 5 passos" documentado neste README.
+- [x] Clicar em "Orçar impressão" com um link válido do MakerWorld abre o WhatsApp direto com o link normalizado e sem parâmetros de rastreamento.
+- [x] Link vazio ou inválido não abre nada, mostra erro acessível com `role="alert"` e devolve o foco ao campo.
+- [x] Pressionar Enter dentro do campo submete o formulário com o mesmo comportamento do botão.
+- [x] "Buscar no MakerWorld" abre em nova aba com o termo buscado.
+- [x] A aba MakerWorld aparece no header desktop (`+ MODELOS`) e como primeiro chip no mobile, com `aria-current="page"` em `/makerworld`.
+- [x] `/busca` sem resultado mostra as duas opções (Caminho 1 MakerWorld e Caminho 2 Sob Medida) e a seção "Talvez sirva".
+- [x] Com `makerworld.ativo = false`, todas as entradas do MakerWorld somem do site e `/makerworld` retorna 404.
+- [x] Modelos sem licença de venda permitida (`licencaPermiteVenda = false`) ou inativos não aparecem na vitrine.
+- [x] Logos vêm centralizados de `static/img/makerworld/` e são referenciados via macro Jinja2 `logo_makerworld`.
 
 ---
 
-## 📌 Lista de Itens Pendentes Marcados como `[DEFINIR]`
+## 📌 Lista de Itens Pendentes Marcados como `[DEFINIR]` e `[CONFERIR]`
 
-Os seguintes dados estão centralizados em [`site_config.py`](file:///c:/git/VOXEL%20LAB/site_config.py) e `data/produtos.json` prontos para receber os valores de produção assim que aprovados:
+Os seguintes dados estão centralizados em [`site_config.py`](file:///c:/git/VOXEL%20LAB/site_config.py), `data/produtos.json` e `data/makerworld.json` prontos para receber os valores de produção assim que aprovados:
 
 1. `whatsapp`: Número oficial da Voxel Lab com DDI + DDD (`'5588921864755'`).
 2. `whatsapp_formatado`: Formatação visual para texto (`'(88) 92186-4755'`).
@@ -94,4 +139,7 @@ Os seguintes dados estão centralizados em [`site_config.py`](file:///c:/git/VOX
 4. `dominio`: Domínio de produção final (atualmente configurado como `'https://voxellab.com.br'`).
 5. `prazoRespostaHoras`: Tempo padrão de resposta estimado (atualmente `24` horas úteis).
 6. `fotos reais`: De início, o sistema gera os placeholders com a malha de voxel, contorno isométrico e marca d'água oficial; serão substituídos pelas fotos reais em `.webp`.
+7. `makerworld.buscaUrl`: `[CONFERIR]` Formato atual da URL de busca do MakerWorld (`https://makerworld.com/en/search/models?keyword=`).
+8. `makerworld.prazoDias`: `[DEFINIR]` Prazo médio de impressão informado na linha técnica (atualmente `'3 a 5'` dias úteis).
+9. `makerworld.json`: `[DEFINIR]` Fotos reais impressas pela Voxel Lab e preços finais para os 4 itens de exemplo da vitrine.
 
