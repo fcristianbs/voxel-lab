@@ -61,15 +61,9 @@
 .vl-nav {
   display: none;
   align-items: center;
-  gap: 12px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  gap: 10px;
   white-space: nowrap;
-}
-
-.vl-nav::-webkit-scrollbar {
-  display: none;
+  flex-shrink: 0;
 }
 
 @media (min-width: 1024px) {
@@ -80,7 +74,7 @@
 
 @media (min-width: 1366px) {
   .vl-nav {
-    gap: 18px;
+    gap: 14px;
   }
 }
 
@@ -93,6 +87,8 @@
   padding: 6px 0;
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 .vl-nav-link:hover {
@@ -111,10 +107,105 @@
   color: var(--cad-hover);
 }
 
+/* Dropdown "Mais" na navegação desktop */
+.vl-nav-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.vl-nav-dropdown-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.vl-dropdown-chevron {
+  transition: transform 0.2s ease;
+}
+
+.vl-nav-dropdown-wrapper:hover .vl-dropdown-chevron,
+.vl-nav-dropdown-wrapper.open .vl-dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.vl-nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  min-width: 210px;
+  padding: 6px 0;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  animation: vlDropdownFadeIn 0.15s ease;
+}
+
+@keyframes vlDropdownFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.vl-nav-dropdown-wrapper:hover .vl-nav-dropdown-menu,
+.vl-nav-dropdown-wrapper.open .vl-nav-dropdown-menu {
+  display: flex;
+}
+
+.vl-nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 9px 16px;
+  font-family: var(--font-body);
+  font-size: 0.84375rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.12s ease, color 0.12s ease;
+  white-space: nowrap;
+}
+
+.vl-nav-dropdown-item:hover {
+  background: var(--surface);
+  color: var(--nozzle);
+}
+
+.vl-nav-dropdown-item.active {
+  color: var(--nozzle);
+  font-weight: 600;
+  background: var(--nozzle-soft);
+}
+
+/* Responsividade de categorias extras */
+.vl-nav-cat-wide {
+  display: none;
+}
+
+.vl-dropdown-item-hide-wide {
+  display: flex;
+}
+
+@media (min-width: 1280px) {
+  .vl-nav-cat-wide {
+    display: block;
+  }
+  .vl-dropdown-item-hide-wide {
+    display: none;
+  }
+}
+
 .vl-header-actions {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  flex-shrink: 0;
 }
 
 /* Campo de busca no header */
@@ -126,13 +217,13 @@
 @media (min-width: 768px) {
   .vl-search-form {
     display: block;
-    width: 220px;
+    width: 190px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1366px) {
   .vl-search-form {
-    width: 260px;
+    width: 230px;
   }
 }
 

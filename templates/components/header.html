@@ -10,9 +10,36 @@
     <!-- Navegação Desktop -->
     <nav class="vl-nav" aria-label="Navegação principal">
       <a href="/catalogo" class="vl-nav-link {% if active_page == 'catalogo' %}active{% endif %}">Catálogo</a>
+      
       {% for cat in todas_categorias %}
-        <a href="/categoria/{{ cat.slug }}" class="vl-nav-link {% if active_categoria == cat.slug or active_page == cat.slug %}active{% endif %}">{{ cat.nome }}</a>
+        {% if loop.index <= 2 %}
+          <a href="/categoria/{{ cat.slug }}" class="vl-nav-link {% if active_categoria == cat.slug or active_page == cat.slug %}active{% endif %}">{{ cat.nome }}</a>
+        {% elif loop.index <= 4 %}
+          <a href="/categoria/{{ cat.slug }}" class="vl-nav-link vl-nav-cat-wide {% if active_categoria == cat.slug or active_page == cat.slug %}active{% endif %}">{{ cat.nome }}</a>
+        {% endif %}
       {% endfor %}
+
+      {% if todas_categorias|length > 2 %}
+        {% set slugs_dropdown = todas_categorias[2:]|map(attribute='slug')|list %}
+        <div class="vl-nav-dropdown-wrapper" id="nav-dropdown-categorias">
+          <button type="button" class="vl-nav-link vl-nav-dropdown-btn {% if active_categoria in slugs_dropdown %}active{% endif %}" aria-expanded="false" aria-haspopup="true">
+            <span>Mais</span>
+            <svg class="vl-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="vl-nav-dropdown-menu" role="menu">
+            {% for cat in todas_categorias %}
+              {% if loop.index > 2 %}
+                <a href="/categoria/{{ cat.slug }}" 
+                   class="vl-nav-dropdown-item {% if loop.index <= 4 %}vl-dropdown-item-hide-wide{% endif %} {% if active_categoria == cat.slug or active_page == cat.slug %}active{% endif %}" 
+                   role="menuitem">
+                  <span>{{ cat.nome }}</span>
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
       <a href="/sob-medida" class="vl-nav-link nav-sob-medida {% if active_page == 'sob-medida' %}active{% endif %}">Sob medida</a>
       {% if site.makerworld and site.makerworld.ativo %}
         <span class="mw-header-divider" aria-hidden="true"></span>
