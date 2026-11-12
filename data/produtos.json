@@ -1,5 +1,68 @@
 [
   {
+    "slug": "deadpool-sentado",
+    "nome": "Deadpool Sentado",
+    "categoria": "figures",
+    "subcategoria": "colecionaveis",
+    "resumo": "Action Figure Deadpool Sentado – Colecionável em Impressão 3D",
+    "descricao": "Traga todo o irreverente carisma do Mercenário Tagarela para a sua estante com esta incrível estatueta do Deadpool em uma pose descontraída e cheia de atitude! Perfeita para fãs dos quadrinhos, filmes da Marvel, gamers e colecionadores que buscam uma peça de destaque para a decoração geek.",
+    "preco": 44.99,
+    "precoParcelado": "ou [n] de x no Mercado Livre",
+    "material": "PLA",
+    "uso": "interno",
+    "specs_resumo": "Decorativo/Utilitário",
+    "destaque": false,
+    "selo": "NOVO",
+    "esgotado": false,
+    "selo_anterior": null,
+    "ordem": 1,
+    "specs": [
+      {
+        "chave": "MATERIAL",
+        "valor": "PLA"
+      },
+      {
+        "chave": "CAMADA",
+        "valor": "0,20 mm"
+      },
+      {
+        "chave": "PREENCHIMENTO",
+        "valor": "40% gyroid"
+      },
+      {
+        "chave": "USO",
+        "valor": "Interno"
+      },
+      {
+        "chave": "PRAZO",
+        "valor": "3 a 5 dias úteis"
+      }
+    ],
+    "variacoes": [],
+    "cores": [
+      {
+        "nome": "Padrão (Vermelho e Preto)",
+        "hex": "#111111",
+        "padrao": true
+      }
+    ],
+    "imagens": [
+      {
+        "src": "/static/img/produtos/deadpool-sentado.jpg",
+        "alt": "deadpool-sentado",
+        "tipo": "instalada"
+      }
+    ],
+    "instalacao": [],
+    "mercadoLivreUrl": null,
+    "relacionados": [
+      "action-figure-hollow-knight-colecionavel-impresso-em-3d",
+      "mandaloriano-e-grogu-sentado-na-borda",
+      "miniatura-do-groot-feliz",
+      "batman-af"
+    ]
+  },
+  {
     "slug": "estatueta-decorativa-jesus-sentado",
     "nome": "Estatueta Decorativa Jesus Sentado",
     "categoria": "casa",
